@@ -3,653 +3,454 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Samara Group | 30+ Years of Excellence Since 1992</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'primary': '#1d4f91',
-                        'primary-dark': '#0f3a6e',
-                        'primary-light': '#a5d6e1',
-                        'accent': '#b8860b',
-                        'steel': '#4682b4',
-                        'dark': '#0a0f1a',
-                        'dark-alt': '#0f1629',
-                        'light': '#f5f5f0',
-                        'light-alt': '#e8e8e3',
-                        'mid': '#c8c8c0',
-                    },
-                    fontFamily: {
-                        'display': ['Cinzel', 'serif'],
-                        'body': ['Space Grotesk', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
+    <title>Samara Group | Building the Future of Saudi Arabia</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body class="bg-dark font-body text-white overflow-x-hidden">
-
+<body>
     <!-- Preloader -->
-    <div id="preloader" class="fixed inset-0 z-[9999] bg-dark flex items-center justify-center">
-        <div class="text-center">
-            <div class="font-display text-3xl md:text-5xl tracking-[0.3em] text-primary mb-4">SAMARA GROUP</div>
-            <div class="w-24 h-[1px] bg-accent mx-auto loader-bar"></div>
+    <div id="preloader">
+        <div class="loader-content">
+            <h1 class="loader-text text-primary">SAMARA GROUP</h1>
+            <div class="loader-bar">
+                <div class="loader-progress"></div>
+            </div>
+            <p class="loader-subtext">EST. 1992</p>
         </div>
     </div>
 
-    <!-- Background Metamorphosis Layer -->
-    <div id="bg-morph" class="fixed inset-0 z-0 pointer-events-none" style="background: #0a0f1a;"></div>
-
-    <!-- Structural Grid Overlay -->
-    <div id="grid-overlay" class="fixed inset-0 z-[1] pointer-events-none overflow-hidden">
-        <svg width="100%" height="100%" class="absolute inset-0">
-            <defs>
-                <pattern id="grid-pattern" width="80" height="80" patternUnits="userSpaceOnUse">
-                    <line x1="80" y1="0" x2="80" y2="80" stroke="currentColor" stroke-width="0.5" opacity="0.06"/>
-                    <line x1="0" y1="80" x2="80" y2="80" stroke="currentColor" stroke-width="0.5" opacity="0.06"/>
-                </pattern>
-            </defs>
-            <rect width="100%" height="100%" fill="url(#grid-pattern)" class="text-primary grid-rect"/>
-        </svg>
-    </div>
-
-    <!-- Crosshair Markers -->
-    <div id="crosshairs-container" class="fixed inset-0 z-[2] pointer-events-none"></div>
-
     <!-- Navigation -->
-    <nav id="main-nav" class="fixed top-0 left-0 w-full z-[100] transition-all duration-500">
-        <div class="backdrop-blur-md bg-dark/80 border-b border-white/5">
-            <div class="max-w-[1400px] mx-auto px-6 md:px-10 lg:px-16 flex items-center justify-between h-20">
-                <div class="flex items-center gap-3">
-                    <div class="w-8 h-8 border border-accent flex items-center justify-center">
-                        <div class="w-3 h-3 bg-accent"></div>
-                    </div>
-                    <span class="font-display text-lg tracking-[0.2em] text-white">SAMARA GROUP</span>
-                </div>
-                <div class="hidden md:flex items-center gap-10 text-sm tracking-[0.15em] uppercase">
-                    <a href="#hero" class="nav-link text-white/60 hover:text-accent transition-colors duration-300">Home</a>
-                    <a href="#overview" class="nav-link text-white/60 hover:text-accent transition-colors duration-300">Overview</a>
-                    <a href="#ecosystem" class="nav-link text-white/60 hover:text-accent transition-colors duration-300">Ecosystem</a>
-                    <a href="#history" class="nav-link text-white/60 hover:text-accent transition-colors duration-300">Legacy</a>
-                    <a href="#contact" class="nav-link text-white/60 hover:text-accent transition-colors duration-300">Contact</a>
-                </div>
-                <button id="mobile-menu-btn" class="md:hidden text-white">
-                    <i data-lucide="menu" class="w-6 h-6"></i>
-                </button>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <span class="logo-text">SAMARA<span class="logo-accent">GROUP</span></span>
+            </a>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#companies">Companies</a>
+                <a href="#investments">Investments</a>
+                <a href="#contact">Contact</a>
             </div>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </nav>
 
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="fixed inset-0 z-[99] bg-dark/95 backdrop-blur-xl transform translate-x-full transition-transform duration-500">
-        <div class="flex flex-col items-center justify-center h-full gap-8">
-            <a href="#hero" class="mobile-nav font-display text-2xl tracking-[0.2em] text-white/80 hover:text-accent transition-colors">Home</a>
-            <a href="#overview" class="mobile-nav font-display text-2xl tracking-[0.2em] text-white/80 hover:text-accent transition-colors">Overview</a>
-            <a href="#ecosystem" class="mobile-nav font-display text-2xl tracking-[0.2em] text-white/80 hover:text-accent transition-colors">Ecosystem</a>
-            <a href="#history" class="mobile-nav font-display text-2xl tracking-[0.2em] text-white/80 hover:text-accent transition-colors">Legacy</a>
-            <a href="#contact" class="mobile-nav font-display text-2xl tracking-[0.2em] text-white/80 hover:text-accent transition-colors">Contact</a>
-            <button id="mobile-menu-close" class="mt-10 text-white/50">
-                <i data-lucide="x" class="w-8 h-8"></i>
-            </button>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg">
+            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop" alt="Modern Architecture" class="hero-image">
+            <div class="hero-overlay"></div>
         </div>
-    </div>
-
-    <!-- ===================== HERO SECTION ===================== -->
-    <section id="hero" class="relative min-h-screen overflow-hidden">
-        <!-- Hero Background -->
-        <div class="hero-bg absolute inset-0">
-            <img src="http://static.photos/industry/1200x630/42" alt="Engineering Excellence" class="w-full h-full object-cover" style="transform: scale(1.1);">
-            <div class="absolute inset-0 bg-gradient-to-b from-dark/60 via-dark/40 to-dark"></div>
+        <div class="container hero-content">
+            <div class="hero-badge">ESTABLISHED 1992</div>
+            <h1 class="hero-title">BUILDING THE FUTURE<br><span class="text-accent">OF SAUDI ARABIA</span></h1>
+            <p class="hero-subtitle">A diversified family business group with over 30 years of excellence across the GCC, leading in refrigeration, real estate, healthcare, and industrial solutions.</p>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number">7</span>
+                    <span class="stat-label">Companies</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">30+</span>
+                    <span class="stat-label">Years</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">GCC</span>
+                    <span class="stat-label">Presence</span>
+                </div>
+            </div>
+            <a href="#companies" class="btn btn-primary">Explore Our Companies</a>
         </div>
-        <!-- Geometric Frame -->
-        <div class="hero-frame absolute inset-6 md:inset-12 border border-primary/0 pointer-events-none z-[5]"></div>
-
-        <!-- Hero Content -->
-        <div class="relative z-10 flex flex-col justify-end min-h-screen pb-20 md:pb-28 px-6 md:px-10 lg:px-16 max-w-[1400px] mx-auto">
-            <!-- Inline metrics -->
-            <div class="flex gap-8 md:gap-16 mb-8 hero-metric opacity-0">
-                <div>
-                    <div class="font-body text-accent text-xs tracking-[0.3em] uppercase mb-1">Founded</div>
-                    <div class="font-display text-2xl md:text-4xl text-white/90">1992</div>
-                </div>
-                <div>
-                    <div class="font-body text-accent text-xs tracking-[0.3em] uppercase mb-1">Companies</div>
-                    <div class="font-display text-2xl md:text-4xl text-white/90">07</div>
-                </div>
-                <div>
-                    <div class="font-body text-accent text-xs tracking-[0.3em] uppercase mb-1">Countries</div>
-                    <div class="font-display text-2xl md:text-4xl text-white/90">GCC</div>
-                </div>
-            </div>
-            <!-- Headline -->
-            <div class="overflow-hidden mb-2">
-                <h1 class="hero-line font-display text-[3rem] md:text-[5rem] lg:text-[6.5rem] leading-[0.95] tracking-[0.05em] text-white transform translate-y-full">BUILDING</h1>
-            </div>
-            <div class="overflow-hidden mb-2">
-                <h1 class="hero-line font-display text-[3rem] md:text-[5rem] lg:text-[6.5rem] leading-[0.95] tracking-[0.05em] text-white transform translate-y-full">THE FUTURE</h1>
-            </div>
-            <div class="overflow-hidden mb-8">
-                <h1 class="hero-line font-display text-[3rem] md:text-[5rem] lg:text-[6.5rem] leading-[0.95] tracking-[0.05em] text-accent transform translate-y-full">OF SAUDI ARABIA</h1>
-            </div>
-            <!-- Subtitle -->
-            <div class="overflow-hidden">
-                <p class="hero-sub font-body text-base md:text-lg text-white/50 max-w-xl leading-relaxed transform translate-y-full">
-                    Over 30 years of excellence across refrigeration, real estate, healthcare, parking solutions, construction, and chemical additives — one trusted family business, seven specialized companies.
-                </p>
-            </div>
-            <!-- Scroll Indicator -->
-            <div class="hero-scroll absolute bottom-8 right-6 md:right-10 lg:right-16 flex flex-col items-center gap-2 opacity-0">
-                <span class="font-body text-[10px] tracking-[0.3em] text-white/30 uppercase rotate-90 origin-center mb-8">Scroll</span>
-                <div class="w-[1px] h-16 bg-white/10 relative overflow-hidden">
-                    <div class="scroll-line w-full h-8 bg-accent absolute top-0"></div>
-                </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
             </div>
         </div>
     </section>
 
-    <!-- ===================== OVERVIEW SECTION ===================== -->
-    <section id="overview" class="relative z-10 bg-dark section-transition">
-        <div class="max-w-[1400px] mx-auto px-6 md:px-10 lg:px-16 py-24 md:py-36">
-            <!-- Section Label -->
-            <div class="section-grid-line opacity-0">
-                <div class="flex items-center gap-4 mb-16">
-                    <div class="w-12 h-[1px] bg-accent"></div>
-                    <span class="font-body text-xs tracking-[0.3em] text-accent uppercase">Corporate Overview</span>
-                </div>
+    <!-- About Section -->
+    <section id="about" class="section about-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Who We Are</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">Three Decades of Business Excellence</p>
             </div>
-
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
-                <!-- Left: Statement -->
-                <div class="lg:col-span-7">
-                    <h2 class="section-title font-display text-3xl md:text-5xl lg:text-[3.5rem] leading-tight text-white mb-8 opacity-0">
-                        We Are a Trusted Family Business Driving Saudi Arabia's Growth
-                    </h2>
-                    <div class="overflow-hidden">
-                        <p class="reveal-text font-body text-base md:text-lg text-white/40 leading-relaxed max-w-2xl">
-                            Samara Group is a family-based business with a portfolio of companies in the Kingdom of Saudi Arabia & GCC, in addition to international investments & affiliations. Since 1992, we have directed capital, talent, and expertise toward diverse sectors across the region.
-                        </p>
-                    </div>
-                    <div class="overflow-hidden mt-6">
-                        <p class="reveal-text font-body text-base md:text-lg text-white/40 leading-relaxed max-w-2xl">
-                            With more than 30 years in business, Samara has become a trusted business partner across Saudi Arabia & GCC. Our business strategy builds on competences and expertise gained in diverse sectors such as Commercial & Industrial Refrigeration, Real Estate Management, Healthcare Management, Collection & Receivable Management, Parking Solutions, General Construction, and Chemical Additives Products.
-                        </p>
+            <div class="about-grid">
+                <div class="about-content">
+                    <p class="lead-text">Samara Group is a prominent family-based business group based in the Kingdom of Saudi Arabia, with a strategic presence across the GCC region.</p>
+                    <p>Since our foundation in 1992, we have grown into a diversified conglomerate operating in key sectors including commercial refrigeration, real estate development, healthcare management, parking solutions, ready-mix concrete, and chemical additives.</p>
+                    <p>Our commitment to quality, innovation, and sustainable growth drives our operations, ensuring we deliver value to our partners, clients, and the communities we serve.</p>
+                    
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                                </svg>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Diversified Portfolio</h4>
+                                <p>Strategic investments across multiple high-growth industries.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <path d="M12 6v6l4 2"/>
+                                </svg>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Legacy of Trust</h4>
+                                <p>Over 30 years of reliability and excellence in the GCC market.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                    <circle cx="9" cy="7" r="4"/>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                                </svg>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Regional Impact</h4>
+                                <p>Contributing to the economic development of Saudi Arabia and the Gulf.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <!-- Right: Key Metrics -->
-                <div class="lg:col-span-5">
-                    <div class="border-l border-white/10 pl-8 space-y-8">
-                        <div class="metric-item opacity-0">
-                            <div class="font-display text-4xl md:text-5xl text-accent counter" data-target="30">0</div>
-                            <div class="font-body text-xs tracking-[0.2em] text-white/30 uppercase mt-1">Years of Excellence</div>
-                        </div>
-                        <div class="metric-item opacity-0">
-                            <div class="font-display text-4xl md:text-5xl text-accent counter" data-target="7">0</div>
-                            <div class="font-body text-xs tracking-[0.2em] text-white/30 uppercase mt-1">Specialized Companies</div>
-                        </div>
-                        <div class="metric-item opacity-0">
-                            <div class="font-display text-4xl md:text-5xl text-accent">GCC</div>
-                            <div class="font-body text-xs tracking-[0.2em] text-white/30 uppercase mt-1">Regional Presence</div>
-                        </div>
-                        <div class="metric-item opacity-0">
-                            <div class="font-display text-4xl md:text-5xl text-accent counter" data-target="1992">0</div>
-                            <div class="font-body text-xs tracking-[0.2em] text-white/30 uppercase mt-1">Established</div>
-                        </div>
+                <div class="about-image">
+                    <div class="image-frame">
+                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069&auto=format&fit=crop" alt="Samara Group Headquarters">
+                        <div class="frame-overlay"></div>
+                    </div>
+                    <div class="experience-badge">
+                        <span class="exp-number">32</span>
+                        <span class="exp-text">Years of<br>Excellence</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ===================== ECOSYSTEM SECTION ===================== -->
-    <section id="ecosystem" class="relative z-10 bg-light section-transition">
-        <div class="max-w-[1400px] mx-auto px-6 md:px-10 lg:px-16 py-24 md:py-36">
-            <div class="ecosystem-wrapper">
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-0">
-                    <!-- Left: Sticky Header -->
-                    <div class="lg:col-span-4 lg:pr-12">
-                        <div class="lg:sticky lg:top-28">
-                            <div class="flex items-center gap-4 mb-8 opacity-0" data-ecosystem-label>
-                                <div class="w-12 h-[1px] bg-accent"></div>
-                                <span class="font-body text-xs tracking-[0.3em] text-accent uppercase">The Ecosystem</span>
-                            </div>
-                            <h2 class="font-display text-3xl md:text-4xl lg:text-5xl leading-tight text-dark mb-6 opacity-0" data-ecosystem-title>
-                                Specialized<br>Engineering<br>Units
-                            </h2>
-                            <p class="font-body text-sm text-dark/50 leading-relaxed mb-8 opacity-0" data-ecosystem-desc>
-                                Six independently operated subsidiaries, each a market leader in its domain, unified under one strategic holding.
-                            </p>
-                            <div class="hidden lg:flex items-center gap-6 opacity-0" data-ecosystem-stats>
-                                <div>
-                                    <div class="font-display text-2xl text-accent">06</div>
-                                    <div class="font-body text-[10px] tracking-[0.2em] text-dark/40 uppercase">Companies</div>
-                                </div>
-                                <div class="w-[1px] h-10 bg-dark/10"></div>
-                                <div>
-                                    <div class="font-display text-2xl text-accent">34</div>
-                                    <div class="font-body text-[10px] tracking-[0.2em] text-dark/40 uppercase">Countries</div>
-                                </div>
-                                <div class="w-[1px] h-10 bg-dark/10"></div>
-                                <div>
-                                    <div class="font-display text-2xl text-accent">14</div>
-                                    <div class="font-body text-[10px] tracking-[0.2em] text-dark/40 uppercase">Sectors</div>
-                                </div>
-                            </div>
-                        </div>
+    <!-- Timeline Section -->
+    <section class="section timeline-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Journey</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">Milestones of Growth Since 1992</p>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">1992</span>
+                        <h3>The Foundation</h3>
+                        <p>Samara Group was established in Riyadh, beginning its journey in commercial refrigeration and contracting.</p>
                     </div>
-                    <!-- Right: Scrolling Cards -->
-                    <div class="lg:col-span-8 space-y-4">
-                        <!-- Card 1: Samara Refrigeration -->
-                        <div class="company-card relative bg-white border border-dark/10 overflow-hidden group cursor-pointer" data-card>
-                            <div class="card-bg-glow absolute inset-0 opacity-0 transition-opacity duration-500 pointer-events-none"></div>
-                            <div class="relative z-10 p-6 md:p-8 flex flex-col md:flex-row gap-6">
-                                <div class="w-full md:w-48 h-40 md:h-48 flex-shrink-0 overflow-hidden relative">
-                                    <img src="http://static.photos/industry/640x360/10" alt="Samara Refrigeration" class="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-700">
-                                    <div class="absolute top-0 left-0 w-4 h-4 border-t border-l border-accent"></div>
-                                    <div class="absolute top-0 right-0 w-4 h-4 border-t border-r border-accent"></div>
-                                    <div class="absolute bottom-0 left-0 w-4 h-4 border-b border-l border-accent"></div>
-                                    <div class="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-accent"></div>
-                                </div>
-                                <div class="flex-1">
-                                    <div class="font-body text-[10px] tracking-[0.3em] text-accent uppercase mb-2">Est. 1992 · Refrigeration</div>
-                                    <h3 class="font-display text-xl md:text-2xl text-dark mb-3">Samara Refrigeration</h3>
-                                    <p class="font-body text-sm text-dark/50 leading-relaxed mb-4">
-                                        Leading provider of commercial and industrial refrigeration solutions across Saudi Arabia and the GCC. Specializing in cold storage, food service equipment, and industrial cooling systems for diverse applications.
-                                    </p>
-                                    <div class="flex flex-wrap gap-3 mb-4">
-                                        <span class="font-body text-[10px] tracking-widest text-dark/40 uppercase bg-dark/5 px-3 py-1">Cold Storage</span>
-                                        <span class="font-body text-[10px] tracking-widest text-dark/40 uppercase bg-dark/5 px-3 py-1">Food Service</span>
-                                        <span class="font-body text-[10px] tracking-widest text-dark/40 uppercase bg-dark/5 px-3 py-1">Industrial Cooling</span>
-                                    </div>
-                                    <div class="card-cta flex items-center gap-2 overflow-hidden">
-                                        <div class="card-cta-line w-0 h-[1px] bg-accent transition-all duration-500 group-hover:w-8"></div>
-                                        <span class="font-body text-xs tracking-[0.2em] text-accent uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-300">Deep Dive into Services</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Card 2: Samara Real Estate & Contracting -->
-                        <div class="company-card relative bg-white border border-dark/10 overflow-hidden group cursor-pointer" data-card>
-                            <div class="card-bg-glow absolute inset-0 opacity-0 transition-opacity duration-500 pointer-events-none"></div>
-                            <div class="relative z-10 p-6 md:p-8 flex flex-col md:flex-row gap-6">
-                                <div class="w-full md:w-48 h-40 md:h-48 flex-shrink-0 overflow-hidden relative">
-                                    <img src="http://static.photos/construction/640x360/22" alt="Samara Real Estate" class="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-700">
-                                    <div class="absolute top-0 left-0 w-4 h-4 border-t border-l border-accent"></div>
-                                    <div class="absolute top-0 right-0 w-4 h-4 border-t border-r border-accent"></div>
-                                    <div class="absolute bottom-0 left-0 w-4 h-4 border-b border-l border-accent"></div>
-                                    <div class="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-accent"></div>
-                                </div>
-                                <div class="flex-1">
-                                    <div class="font-body text-[10px] tracking-[0.3em] text-accent uppercase mb-2">Est. 1992 · Real Estate</div>
-                                    <h3 class="font-display text-xl md:text-2xl text-dark mb-3">Samara Real Estate & Contracting</h3>
-                                    <p class="font-body text-sm text-dark/50 leading-relaxed mb-4">
-                                        Comprehensive real estate development and general contracting services. From residential complexes to commercial buildings, delivering quality construction projects across the Kingdom.
-                                    </p>
-                                    <div class="flex flex-wrap gap-3 mb-4">
-                                        <span class="font-body text-[10px] tracking-widest text-dark/40 uppercase bg-dark/5 px-3 py-1">Property Development</span>
-                                        <span class="font-body text-[10px] tracking-widest text-dark/40 uppercase bg-dark/5 px-3 py-1">General Contracting</span>
-                                        <span class="font-body text-[10px] tracking-widest text-dark/40 uppercase bg-dark/5 px-3 py-1">Construction Management</span>
-                                    </div>
-                                    <div class="card-cta flex items-center gap-2 overflow-hidden">
-                                        <div class="card-cta-line w-0 h-[1px] bg-accent transition-all duration-500 group-hover:w-8"></div>
-                                        <span class="font-body text-xs tracking-[0.2em] text-accent uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-300">Deep Dive into Services</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Card 3: Saryryah Healthcare -->
-                        <div class="company-card relative bg-white border border-dark/10 overflow-hidden group cursor-pointer" data-card>
-                            <div class="card-bg-glow absolute inset-0 opacity-0 transition-opacity duration-500 pointer-events-none"></div>
-                            <div class="relative z-10 p-6 md:p-8 flex flex-col md:flex-row gap-6">
-                                <div class="w-full md:w-48 h-40 md:h-48 flex-shrink-0 overflow-hidden relative">
-                                    <img src="http://static.photos/medical/640x360/35" alt="Saryryah Healthcare" class="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-700">
-                                    <div class="absolute top-0 left-0 w-4 h-4 border-t border-l border-accent"></div>
-                                    <div class="absolute top-0 right-0 w-4 h-4 border-t border-r border-accent"></div>
-                                    <div class="absolute bottom-0 left-0 w-4 h-4 border-b border-l border-accent"></div>
-                                    <div class="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-accent"></div>
-                                </div>
-                                <div class="flex-1">
-                                    <div class="font-body text-[10px] tracking-[0.3em] text-accent uppercase mb-2">Est. 2001 · Healthcare</div>
-                                    <h3 class="font-display text-xl md:text-2xl text-dark mb-3">Saryryah Healthcare</h3>
-                                    <p class="font-body text-sm text-dark/50 leading-relaxed mb-4">
-                                        Professional hospital management and healthcare services provider. Operating medical facilities with commitment to excellence in patient care and healthcare delivery across Saudi Arabia.
-                                    </p>
-                                    <div class="flex flex-wrap gap-3 mb-4">
-                                        <span class="font-body text-[10px] tracking-widest text-dark/40 uppercase bg-dark/5 px-3 py-1">Hospital Management</span>
-                                        <span class="font-body text-[10px] tracking-widest text-dark/40 uppercase bg-dark/5 px-3 py-1">Medical Services</span>
-                                        <span class="font-body text-[10px] tracking-widest text-dark/40 uppercase bg-dark/5 px-3 py-1">Healthcare Operations</span>
-                                    </div>
-                                    <div class="card-cta flex items-center gap-2 overflow-hidden">
-                                        <div class="card-cta-line w-0 h-[1px] bg-accent transition-all duration-500 group-hover:w-8"></div>
-                                        <span class="font-body text-xs tracking-[0.2em] text-accent uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-300">Deep Dive into Services</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Card 4: Samara Parking Solutions -->
-                        <div class="company-card relative bg-white border border-dark/10 overflow-hidden group cursor-pointer" data-card>
-                            <div class="card-bg-glow absolute inset-0 opacity-0 transition-opacity duration-500 pointer-events-none"></div>
-                            <div class="relative z-10 p-6 md:p-8 flex flex-col md:flex-row gap-6">
-                                <div class="w-full md:w-48 h-40 md:h-48 flex-shrink-0 overflow-hidden relative">
-                                    <img src="http://static.photos/technology/640x360/15" alt="Samara Parking Solutions" class="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-700">
-                                    <div class="absolute top-0 left-0 w-4 h-4 border-t border-l border-accent"></div>
-                                    <div class="absolute top-0 right-0 w-4 h-4 border-t border-r border-accent"></div>
-                                    <div class="absolute bottom-0 left-0 w-4 h-4 border-b border-l border-accent"></div>
-                                    <div class="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-accent"></div>
-                                </div>
-                                <div class="flex-1">
-                                    <div class="font-body text-[10px] tracking-[0.3em] text-accent uppercase mb-2">Est. 2001 · Parking Solutions</div>
-                                    <h3 class="font-display text-xl md:text-2xl text-dark mb-3">Samara Parking Solutions (SPS)</h3>
-                                    <p class="font-body text-sm text-dark/50 leading-relaxed mb-4">
-                                        Advanced parking management and facility solutions provider. Offering comprehensive parking operations, technology integration, and revenue management for commercial and public facilities.
-                                    </p>
-                                    <div class="flex flex-wrap gap-3 mb-4">
-                                        <span class="font-body text-[10px] tracking-widest text-dark/40 uppercase bg-dark/5 px-3 py-1">Parking Operations</span>
-                                        <span class="font-body text-[10px] tracking-widest text-dark/40 uppercase bg-dark/5 px-3 py-1">Technology Integration</span>
-                                        <span class="font-body text-[10px] tracking-widest text-dark/40 uppercase bg-dark/5 px-3 py-1">Facility Management</span>
-                                    </div>
-                                    <div class="card-cta flex items-center gap-2 overflow-hidden">
-                                        <div class="card-cta-line w-0 h-[1px] bg-accent transition-all duration-500 group-hover:w-8"></div>
-                                        <span class="font-body text-xs tracking-[0.2em] text-accent uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-300">Deep Dive into Services</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Card 5: Saudi Builmix LLC -->
-                        <div class="company-card relative bg-white border border-dark/10 overflow-hidden group cursor-pointer" data-card>
-                            <div class="card-bg-glow absolute inset-0 opacity-0 transition-opacity duration-500 pointer-events-none"></div>
-                            <div class="relative z-10 p-6 md:p-8 flex flex-col md:flex-row gap-6">
-                                <div class="w-full md:w-48 h-40 md:h-48 flex-shrink-0 overflow-hidden relative">
-                                    <img src="http://static.photos/industry/640x360/28" alt="Saudi Builmix" class="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-700">
-                                    <div class="absolute top-0 left-0 w-4 h-4 border-t border-l border-accent"></div>
-                                    <div class="absolute top-0 right-0 w-4 h-4 border-t border-r border-accent"></div>
-                                    <div class="absolute bottom-0 left-0 w-4 h-4 border-b border-l border-accent"></div>
-                                    <div class="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-accent"></div>
-                                </div>
-                                <div class="flex-1">
-                                    <div class="font-body text-[10px] tracking-[0.3em] text-accent uppercase mb-2">Est. 2012 · Manufacturing</div>
-                                    <h3 class="font-display text-xl md:text-2xl text-dark mb-3">Saudi Builmix LLC</h3>
-                                    <p class="font-body text-sm text-dark/50 leading-relaxed mb-4">
-                                        Premier ready-mix concrete manufacturer serving major construction projects across Saudi Arabia. Delivering high-quality concrete solutions with advanced production capabilities and reliable logistics.
-                                    </p>
-                                    <div class="flex flex-wrap gap-3 mb-4">
-                                        <span class="font-body text-[10px] tracking-widest text-dark/40 uppercase bg-dark/5 px-3 py-1">Ready-Mix Concrete</span>
-                                        <span class="font-body text-[10px] tracking-widest text-dark/40 uppercase bg-dark/5 px-3 py-1">Quality Assurance</span>
-                                        <span class="font-body text-[10px] tracking-widest text-dark/40 uppercase bg-dark/5 px-3 py-1">Logistics</span>
-                                    </div>
-                                    <div class="card-cta flex items-center gap-2 overflow-hidden">
-                                        <div class="card-cta-line w-0 h-[1px] bg-accent transition-all duration-500 group-hover:w-8"></div>
-                                        <span class="font-body text-xs tracking-[0.2em] text-accent uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-300">Deep Dive into Services</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Card 6: Samara Chemical Additives -->
-                        <div class="company-card relative bg-white border border-dark/10 overflow-hidden group cursor-pointer" data-card>
-                            <div class="card-bg-glow absolute inset-0 opacity-0 transition-opacity duration-500 pointer-events-none"></div>
-                            <div class="relative z-10 p-6 md:p-8 flex flex-col md:flex-row gap-6">
-                                <div class="w-full md:w-48 h-40 md:h-48 flex-shrink-0 overflow-hidden relative">
-                                    <img src="http://static.photos/science/640x360/19" alt="Samara Chemical Additives" class="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-700">
-                                    <div class="absolute top-0 left-0 w-4 h-4 border-t border-l border-accent"></div>
-                                    <div class="absolute top-0 right-0 w-4 h-4 border-t border-r border-accent"></div>
-                                    <div class="absolute bottom-0 left-0 w-4 h-4 border-b border-l border-accent"></div>
-                                    <div class="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-accent"></div>
-                                </div>
-                                <div class="flex-1">
-                                    <div class="font-body text-[10px] tracking-[0.3em] text-accent uppercase mb-2">Est. 2012 · Chemicals</div>
-                                    <h3 class="font-display text-xl md:text-2xl text-dark mb-3">Samara Chemical Additives</h3>
-                                    <p class="font-body text-sm text-dark/50 leading-relaxed mb-4">
-                                        Industrial chemical additives manufacturer providing specialized solutions for construction and industrial applications. Committed to quality, innovation, and meeting international standards.
-                                    </p>
-                                    <div class="flex flex-wrap gap-3 mb-4">
-                                        <span class="font-body text-[10px] tracking-widest text-dark/40 uppercase bg-dark/5 px-3 py-1">Chemical Additives</span>
-                                        <span class="font-body text-[10px] tracking-widest text-dark/40 uppercase bg-dark/5 px-3 py-1">Industrial Solutions</span>
-                                        <span class="font-body text-[10px] tracking-widest text-dark/40 uppercase bg-dark/5 px-3 py-1">Quality Standards</span>
-                                    </div>
-                                    <div class="card-cta flex items-center gap-2 overflow-hidden">
-                                        <div class="card-cta-line w-0 h-[1px] bg-accent transition-all duration-500 group-hover:w-8"></div>
-                                        <span class="font-body text-xs tracking-[0.2em] text-accent uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-300">Deep Dive into Services</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">2001</span>
+                        <h3>Expansion & Diversification</h3>
+                        <p>Launched Samara Real Estate & Contracting and entered the healthcare sector with Saryryah Healthcare.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">2012</span>
+                        <h3>Industrial Growth</h3>
+                        <p>Established Saudi Builmix LLC and Samara Chemical Additives, expanding into heavy industry and manufacturing.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">2024</span>
+                        <h3>Future Vision</h3>
+                        <p>Continuing to innovate with smart parking solutions and sustainable construction materials for Vision 2030.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ===================== HISTORY TIMELINE SECTION ===================== -->
-    <section id="history" class="relative z-10 bg-dark section-transition overflow-hidden">
-        <div class="max-w-[1400px] mx-auto px-6 md:px-10 lg:px-16 py-24 md:py-36">
-            <!-- Section Label -->
-            <div class="flex items-center gap-4 mb-8 timeline-label opacity-0">
-                <div class="w-12 h-[1px] bg-accent"></div>
-                <span class="font-body text-xs tracking-[0.3em] text-accent uppercase">History & Legacy</span>
+    <!-- Companies Section -->
+    <section id="companies" class="section companies-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Companies</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">Specialized Entities Driving Excellence</p>
             </div>
-            <h2 class="font-display text-3xl md:text-4xl lg:text-5xl text-white mb-20 timeline-title opacity-0">
-                Three Decades of<br>Business Excellence
-            </h2>
-
-            <!-- Timeline -->
-            <div class="relative" id="timeline-container">
-                <!-- Vertical Line -->
-                <div class="absolute left-4 md:left-1/2 top-0 bottom-0 w-[1px] bg-white/10 md:-translate-x-1/2">
-                    <div id="timeline-progress" class="w-full bg-accent origin-top" style="height: 0%;"></div>
-                </div>
-                <!-- Glowing Node -->
-                <div id="timeline-node" class="absolute left-4 md:left-1/2 w-4 h-4 -translate-x-1/2 rounded-full bg-accent shadow-[0_0_20px_rgba(184,134,11,0.6)] z-10 transition-all duration-100" style="top: 0;">
-                    <div class="absolute inset-0 rounded-full bg-accent/30 animate-ping"></div>
-                </div>
-
-                <!-- Milestones -->
-                <div class="space-y-16 md:space-y-24">
-                    <!-- 1992 -->
-                    <div class="timeline-milestone relative grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-16 opacity-30" style="transform: scale(0.98);">
-                        <div class="md:text-right md:pr-12">
-                            <div class="font-display text-4xl md:text-5xl text-accent/80">1992</div>
-                            <h3 class="font-display text-lg md:text-xl text-white mt-2 mb-3">The Foundation</h3>
-                            <p class="font-body text-sm text-white/40 leading-relaxed">Founded by the Al-Samar family as a trading and contracting business in Riyadh. Beginning with commercial refrigeration installations and small construction projects, the firm's reputation for quality and reliability was established from its very first contracts.</p>
-                        </div>
-                        <div class="md:pl-12">
-                            <div class="relative overflow-hidden">
-                                <img src="http://static.photos/vintage/640x360/50" alt="1992 Foundation" class="w-full h-48 md:h-56 object-cover grayscale">
-                                <div class="absolute top-0 left-0 w-4 h-4 border-t border-l border-accent/50"></div>
-                                <div class="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-accent/50"></div>
-                            </div>
-                        </div>
+            
+            <div class="companies-grid">
+                <!-- Company 1 -->
+                <div class="company-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070&auto=format&fit=crop" alt="Industrial Refrigeration">
+                        <div class="card-overlay"></div>
                     </div>
-
-                    <!-- 2001 -->
-                    <div class="timeline-milestone relative grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-16 opacity-30" style="transform: scale(0.98);">
-                        <div class="md:pr-12 md:order-2">
-                            <div class="font-display text-4xl md:text-5xl text-accent/80">2001</div>
-                            <h3 class="font-display text-lg md:text-xl text-white mt-2 mb-3">Healthcare & Services Expansion</h3>
-                            <p class="font-body text-sm text-white/40 leading-relaxed">Entry into healthcare management with the establishment of Saryryah Healthcare. The group also expanded into parking solutions and facility management services, diversifying its portfolio beyond traditional sectors.</p>
-                        </div>
-                        <div class="md:pl-12 md:order-1 md:text-right">
-                            <div class="relative overflow-hidden">
-                                <img src="http://static.photos/cityscape/640x360/51" alt="2001 Expansion" class="w-full h-48 md:h-56 object-cover grayscale">
-                                <div class="absolute top-0 left-0 w-4 h-4 border-t border-l border-accent/50"></div>
-                                <div class="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-accent/50"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 2012 -->
-                    <div class="timeline-milestone relative grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-16 opacity-30" style="transform: scale(0.98);">
-                        <div class="md:text-right md:pr-12">
-                            <div class="font-display text-4xl md:text-5xl text-accent/80">2012</div>
-                            <h3 class="font-display text-lg md:text-xl text-white mt-2 mb-3">Industrial Manufacturing</h3>
-                            <p class="font-body text-sm text-white/40 leading-relaxed">Establishment of Saudi Builmix LLC for ready-mix concrete production and Samara Chemical Additives for industrial chemical solutions. The group achieved significant growth in manufacturing capabilities, serving major construction projects across the Kingdom.</p>
-                        </div>
-                        <div class="md:pl-12">
-                            <div class="relative overflow-hidden">
-                                <img src="http://static.photos/industry/640x360/52" alt="2012 Manufacturing" class="w-full h-48 md:h-56 object-cover grayscale">
-                                <div class="absolute top-0 left-0 w-4 h-4 border-t border-l border-accent/50"></div>
-                                <div class="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-accent/50"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 2024 -->
-                    <div class="timeline-milestone relative grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-16 opacity-30" style="transform: scale(0.98);">
-                        <div class="md:pr-12 md:order-2">
-                            <div class="font-display text-4xl md:text-5xl text-accent/80">2024</div>
-                            <h3 class="font-display text-lg md:text-xl text-white mt-2 mb-3">The Present Day</h3>
-                            <p class="font-body text-sm text-white/40 leading-relaxed">Seven specialized companies operating across Saudi Arabia and the GCC, with a diversified portfolio spanning refrigeration, real estate, healthcare, parking solutions, ready-mix concrete, and chemical additives. Samara Group continues to build the future of Saudi Arabia while honoring the family values and business excellence that began in 1992.</p>
-                        </div>
-                        <div class="md:pl-12 md:order-1 md:text-right">
-                            <div class="relative overflow-hidden">
-                                <img src="http://static.photos/aerial/640x360/56" alt="2024 Present" class="w-full h-48 md:h-56 object-cover grayscale">
-                                <div class="absolute top-0 left-0 w-4 h-4 border-t border-l border-accent/50"></div>
-                                <div class="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-accent/50"></div>
-                            </div>
-                        </div>
+                    <div class="card-content">
+                        <h3>Samara Refrigeration</h3>
+                        <p class="card-desc">Leading provider of commercial and industrial refrigeration solutions, serving supermarkets, cold storage, and food processing facilities across the Kingdom.</p>
+                        <ul class="card-services">
+                            <li>Cold Storage Warehouses</li>
+                            <li>Supermarket Systems</li>
+                            <li>Industrial Cooling</li>
+                        </ul>
+                        <span class="card-year">Est. 1992</span>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- ===================== CONTACT / CTA SECTION ===================== -->
-    <section id="contact" class="relative z-10 bg-dark section-transition">
-        <div class="max-w-[1400px] mx-auto px-6 md:px-10 lg:px-16 py-24 md:py-36">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
-                <div>
-                    <div class="flex items-center gap-4 mb-8 contact-label opacity-0">
-                        <div class="w-12 h-[1px] bg-accent"></div>
-                        <span class="font-body text-xs tracking-[0.3em] text-accent uppercase">Get in Touch</span>
+                <!-- Company 2 -->
+                <div class="company-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop" alt="Real Estate Development">
+                        <div class="card-overlay"></div>
                     </div>
-                    <h2 class="font-display text-3xl md:text-4xl lg:text-5xl text-white mb-6 contact-title opacity-0">
-                        Initiate a<br>Strategic Dialogue
-                    </h2>
-                    <p class="font-body text-base text-white/40 leading-relaxed mb-12 contact-desc opacity-0">
-                        Whether you represent a sovereign wealth fund, a government infrastructure authority, or an industrial conglomerate — we welcome formal inquiries regarding strategic partnerships, project consultation, and investment opportunities.
-                    </p>
-                    <div class="space-y-4 opacity-0 contact-info">
-                        <div class="flex items-center gap-4">
-                            <i data-lucide="map-pin" class="w-4 h-4 text-accent"></i>
-                            <span class="font-body text-sm text-white/60">Riyadh, Kingdom of Saudi Arabia</span>
-                        </div>
-                        <div class="flex items-center gap-4">
-                            <i data-lucide="phone" class="w-4 h-4 text-accent"></i>
-                            <span class="font-body text-sm text-white/60">+966 11 XXX XXXX</span>
-                        </div>
-                        <div class="flex items-center gap-4">
-                            <i data-lucide="mail" class="w-4 h-4 text-accent"></i>
-                            <span class="font-body text-sm text-white/60">info@samaragroup.com.sa</span>
-                        </div>
+                    <div class="card-content">
+                        <h3>Samara Real Estate & Contracting</h3>
+                        <p class="card-desc">Developing premium residential and commercial properties while delivering high-quality general contracting services for major infrastructure projects.</p>
+                        <ul class="card-services">
+                            <li>Property Development</li>
+                            <li>General Contracting</li>
+                            <li>Project Management</li>
+                        </ul>
+                        <span class="card-year">Est. 2001</span>
                     </div>
                 </div>
-                <div>
-                    <form class="space-y-6" id="contact-form">
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <div>
-                                <label class="font-body text-[10px] tracking-[0.2em] text-white/30 uppercase block mb-2">Full Name</label>
-                                <input type="text" class="w-full bg-white/5 border border-white/10 px-4 py-3 font-body text-sm text-white focus:border-accent focus:outline-none transition-colors" placeholder="Your full name">
-                            </div>
-                            <div>
-                                <label class="font-body text-[10px] tracking-[0.2em] text-white/30 uppercase block mb-2">Organization</label>
-                                <input type="text" class="w-full bg-white/5 border border-white/10 px-4 py-3 font-body text-sm text-white focus:border-accent focus:outline-none transition-colors" placeholder="Company name">
-                            </div>
-                        </div>
-                        <div>
-                            <label class="font-body text-[10px] tracking-[0.2em] text-white/30 uppercase block mb-2">Email Address</label>
-                            <input type="email" class="w-full bg-white/5 border border-white/10 px-4 py-3 font-body text-sm text-white focus:border-accent focus:outline-none transition-colors" placeholder="your@email.com">
-                        </div>
-                        <div>
-                            <label class="font-body text-[10px] tracking-[0.2em] text-white/30 uppercase block mb-2">Inquiry Type</label>
-                            <select class="w-full bg-dark border border-white/10 px-4 py-3 font-body text-sm text-white/60 focus:border-accent focus:outline-none transition-colors">
-                                <option value="">Select inquiry type</option>
-                                <option>Strategic Partnership</option>
-                                <option>Investment Inquiry</option>
-                                <option>Project Consultation</option>
-                                <option>Media & Communications</option>
-                                <option>Career Opportunities</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label class="font-body text-[10px] tracking-[0.2em] text-white/30 uppercase block mb-2">Message</label>
-                            <textarea rows="4" class="w-full bg-white/5 border border-white/10 px-4 py-3 font-body text-sm text-white focus:border-accent focus:outline-none transition-colors resize-none" placeholder="Describe your inquiry..."></textarea>
-                        </div>
-                        <button type="submit" class="group flex items-center gap-4 bg-accent text-dark font-body text-sm tracking-[0.15em] uppercase px-8 py-4 hover:bg-primary-light transition-colors duration-300">
-                            <span>Submit Inquiry</span>
-                            <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
-                        </button>
-                    </form>
+
+                <!-- Company 3 -->
+                <div class="company-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=2053&auto=format&fit=crop" alt="Healthcare Management">
+                        <div class="card-overlay"></div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Saryryah Healthcare</h3>
+                        <p class="card-desc">Operating and managing hospitals and medical centers, providing world-class healthcare services with a focus on patient care and medical excellence.</p>
+                        <ul class="card-services">
+                            <li>Hospital Management</li>
+                            <li>Medical Centers</li>
+                            <li>Healthcare Consulting</li>
+                        </ul>
+                        <span class="card-year">Est. 2001</span>
+                    </div>
+                </div>
+
+                <!-- Company 4 -->
+                <div class="company-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1590674899505-1c5c41951f89?q=80&w=2070&auto=format&fit=crop" alt="Parking Solutions">
+                        <div class="card-overlay"></div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Samara Parking Solutions (SPS)</h3>
+                        <p class="card-desc">Delivering advanced parking management systems and smart city solutions to optimize urban mobility and traffic flow in major cities.</p>
+                        <ul class="card-services">
+                            <li>Smart Parking Systems</li>
+                            <li>Traffic Management</li>
+                            <li>Urban Mobility Solutions</li>
+                        </ul>
+                        <span class="card-year">Recent Venture</span>
+                    </div>
+                </div>
+
+                <!-- Company 5 -->
+                <div class="company-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?q=80&w=2070&auto=format&fit=crop" alt="Ready Mix Concrete">
+                        <div class="card-overlay"></div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Saudi Builmix LLC</h3>
+                        <p class="card-desc">Producing high-quality ready-mix concrete for large-scale construction projects, ensuring durability and compliance with international standards.</p>
+                        <ul class="card-services">
+                            <li>Ready-Mix Concrete</li>
+                            <li>Specialized Mixes</li>
+                            <li>Logistics & Delivery</li>
+                        </ul>
+                        <span class="card-year">Est. 2012</span>
+                    </div>
+                </div>
+
+                <!-- Company 6 -->
+                <div class="company-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1628131336414-82eb609216ca?q=80&w=2070&auto=format&fit=crop" alt="Chemical Additives">
+                        <div class="card-overlay"></div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Samara Chemical Additives</h3>
+                        <p class="card-desc">Manufacturing and supplying specialized chemical additives for the construction and industrial sectors, enhancing material performance.</p>
+                        <ul class="card-services">
+                            <li>Construction Chemicals</li>
+                            <li>Industrial Additives</li>
+                            <li>Custom Formulations</li>
+                        </ul>
+                        <span class="card-year">Est. 2012</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ===================== FOOTER ===================== -->
-    <footer class="relative z-10 border-t border-white/5 bg-dark">
-        <div class="max-w-[1400px] mx-auto px-6 md:px-10 lg:px-16 py-16">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
-                <div class="md:col-span-2">
-                    <div class="flex items-center gap-3 mb-6">
-                        <div class="w-8 h-8 border border-accent flex items-center justify-center">
-                            <div class="w-3 h-3 bg-accent"></div>
-                        </div>
-                        <span class="font-display text-lg tracking-[0.2em] text-white">SAMARA GROUP</span>
+    <!-- Investments / Ecosystem Section -->
+    <section id="investments" class="section ecosystem-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Investment Ecosystem</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">Strategic Sectors Driving Value</p>
+            </div>
+            
+            <div class="ecosystem-grid">
+                <div class="eco-card">
+                    <div class="eco-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                            <polyline points="9 22 9 12 15 12 15 22"/>
+                        </svg>
                     </div>
-                    <p class="font-body text-sm text-white/30 leading-relaxed max-w-md mb-6">
-                        Samara Group is a family-based business with a portfolio of companies in the Kingdom of Saudi Arabia & GCC. Together, we form a diversified conglomerate serving multiple sectors including refrigeration, real estate, healthcare, parking solutions, construction, and chemical additives.
-                    </p>
-                    <p class="font-body text-[10px] tracking-[0.2em] text-white/20 uppercase">© 2024 Samara Group. All Rights Reserved.</p>
+                    <h3>Industrial</h3>
+                    <p>Manufacturing and processing facilities supporting national infrastructure.</p>
                 </div>
-                <div>
-                    <h4 class="font-body text-xs tracking-[0.2em] text-accent uppercase mb-6">Companies</h4>
-                    <ul class="space-y-3">
-                        <li><a href="#" class="font-body text-sm text-white/40 hover:text-white transition-colors">Samara Refrigeration</a></li>
-                        <li><a href="#" class="font-body text-sm text-white/40 hover:text-white transition-colors">Samara Real Estate & Contracting</a></li>
-                        <li><a href="#" class="font-body text-sm text-white/40 hover:text-white transition-colors">Saryryah Healthcare</a></li>
-                        <li><a href="#" class="font-body text-sm text-white/40 hover:text-white transition-colors">Samara Parking Solutions</a></li>
-                        <li><a href="#" class="font-body text-sm text-white/40 hover:text-white transition-colors">Saudi Builmix LLC</a></li>
-                        <li><a href="#" class="font-body text-sm text-white/40 hover:text-white transition-colors">Samara Chemical Additives</a></li>
-                    </ul>
+                <div class="eco-card">
+                    <div class="eco-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                            <line x1="3" y1="9" x2="21" y2="9"/>
+                            <line x1="9" y1="21" x2="9" y2="9"/>
+                        </svg>
+                    </div>
+                    <h3>Real Estate</h3>
+                    <p>Development of residential, commercial, and mixed-use communities.</p>
                 </div>
-                <div>
-                    <h4 class="font-body text-xs tracking-[0.2em] text-accent uppercase mb-6">Navigation</h4>
-                    <ul class="space-y-3">
-                        <li><a href="#hero" class="font-body text-sm text-white/40 hover:text-white transition-colors">Home</a></li>
-                        <li><a href="#overview" class="font-body text-sm text-white/40 hover:text-white transition-colors">Overview</a></li>
-                        <li><a href="#ecosystem" class="font-body text-sm text-white/40 hover:text-white transition-colors">Ecosystem</a></li>
-                        <li><a href="#history" class="font-body text-sm text-white/40 hover:text-white transition-colors">Legacy</a></li>
-                        <li><a href="#contact" class="font-body text-sm text-white/40 hover:text-white transition-colors">Contact</a></li>
-                    </ul>
+                <div class="eco-card">
+                    <div class="eco-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                        </svg>
+                    </div>
+                    <h3>Healthcare</h3>
+                    <p>Investing in medical infrastructure and patient-centric services.</p>
+                </div>
+                <div class="eco-card">
+                    <div class="eco-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <line x1="2" y1="12" x2="22" y2="12"/>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                        </svg>
+                    </div>
+                    <h3>Technology</h3>
+                    <p>Smart solutions for urban challenges and operational efficiency.</p>
                 </div>
             </div>
         </div>
-        <!-- Bottom line -->
-        <div class="border-t border-white/5">
-            <div class="max-w-[1400px] mx-auto px-6 md:px-10 lg:px-16 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
-                <p class="font-body text-[10px] tracking-[0.15em] text-white/20 uppercase">Confidential · For Authorized Recipients Only</p>
-                <p class="font-body text-[10px] tracking-[0.15em] text-white/20 uppercase">Riyadh · Jeddah · Dammam · GCC</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h2>Get In Touch</h2>
+                    <p>Headquarters: Riyadh, Saudi Arabia</p>
+                    <div class="contact-details">
+                        <div class="detail-item">
+                            <strong>Email:</strong>
+                            <a href="mailto:info@samaragroup.com.sa">info@samaragroup.com.sa</a>
+                        </div>
+                        <div class="detail-item">
+                            <strong>Phone:</strong>
+                            <span>+966 11 XXX XXXX</span>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Twitter">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <select>
+                            <option value="" disabled selected>Inquiry Type</option>
+                            <option value="business">Business Partnership</option>
+                            <option value="careers">Careers</option>
+                            <option value="general">General Inquiry</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea rows="5" placeholder="Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>SAMARA GROUP</h3>
+                    <p>A family-based business group in Saudi Arabia & GCC, operating across refrigeration, real estate, healthcare, parking, construction, and chemicals.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="link-column">
+                        <h4>Companies</h4>
+                        <a href="#">Samara Refrigeration</a>
+                        <a href="#">Real Estate & Contracting</a>
+                        <a href="#">Saryryah Healthcare</a>
+                        <a href="#">Parking Solutions</a>
+                        <a href="#">Saudi Builmix LLC</a>
+                        <a href="#">Chemical Additives</a>
+                    </div>
+                    <div class="link-column">
+                        <h4>Quick Links</h4>
+                        <a href="#about">About Us</a>
+                        <a href="#investments">Investments</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Samara Group. All rights reserved.</p>
+                <p>Riyadh · Jeddah · Dammam · GCC</p>
             </div>
         </div>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-    <script>
-        // Load GSAP plugins
-        gsap.registerPlugin(ScrollTrigger);
-    </script>
     <script src="script.js"></script>
-<script src="https://deepsite.hf.co/deepsite-badge.js"></script>
 </body>
 </html>
