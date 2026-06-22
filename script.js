@@ -1,12 +1,6 @@
-// ============================================================
-// MERIDIAN HOLDINGS — Main Script
-// ============================================================
-
 document.addEventListener('DOMContentLoaded', () => {
-
     // ===== INITIALIZE LUCIDE ICONS =====
     lucide.createIcons();
-
     // ===== PRELOADER =====
     const preloader = document.getElementById('preloader');
     window.addEventListener('load', () => {
@@ -21,7 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-
     // Fallback: hide preloader after 3 seconds if load event already fired
     setTimeout(() => {
         if (!preloader.classList.contains('hidden')) {
@@ -37,33 +30,28 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
     }, 3000);
-
     // ===== MOBILE MENU =====
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const mobileMenuClose = document.getElementById('mobile-menu-close');
     const mobileMenu = document.getElementById('mobile-menu');
-
     if (mobileMenuBtn) {
         mobileMenuBtn.addEventListener('click', () => {
             mobileMenu.classList.remove('translate-x-full');
             mobileMenu.classList.add('translate-x-0');
         });
     }
-
     if (mobileMenuClose) {
         mobileMenuClose.addEventListener('click', () => {
             mobileMenu.classList.remove('translate-x-0');
             mobileMenu.classList.add('translate-x-full');
         });
     }
-
     document.querySelectorAll('.mobile-nav').forEach(link => {
         link.addEventListener('click', () => {
             mobileMenu.classList.remove('translate-x-0');
             mobileMenu.classList.add('translate-x-full');
         });
     });
-
     // ===== SMOOTH SCROLL FOR NAV LINKS =====
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
@@ -78,7 +66,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-
     // ===== CARD MOUSE TRACKING =====
     document.querySelectorAll('[data-card]').forEach(card => {
         card.addEventListener('mousemove', (e) => {
@@ -92,7 +79,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 glow.style.opacity = '1';
             }
         });
-
         card.addEventListener('mouseleave', () => {
             const glow = card.querySelector('.card-bg-glow');
             if (glow) {
@@ -100,7 +86,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-
     // ===== CONTACT FORM =====
     const contactForm = document.getElementById('contact-form');
     if (contactForm) {
@@ -119,58 +104,42 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
-
 // ============================================================
 // MAIN ANIMATION INITIALIZATION
 // ============================================================
 let animationsInitialized = false;
-
 function initAnimations() {
     if (animationsInitialized) return;
     animationsInitialized = true;
-
     // ===== SHOW GRID OVERLAY =====
     setTimeout(() => {
         document.getElementById('grid-overlay').classList.add('visible');
     }, 500);
-
     // ===== CREATE CROSSHAIRS =====
     createCrosshairs();
-
     // ===== HERO ANIMATIONS =====
     animateHero();
-
     // ===== BACKGROUND METAMORPHOSIS =====
     animateBgMorph();
-
     // ===== OVERVIEW SECTION ANIMATIONS =====
     animateOverview();
-
     // ===== ECOSYSTEM SECTION ANIMATIONS =====
     animateEcosystem();
-
     // ===== COMPANY CARD ANIMATIONS =====
     animateCards();
-
     // ===== HISTORY TIMELINE ANIMATIONS =====
     animateTimeline();
-
     // ===== CONTACT SECTION ANIMATIONS =====
     animateContact();
-
     // ===== COUNTER ANIMATIONS =====
     animateCounters();
-
     // ===== GRID DRAW LINES =====
     createGridDrawLines();
-
     // ===== NAVBAR SCROLL STATE =====
     animateNavbar();
-
     // ===== CROSSHAIR ACTIVATION ON SCROLL =====
     activateCrosshairsOnScroll();
 }
-
 // ============================================================
 // CROSSHAIR CREATION
 // ============================================================
@@ -189,7 +158,6 @@ function createCrosshairs() {
         { top: '50%', left: '50%' },
         { top: '75%', left: '50%' },
     ];
-
     positions.forEach(pos => {
         const marker = document.createElement('div');
         marker.className = 'crosshair-marker';
@@ -198,10 +166,8 @@ function createCrosshairs() {
         container.appendChild(marker);
     });
 }
-
 function activateCrosshairsOnScroll() {
     const markers = document.querySelectorAll('.crosshair-marker');
-    
     markers.forEach((marker, i) => {
         gsap.to(marker, {
             scrollTrigger: {
@@ -226,7 +192,6 @@ function activateCrosshairsOnScroll() {
         });
     });
 }
-
 // ============================================================
 // HERO ANIMATIONS
 // ============================================================
@@ -237,10 +202,8 @@ function animateHero() {
     const heroScroll = document.querySelector('.hero-scroll');
     const heroBg = document.querySelector('.hero-bg img');
     const heroFrame = document.querySelector('.hero-frame');
-
     // Text reveal: lines slide up from below the baseline
     const heroTL = gsap.timeline({ delay: 0.3 });
-
     heroLines.forEach((line, i) => {
         heroTL.to(line, {
             y: 0,
@@ -248,7 +211,6 @@ function animateHero() {
             ease: 'power3.out',
         }, i * 0.15);
     });
-
     if (heroSub) {
         heroTL.to(heroSub, {
             y: 0,
@@ -257,7 +219,6 @@ function animateHero() {
             ease: 'power3.out',
         }, heroLines.length * 0.15 + 0.2);
     }
-
     if (heroMetric) {
         heroTL.to(heroMetric, {
             opacity: 1,
@@ -265,7 +226,6 @@ function animateHero() {
             ease: 'power3.out',
         }, heroLines.length * 0.15 + 0.4);
     }
-
     if (heroScroll) {
         heroTL.to(heroScroll, {
             opacity: 1,
@@ -273,7 +233,6 @@ function animateHero() {
             ease: 'power3.out',
         }, heroLines.length * 0.15 + 0.6);
     }
-
     // Hero scroll: zoom-and-mask out
     if (heroBg && heroFrame) {
         gsap.timeline({
@@ -298,13 +257,11 @@ function animateHero() {
         }, 0.3);
     }
 }
-
 // ============================================================
 // BACKGROUND METAMORPHOSIS
 // ============================================================
 function animateBgMorph() {
     const bgMorph = document.getElementById('bg-morph');
-
     // Transition from dark to light as user scrolls into ecosystem section
     gsap.to(bgMorph, {
         scrollTrigger: {
@@ -316,7 +273,6 @@ function animateBgMorph() {
         backgroundColor: '#f5f5f0',
         duration: 1,
     });
-
     // Transition back to dark when scrolling into history section
     gsap.to(bgMorph, {
         scrollTrigger: {
@@ -328,10 +284,8 @@ function animateBgMorph() {
         backgroundColor: '#0a0f1a',
         duration: 1,
     });
-
     // Contact section stays dark
 }
-
 // ============================================================
 // OVERVIEW SECTION ANIMATIONS
 // ============================================================
@@ -346,7 +300,6 @@ function animateOverview() {
         duration: 0.8,
         ease: 'power2.out',
     });
-
     // Section title
     gsap.from('.section-title', {
         scrollTrigger: {
@@ -358,10 +311,8 @@ function animateOverview() {
         duration: 1,
         ease: 'power3.out',
     });
-
     // Override the CSS-set opacity
     gsap.set('.section-title', { opacity: 0 });
-
     gsap.to('.section-title', {
         scrollTrigger: {
             trigger: '.section-title',
@@ -372,7 +323,6 @@ function animateOverview() {
         duration: 1,
         ease: 'power3.out',
     });
-
     // Reveal text paragraphs
     gsap.utils.toArray('.reveal-text').forEach(text => {
         gsap.to(text, {
@@ -386,7 +336,6 @@ function animateOverview() {
             ease: 'power3.out',
         });
     });
-
     // Metrics
     gsap.utils.toArray('.metric-item').forEach((item, i) => {
         gsap.to(item, {
@@ -402,7 +351,6 @@ function animateOverview() {
         });
     });
 }
-
 // ============================================================
 // ECOSYSTEM SECTION ANIMATIONS
 // ============================================================
@@ -411,7 +359,6 @@ function animateEcosystem() {
     const title = document.querySelector('[data-ecosystem-title]');
     const desc = document.querySelector('[data-ecosystem-desc]');
     const stats = document.querySelector('[data-ecosystem-stats]');
-
     if (labels) {
         gsap.to(labels, {
             scrollTrigger: {
@@ -423,7 +370,6 @@ function animateEcosystem() {
             ease: 'power2.out',
         });
     }
-
     if (title) {
         gsap.from(title, {
             scrollTrigger: {
@@ -447,7 +393,6 @@ function animateEcosystem() {
             ease: 'power3.out',
         });
     }
-
     if (desc) {
         gsap.to(desc, {
             scrollTrigger: {
@@ -461,7 +406,6 @@ function animateEcosystem() {
             ease: 'power3.out',
         });
     }
-
     if (stats) {
         gsap.to(stats, {
             scrollTrigger: {
@@ -476,13 +420,11 @@ function animateEcosystem() {
         });
     }
 }
-
 // ============================================================
 // COMPANY CARD ANIMATIONS
 // ============================================================
 function animateCards() {
     const cards = document.querySelectorAll('.company-card');
-
     cards.forEach((card, i) => {
         gsap.to(card, {
             scrollTrigger: {
@@ -495,7 +437,6 @@ function animateCards() {
             delay: i * 0.1,
             ease: 'power3.out',
         });
-
         // Add bounding corners
         ['tl', 'tr', 'bl', 'br'].forEach(pos => {
             const corner = document.createElement('div');
@@ -504,7 +445,6 @@ function animateCards() {
         });
     });
 }
-
 // ============================================================
 // HISTORY TIMELINE ANIMATIONS
 // ============================================================
@@ -520,7 +460,6 @@ function animateTimeline() {
         duration: 0.8,
         ease: 'power2.out',
     });
-
     gsap.set('.timeline-title', { opacity: 0 });
     gsap.to('.timeline-title', {
         scrollTrigger: {
@@ -532,13 +471,11 @@ function animateTimeline() {
         duration: 1,
         ease: 'power3.out',
     });
-
     // Timeline progress and node follow scroll
     const milestones = document.querySelectorAll('.timeline-milestone');
     const timelineContainer = document.getElementById('timeline-container');
     const timelineNode = document.getElementById('timeline-node');
     const timelineProgress = document.getElementById('timeline-progress');
-
     if (timelineContainer && timelineNode) {
         // Animate the progress line
         gsap.to(timelineProgress, {
@@ -551,7 +488,6 @@ function animateTimeline() {
             height: '100%',
             ease: 'none',
         });
-
         // Node follows scroll progress
         ScrollTrigger.create({
             trigger: timelineContainer,
@@ -564,7 +500,6 @@ function animateTimeline() {
                 const containerTop = timelineContainer.offsetTop;
                 const containerHeight = timelineContainer.offsetHeight;
                 const nodeTop = containerTop + (progress * containerHeight);
-                
                 // Position the node
                 gsap.set(timelineNode, {
                     top: progress * 100 + '%',
@@ -572,7 +507,6 @@ function animateTimeline() {
             }
         });
     }
-
     // Animate each milestone
     milestones.forEach((milestone, i) => {
         gsap.to(milestone, {
@@ -589,7 +523,6 @@ function animateTimeline() {
         });
     });
 }
-
 // ============================================================
 // CONTACT SECTION ANIMATIONS
 // ============================================================
@@ -598,7 +531,6 @@ function animateContact() {
     const title = document.querySelector('.contact-title');
     const desc = document.querySelector('.contact-desc');
     const info = document.querySelector('.contact-info');
-
     if (label) {
         gsap.to(label, {
             scrollTrigger: {
@@ -610,7 +542,6 @@ function animateContact() {
             ease: 'power2.out',
         });
     }
-
     if (title) {
         gsap.set(title, { opacity: 0 });
         gsap.to(title, {
@@ -624,7 +555,6 @@ function animateContact() {
             ease: 'power3.out',
         });
     }
-
     if (desc) {
         gsap.to(desc, {
             scrollTrigger: {
@@ -638,7 +568,6 @@ function animateContact() {
             ease: 'power3.out',
         });
     }
-
     if (info) {
         gsap.to(info, {
             scrollTrigger: {
@@ -653,16 +582,13 @@ function animateContact() {
         });
     }
 }
-
 // ============================================================
 // COUNTER ANIMATIONS
 // ============================================================
 function animateCounters() {
     const counters = document.querySelectorAll('.counter');
-
     counters.forEach(counter => {
         const target = parseInt(counter.getAttribute('data-target'));
-        
         ScrollTrigger.create({
             trigger: counter,
             start: 'top 85%',
@@ -686,14 +612,12 @@ function animateCounters() {
         });
     });
 }
-
 // ============================================================
 // GRID DRAW LINES
 // ============================================================
 function createGridDrawLines() {
     // Create horizontal draw lines at section boundaries
     const sections = document.querySelectorAll('section');
-    
     sections.forEach(section => {
         const line = document.createElement('div');
         line.className = 'grid-draw-line horizontal';
@@ -703,7 +627,6 @@ function createGridDrawLines() {
         line.style.right = '0';
         section.style.position = 'relative';
         section.appendChild(line);
-
         gsap.to(line, {
             scrollTrigger: {
                 trigger: section,
@@ -716,30 +639,24 @@ function createGridDrawLines() {
         });
     });
 }
-
 // ============================================================
 // NAVBAR SCROLL STATE
 // ============================================================
 function animateNavbar() {
     const nav = document.getElementById('main-nav');
     let lastScrollY = 0;
-
     window.addEventListener('scroll', () => {
         const currentScrollY = window.scrollY;
-
         if (currentScrollY > 100) {
             nav.style.transform = currentScrollY > lastScrollY ? 'translateY(-100%)' : 'translateY(0)';
         } else {
             nav.style.transform = 'translateY(0)';
         }
-
         lastScrollY = currentScrollY;
     }, { passive: true });
-
     // Update active nav link
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-link');
-
     sections.forEach(section => {
         ScrollTrigger.create({
             trigger: section,
@@ -749,7 +666,6 @@ function animateNavbar() {
             onEnterBack: () => updateActiveNav(section.id),
         });
     });
-
     function updateActiveNav(id) {
         navLinks.forEach(link => {
             link.classList.remove('active');
@@ -759,7 +675,6 @@ function animateNavbar() {
         });
     }
 }
-
 // ============================================================
 // REFRESH SCROLL TRIGGER ON RESIZE
 // ============================================================
@@ -770,17 +685,14 @@ window.addEventListener('resize', () => {
         ScrollTrigger.refresh();
     }, 250);
 });
-
 // ============================================================
 // SMOOTH SCROLL POLYFILL (cubic-bezier(0.16, 1, 0.3, 1))
 // ============================================================
 (function() {
     const ease = t => 1 + 2.7 * Math.pow(t - 1, 3) + 1.7 * Math.pow(t - 1, 2);
-    
     let isScrolling = false;
     let targetY = 0;
     let currentY = window.scrollY;
-
     function smoothScrollLoop() {
         if (Math.abs(targetY - currentY) > 0.5) {
             currentY += (targetY - currentY) * 0.08;
@@ -790,7 +702,6 @@ window.addEventListener('resize', () => {
             isScrolling = false;
         }
     }
-
     // We rely on GSAP ScrollTrigger for scroll-based animations
     // The smoothness is handled by the browser's native scroll
     // with GSAP's scrub property providing the momentum feel
