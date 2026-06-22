@@ -1,0 +1,317 @@
+/* ===== BASE STYLES ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: auto; /* Lenis or GSAP will handle smooth scrolling */
+}
+
+body {
+    background: #0a0f1a;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+::selection {
+    background: #b8860b;
+    color: #0a0f1a;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0a0f1a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1d4f91;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #b8860b;
+}
+
+/* ===== PRELOADER ===== */
+#preloader {
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.8s;
+}
+
+#preloader.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader-bar {
+    animation: loaderProgress 1.5s ease-in-out forwards;
+}
+
+@keyframes loaderProgress {
+    0% { width: 0; }
+    50% { width: 70%; }
+    100% { width: 100%; }
+}
+
+/* ===== HERO SECTION ===== */
+.hero-bg img {
+    transition: transform 0.1s linear;
+}
+
+.hero-frame {
+    transition: border-color 0.5s ease;
+}
+
+/* ===== GRID OVERLAY ===== */
+#grid-overlay {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+#grid-overlay.visible {
+    opacity: 1;
+}
+
+/* ===== CROSSHAIRS ===== */
+.crosshair-marker {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+
+.crosshair-marker::before,
+.crosshair-marker::after {
+    content: '';
+    position: absolute;
+    background: #a5d6e1;
+    opacity: 0.15;
+}
+
+.crosshair-marker::before {
+    width: 1px;
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.crosshair-marker::after {
+    height: 1px;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.crosshair-marker.active {
+    opacity: 1;
+}
+
+.crosshair-marker.rotated::before,
+.crosshair-marker.rotated::after {
+    transform: translateX(-50%) rotate(45deg);
+}
+
+.crosshair-marker.rotated::after {
+    transform: translateY(-50%) rotate(45deg);
+}
+
+/* ===== SECTION TRANSITIONS ===== */
+.section-transition {
+    position: relative;
+}
+
+/* ===== TIMELINE ===== */
+#timeline-node {
+    transition: top 0.15s ease-out, box-shadow 0.3s ease;
+}
+
+.timeline-milestone {
+    will-change: transform, opacity;
+}
+
+/* ===== COMPANY CARDS ===== */
+.company-card {
+    opacity: 0;
+    transform: translateY(40px);
+    will-change: transform, opacity;
+}
+
+.company-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card-bg-glow {
+    background: radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(29, 79, 145, 0.06), transparent 40%);
+}
+
+/* ===== BOUNDING BOX CORNERS ===== */
+.company-card .bounding-corner {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.company-card .bounding-corner--tl {
+    top: 0;
+    left: 0;
+    border-top: 1px solid #b8860b;
+    border-left: 1px solid #b8860b;
+}
+
+.company-card .bounding-corner--tr {
+    top: 0;
+    right: 0;
+    border-top: 1px solid #b8860b;
+    border-right: 1px solid #b8860b;
+}
+
+.company-card .bounding-corner--bl {
+    bottom: 0;
+    left: 0;
+    border-bottom: 1px solid #b8860b;
+    border-left: 1px solid #b8860b;
+}
+
+.company-card .bounding-corner--br {
+    bottom: 0;
+    right: 0;
+    border-bottom: 1px solid #b8860b;
+    border-right: 1px solid #b8860b;
+}
+
+.company-card.visible .bounding-corner {
+    opacity: 1;
+}
+
+/* ===== GRID DRAW LINES ===== */
+.grid-draw-line {
+    position: absolute;
+    background: #a5d6e1;
+    opacity: 0.08;
+}
+
+.grid-draw-line.horizontal {
+    height: 1px;
+    width: 0;
+    left: 0;
+    right: 0;
+}
+
+.grid-draw-line.vertical {
+    width: 1px;
+    height: 0;
+    top: 0;
+}
+
+.grid-draw-line.drawn.horizontal {
+    width: 100%;
+}
+
+.grid-draw-line.drawn.vertical {
+    height: 100%;
+}
+
+/* ===== METRIC COUNTER ===== */
+.counter {
+    display: inline;
+}
+
+/* ===== NAV ===== */
+.nav-link {
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: #b8860b;
+    transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+/* ===== SCROLL LINE ===== */
+.scroll-line {
+    animation: scrollDown 2s ease-in-out infinite;
+}
+
+@keyframes scrollDown {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(200%); }
+}
+
+/* ===== FORM ===== */
+input:focus, 
+select:focus, 
+textarea:focus {
+    outline: none;
+}
+
+select option {
+    background: #0a0f1a;
+    color: #fff;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .hero-frame {
+        inset: 1rem !important;
+    }
+}
+
+/* ===== SECTION SPECIFIC BACKGROUND ===== */
+#ecosystem {
+    background: #f5f5f0;
+}
+
+#ecosystem h2,
+#ecosystem p,
+#ecosystem span,
+#ecosystem h3 {
+    color: inherit;
+}
+
+/* ===== TIMELINE MILESTONE IMAGE ===== */
+.timeline-milestone .relative {
+    overflow: hidden;
+}
+
+/* ===== ANIMATION CLASSES ===== */
+.reveal-text {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.reveal-text.revealed {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ===== INERTIAL SCROLL FEEL ===== */
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Smooth momentum feel */
+@supports (scroll-behavior: smooth) {
+    html {
+        scroll-behavior: smooth;
+    }
+}

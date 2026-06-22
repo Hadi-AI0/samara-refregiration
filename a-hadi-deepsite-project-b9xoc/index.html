@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meridian Holdings | Engineering Excellence Since 1948</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#1d4f91',
+                        'primary-light': '#a5d6e1',
+                        'accent': '#b8860b',
+                        'steel': '#4682b4',
+                        'dark': '#0a0f1a',
+                        'dark-alt': '#0f1629',
+                        'light': '#f5f5f0',
+                        'light-alt': '#e8e8e3',
+                        'mid': '#c8c8c0',
+                    },
+                    fontFamily: {
+                        'display': ['Cinzel', 'serif'],
+                        'body': ['Space Grotesk', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-dark font-body text-white overflow-x-hidden">
+
+    <!-- Preloader -->
+    <div id="preloader" class="fixed inset-0 z-[9999] bg-dark flex items-center justify-center">
+        <div class="text-center">
+            <div class="font-display text-3xl md:text-5xl tracking-[0.3em] text-primary-light mb-4">MERIDIAN</div>
+            <div class="w-24 h-[1px] bg-accent mx-auto loader-bar"></div>
+        </div>
+    </div>
+
+    <!-- Background Metamorphosis Layer -->
+    <div id="bg-morph" class="fixed inset-0 z-0 pointer-events-none" style="background: #0a0f1a;"></div>
+
+    <!-- Structural Grid Overlay -->
+    <div id="grid-overlay" class="fixed inset-0 z-[1] pointer-events-none overflow-hidden">
+        <svg width="100%" height="100%" class="absolute inset-0">
+            <defs>
+                <pattern id="grid-pattern" width="80" height="80" patternUnits="userSpaceOnUse">
+                    <line x1="80" y1="0" x2="80" y2="80" stroke="currentColor" stroke-width="0.5" opacity="0.06"/>
+                    <line x1="0" y1="80" x2="80" y2="80" stroke="currentColor" stroke-width="0.5" opacity="0.06"/>
+                </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#grid-pattern)" class="text-primary-light grid-rect"/>
+        </svg>
+    </div>
+
+    <!-- Crosshair Markers -->
+    <div id="crosshairs-container" class="fixed inset-0 z-[2] pointer-events-none"></div>
+
+    <!-- Navigation -->
+    <nav id="main-nav" class="fixed top-0 left-0 w-full z-[100] transition-all duration-500">
+        <div class="backdrop-blur-md bg-dark/80 border-b border-white/5">
+            <div class="max-w-[1400px] mx-auto px-6 md:px-10 lg:px-16 flex items-center justify-between h-20">
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 border border-accent flex items-center justify-center">
+                        <div class="w-3 h-3 bg-accent"></div>
+                    </div>
+                    <span class="font-display text-lg tracking-[0.2em] text-white">MERIDIAN</span>
+                </div>
+                <div class="hidden md:flex items-center gap-10 text-sm tracking-[0.15em] uppercase">
+                    <a href="#hero" class="nav-link text-white/60 hover:text-accent transition-colors duration-300">Home</a>
+                    <a href="#overview" class="nav-link text-white/60 hover:text-accent transition-colors duration-300">Overview</a>
+                    <a href="#ecosystem" class="nav-link text-white/60 hover:text-accent transition-colors duration-300">Ecosystem</a>
+                    <a href="#history" class="nav-link text-white/60 hover:text-accent transition-colors duration-300">Legacy</a>
+                    <a href="#contact" class="nav-link text-white/60 hover:text-accent transition-colors duration-300">Contact</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-white">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed inset-0 z-[99] bg-dark/95 backdrop-blur-xl transform translate-x-full transition-transform duration-500">
+        <div class="flex flex-col items-center justify-center h-full gap-8">
+            <a href="#hero" class="mobile-nav font-display text-2xl tracking-[0.2em] text-white/80 hover:text-accent transition-colors">Home</a>
+            <a href="#overview" class="mobile-nav font-display text-2xl tracking-[0.2em] text-white/80 hover:text-accent transition-colors">Overview</a>
+            <a href="#ecosystem" class="mobile-nav font-display text-2xl tracking-[0.2em] text-white/80 hover:text-accent transition-colors">Ecosystem</a>
+            <a href="#history" class="mobile-nav font-display text-2xl tracking-[0.2em] text-white/80 hover:text-accent transition-colors">Legacy</a>
+            <a href="#contact" class="mobile-nav font-display text-2xl tracking-[0.2em] text-white/80 hover:text-accent transition-colors">Contact</a>
+            <button id="mobile-menu-close" class="mt-10 text-white/50">
+                <i data-lucide="x" class="w-8 h-8"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- ===================== HERO SECTION ===================== -->
+    <section id="hero" class="relative min-h-screen overflow-hidden">
+        <!-- Hero Background -->
+        <div class="hero-bg absolute inset-0">
+            <img src="http://static.photos/industry/1200x630/42" alt="Engineering Excellence" class="w-full h-full object-cover" style="transform: scale(1.1);">
+            <div class="absolute inset-0 bg-gradient-to-b from-dark/60 via-dark/40 to-dark"></div>
+        </div>
+        <!-- Geometric Frame -->
+        <div class="hero-frame absolute inset-6 md:inset-12 border border-primary-light/0 pointer-events-none z-[5]"></div>
+
+        <!-- Hero Content -->
+        <div class="relative z-10 flex flex-col justify-end min-h-screen pb-20 md:pb-28 px-6 md:px-10 lg:px-16 max-w-[1400px] mx-auto">
+            <!-- Inline metrics -->
+            <div class="flex gap-8 md:gap-16 mb-8 hero-metric opacity-0">
+                <div>
+                    <div class="font-body text-accent text-xs tracking-[0.3em] uppercase mb-1">Founded</div>
+                    <div class="font-display text-2xl md:text-4xl text-white/90">1948</div>
+                </div>
+                <div>
+                    <div class="font-body text-accent text-xs tracking-[0.3em] uppercase mb-1">Companies</div>
+                    <div class="font-display text-2xl md:text-4xl text-white/90">06</div>
+                </div>
+                <div>
+                    <div class="font-body text-accent text-xs tracking-[0.3em] uppercase mb-1">Countries</div>
+                    <div class="font-display text-2xl md:text-4xl text-white/90">34</div>
+                </div>
+            </div>
+            <!-- Headline -->
+            <div class="overflow-hidden mb-2">
+                <h1 class="hero-line font-display text-[3rem] md:text-[5rem] lg:text-[6.5rem] leading-[0.95] tracking-[0.05em] text-white transform translate-y-full">ENGINEERING</h1>
+            </div>
+            <div class="overflow-hidden mb-2">
+                <h1 class="hero-line font-display text-[3rem] md:text-[5rem] lg:text-[6.5rem] leading-[0.95] tracking-[0.05em] text-white transform translate-y-full">THE STRUCTURE</h1>
+            </div>
+            <div class="overflow-hidden mb-8">
+                <h1 class="hero-line font-display text-[3rem] md:text-[5rem] lg:text-[6.5rem] leading-[0.95] tracking-[0.05em] text-accent transform translate-y-full">OF PROGRESS</h1>
+            </div>
+            <!-- Subtitle -->
+            <div class="overflow-hidden">
+                <p class="hero-sub font-body text-base md:text-lg text-white/50 max-w-xl leading-relaxed transform translate-y-full">
+                    Seven decades of mastery across infrastructure, energy, and industrial engineering — one integrated holding, six specialized forces.
+                </p>
+            </div>
+            <!-- Scroll Indicator -->
+            <div class="hero-scroll absolute bottom-8 right-6 md:right-10 lg:right-16 flex flex-col items-center gap-2 opacity-0">
+                <span class="font-body text-[10px] tracking-[0.3em] text-white/30 uppercase rotate-90 origin-center mb-8">Scroll</span>
+                <div class="w-[1px] h-16 bg-white/10 relative overflow-hidden">
+                    <div class="scroll-line w-full h-8 bg-accent absolute top-0"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== OVERVIEW SECTION ===================== -->
+    <section id="overview" class="relative z-10 bg-dark section-transition">
+        <div class="max-w-[1400px] mx-auto px-6 md:px-10 lg:px-16 py-24 md:py-36">
+            <!-- Section Label -->
+            <div class="section-grid-line opacity-0">
+                <div class="flex items-center gap-4 mb-16">
+                    <div class="w-12 h-[1px] bg-accent"></div>
+                    <span class="font-body text-xs tracking-[0.3em] text-accent uppercase">Corporate Overview</span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
+                <!-- Left: Statement -->
+                <div class="lg:col-span-7">
+                    <h2 class="section-title font-display text-3xl md:text-5xl lg:text-[3.5rem] leading-tight text-white mb-8 opacity-0">
+                        We Are the Architectural Backbone Behind National Infrastructure
+                    </h2>
+                    <div class="overflow-hidden">
+                        <p class="reveal-text font-body text-base md:text-lg text-white/40 leading-relaxed max-w-2xl">
+                            Meridian Holdings operates as the strategic parent and capital allocator for a constellation of specialized engineering firms. Since 1948, we have directed capital, talent, and technical expertise toward the most consequential infrastructure and industrial challenges of our time.
+                        </p>
+                    </div>
+                    <div class="overflow-hidden mt-6">
+                        <p class="reveal-text font-body text-base md:text-lg text-white/40 leading-relaxed max-w-2xl">
+                            Our holding structure provides each subsidiary with autonomous operational command while leveraging centralized financial strength, shared R&D infrastructure, and cross-entity project coordination that no independent firm could replicate.
+                        </p>
+                    </div>
+                </div>
+                <!-- Right: Key Metrics -->
+                <div class="lg:col-span-5">
+                    <div class="border-l border-white/10 pl-8 space-y-8">
+                        <div class="metric-item opacity-0">
+                            <div class="font-display text-4xl md:text-5xl text-accent counter" data-target="76">0</div>
+                            <div class="font-body text-xs tracking-[0.2em] text-white/30 uppercase mt-1">Years of Continuous Operation</div>
+                        </div>
+                        <div class="metric-item opacity-0">
+                            <div class="font-display text-4xl md:text-5xl text-accent counter" data-target="12400">0</div>
+                            <div class="font-body text-xs tracking-[0.2em] text-white/30 uppercase mt-1">Projects Delivered Globally</div>
+                        </div>
+                        <div class="metric-item opacity-0">
+                            <div class="font-display text-4xl md:text-5xl text-accent">$<span class="counter" data-target="8">0</span>.7B</div>
+                            <div class="font-body text-xs tracking-[0.2em] text-white/30 uppercase mt-1">Consolidated Annual Revenue</div>
+                        </div>
+                        <div class="metric-item opacity-0">
+                            <div class="font-display text-4xl md:text-5xl text-accent counter" data-target="9200">0</div>
+                            <div class="font-body text-xs tracking-[0.2em] text-white/30 uppercase mt-1">Engineers and Technical Staff</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== ECOSYSTEM SECTION ===================== -->
+    <section id="ecosystem" class="relative z-10 bg-light section-transition">
+        <div class="max-w-[1400px] mx-auto px-6 md:px-10 lg:px-16 py-24 md:py-36">
+            <div class="ecosystem-wrapper">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-0">
+                    <!-- Left: Sticky Header -->
+                    <div class="lg:col-span-4 lg:pr-12">
+                        <div class="lg:sticky lg:top-28">
+                            <div class="flex items-center gap-4 mb-8 opacity-0" data-ecosystem-label>
+                                <div class="w-12 h-[1px] bg-accent"></div>
+                                <span class="font-body text-xs tracking-[0.3em] text-accent uppercase">The Ecosystem</span>
+                            </div>
+                            <h2 class="font-display text-3xl md:text-4xl lg:text-5xl leading-tight text-dark mb-6 opacity-0" data-ecosystem-title>
+                                Specialized<br>Engineering<br>Units
+                            </h2>
+                            <p class="font-body text-sm text-dark/50 leading-relaxed mb-8 opacity-0" data-ecosystem-desc>
+                                Six independently operated subsidiaries, each a market leader in its domain, unified under one strategic holding.
+                            </p>
+                            <div class="hidden lg:flex items-center gap-6 opacity-0" data-ecosystem-stats>
+                                <div>
+                                    <div class="font-display text-2xl text-accent">06</div>
+                                    <div class="font-body text-[10px] tracking-[0.2em] text-dark/40 uppercase">Companies</div>
+                                </div>
+                                <div class="w-[1px] h-10 bg-dark/10"></div>
+                                <div>
+                                    <div class="font-display text-2xl text-accent">34</div>
+                                    <div class="font-body text-[10px] tracking-[0.2em] text-dark/40 uppercase">Countries</div>
+                                </div>
+                                <div class="w-[1px] h-10 bg-dark/10"></div>
+                                <div>
+                                    <div class="font-display text-2xl text-accent">14</div>
+                                    <div class="font-body text-[10px] tracking-[0.2em] text-dark/40 uppercase">Sectors</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Right: Scrolling Cards -->
+                    <div class="lg:col-span-8 space-y-4">
+                        <!-- Card 1: Meridian Steel -->
+                        <div class="company-card relative bg-white border border-dark/10 overflow-hidden group cursor-pointer" data-card>
+                            <div class="card-bg-glow absolute inset-0 opacity-0 transition-opacity duration-500 pointer-events-none"></div>
+                            <div class="relative z-10 p-6 md:p-8 flex flex-col md:flex-row gap-6">
+                                <div class="w-full md:w-48 h-40 md:h-48 flex-shrink-0 overflow-hidden relative">
+                                    <img src="http://static.photos/industry/640x360/10" alt="Meridian Steel" class="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-700">
+                                    <div class="absolute top-0 left-0 w-4 h-4 border-t border-l border-accent"></div>
+                                    <div class="absolute top-0 right-0 w-4 h-4 border-t border-r border-accent"></div>
+                                    <div class="absolute bottom-0 left-0 w-4 h-4 border-b border-l border-accent"></div>
+                                    <div class="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-accent"></div>
+                                </div>
+                                <div class="flex-1">
+                                    <div class="font-body text-[10px] tracking-[0.3em] text-accent uppercase mb-2">Est. 1948 · Heavy Industry</div>
+                                    <h3 class="font-display text-xl md:text-2xl text-dark mb-3">Meridian Steel & Structures</h3>
+                                    <p class="font-body text-sm text-dark/50 leading-relaxed mb-4">
+                                        Premier fabricator of structural steel, modular construction systems, and industrial frameworks for critical infrastructure projects across three continents.
+                                    </p>
+                                    <div class="flex flex-wrap gap-3 mb-4">
+                                        <span class="font-body text-[10px] tracking-widest text-dark/40 uppercase bg-dark/5 px-3 py-1">Structural Steel</span>
+                                        <span class="font-body text-[10px] tracking-widest text-dark/40 uppercase bg-dark/5 px-3 py-1">Modular Systems</span>
+                                        <span class="font-body text-[10px] tracking-widest text-dark/40 uppercase bg-dark/5 px-3 py-1">Industrial Frameworks</span>
+                                    </div>
+                                    <div class="card-cta flex items-center gap-2 overflow-hidden">
+                                        <div class="card-cta-line w-0 h-[1px] bg-accent transition-all duration-500 group-hover:w-8"></div>
+                                        <span class="font-body text-xs tracking-[0.2em] text-accent uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-300">Deep Dive into Services</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 2: Atlas Infrastructure -->
+                        <div class="company-card relative bg-white border border-dark/10 overflow-hidden group cursor-pointer" data-card>
+                            <div class="card-bg-glow absolute inset-0 opacity-0 transition-opacity duration-500 pointer-events-none"></div>
+                            <div class="relative z-10 p-6 md:p-8 flex flex-col md:flex-row gap-6">
+                                <div class="w-full md:w-48 h-40 md:h-48 flex-shrink-0 overflow-hidden relative">
+                                    <img src="http://static.photos/technology/640x360/22" alt="Atlas Infrastructure" class="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-700">
+                                    <div class="absolute top-0 left-0 w-4 h-4 border-t border-l border-accent"></div>
+                                    <div class="absolute top-0 right-0 w-4 h-4 border-t border-r border-accent"></div>
+                                    <div class="absolute bottom-0 left-0 w-4 h-4 border-b border-l border-accent"></div>
+                                    <div class="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-accent"></div>
+                                </div>
+                                <div class="flex-1">
+                                    <div class="font-body text-[10px] tracking-[0.3em] text-accent uppercase mb-2">Est. 1962 · Infrastructure</div>
+                                    <h3 class="font-display text-xl md:text-2xl text-dark mb-3">Atlas Infrastructure Corp</h3>
+                                    <p class="font-body text-sm text-dark/50 leading-relaxed mb-4">
+                                        Large-scale infrastructure developer specializing in bridges, tunnels, highways, and urban transit systems. A trusted partner for government and private sector infrastructure programs.
+                                    </p>
+                                    <div class="flex flex-wrap gap-3 mb-4">
+                                        <span class="font-body text-[10px] tracking-widest text-dark/40 uppercase bg-dark/5 px-3 py-1">Bridges & Tunnels</span>
+                                        <span class="font-body text-[10px] tracking-widest text-dark/40 uppercase bg-dark/5 px-3 py-1">Urban Transit</span>
+                                        <span class="font-body text-[10px] tracking-widest text-dark/40 uppercase bg-dark/5 px-3 py-1">Highway Systems</span>
+                                    </div>
+                                    <div class="card-cta flex items-center gap-2 overflow-hidden">
+                                        <div class="card-cta-line w-0 h-[1px] bg-accent transition-all duration-500 group-hover:w-8"></div>
+                                        <span class="font-body text-xs tracking-[0.2em] text-accent uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-300">Deep Dive into Services</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 3: Vanguard Engineering -->
+                        <div class="company-card relative bg-white border border-dark/10 overflow-hidden group cursor-pointer" data-card>
+                            <div class="card-bg-glow absolute inset-0 opacity-0 transition-opacity duration-500 pointer-events-none"></div>
+                            <div class="relative z-10 p-6 md:p-8 flex flex-col md:flex-row gap-6">
+                                <div class="w-full md:w-48 h-40 md:h-48 flex-shrink-0 overflow-hidden relative">
+                                    <img src="http://static.photos/science/640x360/35" alt="Vanguard Engineering" class="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-700">
+                                    <div class="absolute top-0 left-0 w-4 h-4 border-t border-l border-accent"></div>
+                                    <div class="absolute top-0 right-0 w-4 h-4 border-t border-r border-accent"></div>
+                                    <div class="absolute bottom-0 left-0 w-4 h-4 border-b border-l border-accent"></div>
+                                    <div class="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-accent"></div>
+                                </div>
+                                <div class="flex-1">
+                                    <div class="font-body text-[10px] tracking-[0.3em] text-accent uppercase mb-2">Est. 1975 · Consulting</div>
+                                    <h3 class="font-display text-xl md:text-2xl text-dark mb-3">Vanguard Engineering Solutions</h3>
+                                    <p class="font-body text-sm text-dark/50 leading-relaxed mb-4">
+                                        Precision engineering consulting and structural analysis firm delivering advanced computational modeling, design verification, and technical advisory for high-stakes projects.
+                                    </p>
+                                    <div class="flex flex-wrap gap-3 mb-4">
+                                        <span class="font-body text-[10px] tracking-widest text-dark/40 uppercase bg-dark/5 px-3 py-1">Structural Analysis</span>
+                                        <span class="font-body text-[10px] tracking-widest text-dark/40 uppercase bg-dark/5 px-3 py-1">Design Verification</span>
+                                        <span class="font-body text-[10px] tracking-widest text-dark/40 uppercase bg-dark/5 px-3 py-1">Technical Advisory</span>
+                                    </div>
+                                    <div class="card-cta flex items-center gap-2 overflow-hidden">
+                                        <div class="card-cta-line w-0 h-[1px] bg-accent transition-all duration-500 group-hover:w-8"></div>
+                                        <span class="font-body text-xs tracking-[0.2em] text-accent uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-300">Deep Dive into Services</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 4: Pinnacle Energy -->
+                        <div class="company-card relative bg-white border border-dark/10 overflow-hidden group cursor-pointer" data-card>
+                            <div class="card-bg-glow absolute inset-0 opacity-0 transition-opacity duration-500 pointer-events-none"></div>
+                            <div class="relative z-10 p-6 md:p-8 flex flex-col md:flex-row gap-6">
+                                <div class="w-full md:w-48 h-40 md:h-48 flex-shrink-0 overflow-hidden relative">
+                                    <img src="http://static.photos/education/640x360/15" alt="Pinnacle Energy" class="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-700">
+                                    <div class="absolute top-0 left-0 w-4 h-4 border-t border-l border-accent"></div>
+                                    <div class="absolute top-0 right-0 w-4 h-4 border-t border-r border-accent"></div>
+                                    <div class="absolute bottom-0 left-0 w-4 h-4 border-b border-l border-accent"></div>
+                                    <div class="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-accent"></div>
+                                </div>
+                                <div class="flex-1">
+                                    <div class="font-body text-[10px] tracking-[0.3em] text-accent uppercase mb-2">Est. 1989 · Energy</div>
+                                    <h3 class="font-display text-xl md:text-2xl text-dark mb-3">Pinnacle Energy Systems</h3>
+                                    <p class="font-body text-sm text-dark/50 leading-relaxed mb-4">
+                                        Power generation and energy infrastructure specialist driving the transition to sustainable energy. From grid modernization to renewable energy utility-scale deployments.
+                                    </p>
+                                    <div class="flex flex-wrap gap-3 mb-4">
+                                        <span class="font-body text-[10px] tracking-widest text-dark/40 uppercase bg-dark/5 px-3 py-1">Power Generation</span>
+                                        <span class="font-body text-[10px] tracking-widest text-dark/40 uppercase bg-dark/5 px-3 py-1">Grid Modernization</span>
+                                        <span class="font-body text-[10px] tracking-widest text-dark/40 uppercase bg-dark/5 px-3 py-1">Renewable Energy</span>
+                                    </div>
+                                    <div class="card-cta flex items-center gap-2 overflow-hidden">
+                                        <div class="card-cta-line w-0 h-[1px] bg-accent transition-all duration-500 group-hover:w-8"></div>
+                                        <span class="font-body text-xs tracking-[0.2em] text-accent uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-300">Deep Dive into Services</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 5: Sentinel Safety -->
+                        <div class="company-card relative bg-white border border-dark/10 overflow-hidden group cursor-pointer" data-card>
+                            <div class="card-bg-glow absolute inset-0 opacity-0 transition-opacity duration-500 pointer-events-none"></div>
+                            <div class="relative z-10 p-6 md:p-8 flex flex-col md:flex-row gap-6">
+                                <div class="w-full md:w-48 h-40 md:h-48 flex-shrink-0 overflow-hidden relative">
+                                    <img src="http://static.photos/medical/640x360/28" alt="Sentinel Safety" class="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-700">
+                                    <div class="absolute top-0 left-0 w-4 h-4 border-t border-l border-accent"></div>
+                                    <div class="absolute top-0 right-0 w-4 h-4 border-t border-r border-accent"></div>
+                                    <div class="absolute bottom-0 left-0 w-4 h-4 border-b border-l border-accent"></div>
+                                    <div class="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-accent"></div>
+                                </div>
+                                <div class="flex-1">
+                                    <div class="font-body text-[10px] tracking-[0.3em] text-accent uppercase mb-2">Est. 2001 · Compliance</div>
+                                    <h3 class="font-display text-xl md:text-2xl text-dark mb-3">Sentinel Safety & Compliance</h3>
+                                    <p class="font-body text-sm text-dark/50 leading-relaxed mb-4">
+                                        Safety engineering and regulatory compliance authority ensuring every project meets the highest standards of operational safety, environmental stewardship, and statutory compliance.
+                                    </p>
+                                    <div class="flex flex-wrap gap-3 mb-4">
+                                        <span class="font-body text-[10px] tracking-widest text-dark/40 uppercase bg-dark/5 px-3 py-1">Safety Engineering</span>
+                                        <span class="font-body text-[10px] tracking-widest text-dark/40 uppercase bg-dark/5 px-3 py-1">Regulatory Compliance</span>
+                                        <span class="font-body text-[10px] tracking-widest text-dark/40 uppercase bg-dark/5 px-3 py-1">Risk Assessment</span>
+                                    </div>
+                                    <div class="card-cta flex items-center gap-2 overflow-hidden">
+                                        <div class="card-cta-line w-0 h-[1px] bg-accent transition-all duration-500 group-hover:w-8"></div>
+                                        <span class="font-body text-xs tracking-[0.2em] text-accent uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-300">Deep Dive into Services</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 6: Fortress PM -->
+                        <div class="company-card relative bg-white border border-dark/10 overflow-hidden group cursor-pointer" data-card>
+                            <div class="card-bg-glow absolute inset-0 opacity-0 transition-opacity duration-500 pointer-events-none"></div>
+                            <div class="relative z-10 p-6 md:p-8 flex flex-col md:flex-row gap-6">
+                                <div class="w-full md:w-48 h-40 md:h-48 flex-shrink-0 overflow-hidden relative">
+                                    <img src="http://static.photos/construction/640x360/19" alt="Fortress PM" class="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-700">
+                                    <div class="absolute top-0 left-0 w-4 h-4 border-t border-l border-accent"></div>
+                                    <div class="absolute top-0 right-0 w-4 h-4 border-t border-r border-accent"></div>
+                                    <div class="absolute bottom-0 left-0 w-4 h-4 border-b border-l border-accent"></div>
+                                    <div class="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-accent"></div>
+                                </div>
+                                <div class="flex-1">
+                                    <div class="font-body text-[10px] tracking-[0.3em] text-accent uppercase mb-2">Est. 2012 · Management</div>
+                                    <h3 class="font-display text-xl md:text-2xl text-dark mb-3">Fortress Project Management</h3>
+                                    <p class="font-body text-sm text-dark/50 leading-relaxed mb-4">
+                                        EPC project delivery and program management for mega-projects. Orchestrating complex multi-stakeholder programs with precision and accountability from conception through commissioning.
+                                    </p>
+                                    <div class="flex flex-wrap gap-3 mb-4">
+                                        <span class="font-body text-[10px] tracking-widest text-dark/40 uppercase bg-dark/5 px-3 py-1">EPC Delivery</span>
+                                        <span class="font-body text-[10px] tracking-widest text-dark/40 uppercase bg-dark/5 px-3 py-1">Program Management</span>
+                                        <span class="font-body text-[10px] tracking-widest text-dark/40 uppercase bg-dark/5 px-3 py-1">Construction Oversight</span>
+                                    </div>
+                                    <div class="card-cta flex items-center gap-2 overflow-hidden">
+                                        <div class="card-cta-line w-0 h-[1px] bg-accent transition-all duration-500 group-hover:w-8"></div>
+                                        <span class="font-body text-xs tracking-[0.2em] text-accent uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-300">Deep Dive into Services</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== HISTORY TIMELINE SECTION ===================== -->
+    <section id="history" class="relative z-10 bg-dark section-transition overflow-hidden">
+        <div class="max-w-[1400px] mx-auto px-6 md:px-10 lg:px-16 py-24 md:py-36">
+            <!-- Section Label -->
+            <div class="flex items-center gap-4 mb-8 timeline-label opacity-0">
+                <div class="w-12 h-[1px] bg-accent"></div>
+                <span class="font-body text-xs tracking-[0.3em] text-accent uppercase">History & Legacy</span>
+            </div>
+            <h2 class="font-display text-3xl md:text-4xl lg:text-5xl text-white mb-20 timeline-title opacity-0">
+                Seven Decades of<br>Engineering Mastery
+            </h2>
+
+            <!-- Timeline -->
+            <div class="relative" id="timeline-container">
+                <!-- Vertical Line -->
+                <div class="absolute left-4 md:left-1/2 top-0 bottom-0 w-[1px] bg-white/10 md:-translate-x-1/2">
+                    <div id="timeline-progress" class="w-full bg-accent origin-top" style="height: 0%;"></div>
+                </div>
+                <!-- Glowing Node -->
+                <div id="timeline-node" class="absolute left-4 md:left-1/2 w-4 h-4 -translate-x-1/2 rounded-full bg-accent shadow-[0_0_20px_rgba(184,134,11,0.6)] z-10 transition-all duration-100" style="top: 0;">
+                    <div class="absolute inset-0 rounded-full bg-accent/30 animate-ping"></div>
+                </div>
+
+                <!-- Milestones -->
+                <div class="space-y-16 md:space-y-24">
+                    <!-- 1948 -->
+                    <div class="timeline-milestone relative grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-16 opacity-30" style="transform: scale(0.98);">
+                        <div class="md:text-right md:pr-12">
+                            <div class="font-display text-4xl md:text-5xl text-accent/80">1948</div>
+                            <h3 class="font-display text-lg md:text-xl text-white mt-2 mb-3">The Foundation</h3>
+                            <p class="font-body text-sm text-white/40 leading-relaxed">Founded by Viktor Aldridge as a structural steel workshop in the industrial heartland. Beginning with bridge repairs and warehouse frameworks, the firm's reputation for precision and reliability was established from its very first contracts.</p>
+                        </div>
+                        <div class="md:pl-12">
+                            <div class="relative overflow-hidden">
+                                <img src="http://static.photos/vintage/640x360/50" alt="1948 Foundation" class="w-full h-48 md:h-56 object-cover grayscale">
+                                <div class="absolute top-0 left-0 w-4 h-4 border-t border-l border-accent/50"></div>
+                                <div class="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-accent/50"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 1962 -->
+                    <div class="timeline-milestone relative grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-16 opacity-30" style="transform: scale(0.98);">
+                        <div class="md:pr-12 md:order-2">
+                            <div class="font-display text-4xl md:text-5xl text-accent/80">1962</div>
+                            <h3 class="font-display text-lg md:text-xl text-white mt-2 mb-3">First Major Infrastructure</h3>
+                            <p class="font-body text-sm text-white/40 leading-relaxed">Awarded the contract for the Meridian River Crossing — a 1.2km suspension bridge that would become an engineering landmark. This project transformed the firm from a regional fabricator into a national infrastructure contender.</p>
+                        </div>
+                        <div class="md:pl-12 md:order-1 md:text-right">
+                            <div class="relative overflow-hidden">
+                                <img src="http://static.photos/cityscape/640x360/51" alt="1962 Infrastructure" class="w-full h-48 md:h-56 object-cover grayscale">
+                                <div class="absolute top-0 left-0 w-4 h-4 border-t border-l border-accent/50"></div>
+                                <div class="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-accent/50"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 1975 -->
+                    <div class="timeline-milestone relative grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-16 opacity-30" style="transform: scale(0.98);">
+                        <div class="md:text-right md:pr-12">
+                            <div class="font-display text-4xl md:text-5xl text-accent/80">1975</div>
+                            <h3 class="font-display text-lg md:text-xl text-white mt-2 mb-3">Energy Sector Expansion</h3>
+                            <p class="font-body text-sm text-white/40 leading-relaxed">Strategic entry into the energy sector with the formation of Pinnacle Energy Systems. Began with conventional power plant construction before pivoting toward sustainable energy infrastructure — two decades ahead of market consensus.</p>
+                        </div>
+                        <div class="md:pl-12">
+                            <div class="relative overflow-hidden">
+                                <img src="http://static.photos/industry/640x360/52" alt="1975 Energy" class="w-full h-48 md:h-56 object-cover grayscale">
+                                <div class="absolute top-0 left-0 w-4 h-4 border-t border-l border-accent/50"></div>
+                                <div class="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-accent/50"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 1989 -->
+                    <div class="timeline-milestone relative grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-16 opacity-30" style="transform: scale(0.98);">
+                        <div class="md:pr-12 md:order-2">
+                            <div class="font-display text-4xl md:text-5xl text-accent/80">1989</div>
+                            <h3 class="font-display text-lg md:text-xl text-white mt-2 mb-3">International Operations</h3>
+                            <p class="font-body text-sm text-white/40 leading-relaxed">Meridian Holdings was formally established as the parent holding company, consolidating three operating subsidiaries. International offices opened in London, Singapore, and Dubai. Revenue surpassed $1B for the first time.</p>
+                        </div>
+                        <div class="md:pl-12 md:order-1 md:text-right">
+                            <div class="relative overflow-hidden">
+                                <img src="http://static.photos/aerial/640x360/53" alt="1989 International" class="w-full h-48 md:h-56 object-cover grayscale">
+                                <div class="absolute top-0 left-0 w-4 h-4 border-t border-l border-accent/50"></div>
+                                <div class="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-accent/50"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2001 -->
+                    <div class="timeline-milestone relative grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-16 opacity-30" style="transform: scale(0.98);">
+                        <div class="md:text-right md:pr-12">
+                            <div class="font-display text-4xl md:text-5xl text-accent/80">2001</div>
+                            <h3 class="font-display text-lg md:text-xl text-white mt-2 mb-3">Digital Transformation</h3>
+                            <p class="font-body text-sm text-white/40 leading-relaxed">Formation of Sentinel Safety & Compliance coincided with the group-wide digital transformation. Pioneered BIM-integrated project management and computational structural analysis, reducing project delivery timelines by 35%.</p>
+                        </div>
+                        <div class="md:pl-12">
+                            <div class="relative overflow-hidden">
+                                <img src="http://static.photos/technology/640x360/54" alt="2001 Digital" class="w-full h-48 md:h-56 object-cover grayscale">
+                                <div class="absolute top-0 left-0 w-4 h-4 border-t border-l border-accent/50"></div>
+                                <div class="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-accent/50"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2012 -->
+                    <div class="timeline-milestone relative grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-16 opacity-30" style="transform: scale(0.98);">
+                        <div class="md:pr-12 md:order-2">
+                            <div class="font-display text-4xl md:text-5xl text-accent/80">2012</div>
+                            <h3 class="font-display text-lg md:text-xl text-white mt-2 mb-3">Sustainability Initiative</h3>
+                            <p class="font-body text-sm text-white/40 leading-relaxed">Meridian committed to carbon-neutral operations across all subsidiaries. Fortress Project Management was established to deliver the most complex EPC programs. The group achieved its highest-ever project completion rate of 97.3%.</p>
+                        </div>
+                        <div class="md:pl-12 md:order-1 md:text-right">
+                            <div class="relative overflow-hidden">
+                                <img src="http://static.photos/finance/640x360/55" alt="2012 Sustainability" class="w-full h-48 md:h-56 object-cover grayscale">
+                                <div class="absolute top-0 left-0 w-4 h-4 border-t border-l border-accent/50"></div>
+                                <div class="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-accent/50"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2024 -->
+                    <div class="timeline-milestone relative grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-16 opacity-30" style="transform: scale(0.98);">
+                        <div class="md:text-right md:pr-12">
+                            <div class="font-display text-4xl md:text-5xl text-accent/80">2024</div>
+                            <h3 class="font-display text-lg md:text-xl text-white mt-2 mb-3">The Present Day</h3>
+                            <p class="font-body text-sm text-white/40 leading-relaxed">Six subsidiaries operating across 34 countries, 9,200 engineers and technical staff, $8.7B consolidated revenue. Meridian Holdings continues to define the future of engineered infrastructure while honoring the precision and resolve that began in 1948.</p>
+                        </div>
+                        <div class="md:pl-12">
+                            <div class="relative overflow-hidden">
+                                <img src="http://static.photos/aerial/640x360/56" alt="2024 Present" class="w-full h-48 md:h-56 object-cover grayscale">
+                                <div class="absolute top-0 left-0 w-4 h-4 border-t border-l border-accent/50"></div>
+                                <div class="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-accent/50"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== CONTACT / CTA SECTION ===================== -->
+    <section id="contact" class="relative z-10 bg-dark section-transition">
+        <div class="max-w-[1400px] mx-auto px-6 md:px-10 lg:px-16 py-24 md:py-36">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                <div>
+                    <div class="flex items-center gap-4 mb-8 contact-label opacity-0">
+                        <div class="w-12 h-[1px] bg-accent"></div>
+                        <span class="font-body text-xs tracking-[0.3em] text-accent uppercase">Get in Touch</span>
+                    </div>
+                    <h2 class="font-display text-3xl md:text-4xl lg:text-5xl text-white mb-6 contact-title opacity-0">
+                        Initiate a<br>Strategic Dialogue
+                    </h2>
+                    <p class="font-body text-base text-white/40 leading-relaxed mb-12 contact-desc opacity-0">
+                        Whether you represent a sovereign wealth fund, a government infrastructure authority, or an industrial conglomerate — we welcome formal inquiries regarding strategic partnerships, project consultation, and investment opportunities.
+                    </p>
+                    <div class="space-y-4 opacity-0 contact-info">
+                        <div class="flex items-center gap-4">
+                            <i data-lucide="map-pin" class="w-4 h-4 text-accent"></i>
+                            <span class="font-body text-sm text-white/60">Meridian Tower, 3400 Engineering Boulevard, Chicago, IL 60601</span>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <i data-lucide="phone" class="w-4 h-4 text-accent"></i>
+                            <span class="font-body text-sm text-white/60">+1 (312) 555-0194</span>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <i data-lucide="mail" class="w-4 h-4 text-accent"></i>
+                            <span class="font-body text-sm text-white/60">investor.relations@meridianholdings.com</span>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <form class="space-y-6" id="contact-form">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="font-body text-[10px] tracking-[0.2em] text-white/30 uppercase block mb-2">Full Name</label>
+                                <input type="text" class="w-full bg-white/5 border border-white/10 px-4 py-3 font-body text-sm text-white focus:border-accent focus:outline-none transition-colors" placeholder="Your full name">
+                            </div>
+                            <div>
+                                <label class="font-body text-[10px] tracking-[0.2em] text-white/30 uppercase block mb-2">Organization</label>
+                                <input type="text" class="w-full bg-white/5 border border-white/10 px-4 py-3 font-body text-sm text-white focus:border-accent focus:outline-none transition-colors" placeholder="Company name">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="font-body text-[10px] tracking-[0.2em] text-white/30 uppercase block mb-2">Email Address</label>
+                            <input type="email" class="w-full bg-white/5 border border-white/10 px-4 py-3 font-body text-sm text-white focus:border-accent focus:outline-none transition-colors" placeholder="your@email.com">
+                        </div>
+                        <div>
+                            <label class="font-body text-[10px] tracking-[0.2em] text-white/30 uppercase block mb-2">Inquiry Type</label>
+                            <select class="w-full bg-dark border border-white/10 px-4 py-3 font-body text-sm text-white/60 focus:border-accent focus:outline-none transition-colors">
+                                <option value="">Select inquiry type</option>
+                                <option>Strategic Partnership</option>
+                                <option>Investment Inquiry</option>
+                                <option>Project Consultation</option>
+                                <option>Media & Communications</option>
+                                <option>Career Opportunities</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="font-body text-[10px] tracking-[0.2em] text-white/30 uppercase block mb-2">Message</label>
+                            <textarea rows="4" class="w-full bg-white/5 border border-white/10 px-4 py-3 font-body text-sm text-white focus:border-accent focus:outline-none transition-colors resize-none" placeholder="Describe your inquiry..."></textarea>
+                        </div>
+                        <button type="submit" class="group flex items-center gap-4 bg-accent text-dark font-body text-sm tracking-[0.15em] uppercase px-8 py-4 hover:bg-primary-light transition-colors duration-300">
+                            <span>Submit Inquiry</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="relative z-10 border-t border-white/5 bg-dark">
+        <div class="max-w-[1400px] mx-auto px-6 md:px-10 lg:px-16 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+                <div class="md:col-span-2">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-8 h-8 border border-accent flex items-center justify-center">
+                            <div class="w-3 h-3 bg-accent"></div>
+                        </div>
+                        <span class="font-display text-lg tracking-[0.2em] text-white">MERIDIAN</span>
+                    </div>
+                    <p class="font-body text-sm text-white/30 leading-relaxed max-w-md mb-6">
+                        Meridian Holdings is the strategic parent company for six specialized engineering subsidiaries. Together, we form the architectural backbone of national and global infrastructure.
+                    </p>
+                    <p class="font-body text-[10px] tracking-[0.2em] text-white/20 uppercase">© 2024 Meridian Holdings. All Rights Reserved.</p>
+                </div>
+                <div>
+                    <h4 class="font-body text-xs tracking-[0.2em] text-accent uppercase mb-6">Subsidiaries</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="font-body text-sm text-white/40 hover:text-white transition-colors">Meridian Steel</a></li>
+                        <li><a href="#" class="font-body text-sm text-white/40 hover:text-white transition-colors">Atlas Infrastructure</a></li>
+                        <li><a href="#" class="font-body text-sm text-white/40 hover:text-white transition-colors">Vanguard Engineering</a></li>
+                        <li><a href="#" class="font-body text-sm text-white/40 hover:text-white transition-colors">Pinnacle Energy</a></li>
+                        <li><a href="#" class="font-body text-sm text-white/40 hover:text-white transition-colors">Sentinel Safety</a></li>
+                        <li><a href="#" class="font-body text-sm text-white/40 hover:text-white transition-colors">Fortress PM</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-body text-xs tracking-[0.2em] text-accent uppercase mb-6">Navigation</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#hero" class="font-body text-sm text-white/40 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#overview" class="font-body text-sm text-white/40 hover:text-white transition-colors">Overview</a></li>
+                        <li><a href="#ecosystem" class="font-body text-sm text-white/40 hover:text-white transition-colors">Ecosystem</a></li>
+                        <li><a href="#history" class="font-body text-sm text-white/40 hover:text-white transition-colors">Legacy</a></li>
+                        <li><a href="#contact" class="font-body text-sm text-white/40 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Bottom line -->
+        <div class="border-t border-white/5">
+            <div class="max-w-[1400px] mx-auto px-6 md:px-10 lg:px-16 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
+                <p class="font-body text-[10px] tracking-[0.15em] text-white/20 uppercase">Confidential · For Authorized Recipients Only</p>
+                <p class="font-body text-[10px] tracking-[0.15em] text-white/20 uppercase">Chicago · London · Singapore · Dubai · São Paulo</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script>
+        // Load GSAP plugins
+        gsap.registerPlugin(ScrollTrigger);
+    </script>
+    <script src="script.js"></script>
+<script src="https://deepsite.hf.co/deepsite-badge.js"></script>
+</body>
+</html>
