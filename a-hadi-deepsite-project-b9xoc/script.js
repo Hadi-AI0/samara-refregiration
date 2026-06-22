@@ -289,7 +289,7 @@ function animateHero() {
             duration: 1,
         }, 0)
         .to(heroFrame, {
-            borderColor: 'rgba(165, 214, 225, 0.3)',
+            borderColor: 'rgba(29, 79, 145, 0.3)',
             duration: 1,
         }, 0)
         .to('#hero', {

@@ -89,7 +89,7 @@ body {
 .crosshair-marker::after {
     content: '';
     position: absolute;
-    background: #a5d6e1;
+    background: #1d4f91;
     opacity: 0.15;
 }
 
@@ -147,7 +147,7 @@ body {
 }
 
 .card-bg-glow {
-    background: radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(29, 79, 145, 0.06), transparent 40%);
+    background: radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(184, 134, 11, 0.06), transparent 40%);
 }
 
 /* ===== BOUNDING BOX CORNERS ===== */
@@ -194,7 +194,7 @@ body {
 /* ===== GRID DRAW LINES ===== */
 .grid-draw-line {
     position: absolute;
-    background: #a5d6e1;
+    background: #b8860b;
     opacity: 0.08;
 }
 
