@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Samara Group - Building the Future of Saudi Arabia. A diversified family business group with over 40 years of excellence across the GCC.">
+  <meta name="theme-color" content="#1d4f91">
+  <title>Samara Group | Building the Future of Saudi Arabia</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Orbitron:wght@400;500;600;700;800;900&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
+  
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Background Layers -->
+  <div id="bg-morph"></div>
+  <div id="grid-overlay"></div>
+
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="loader-content">
+      <div class="loader-logo">SAMARA</div>
+      <div class="loader-text">GROUP</div>
+      <div class="loader-bar">
+        <div class="loader-progress"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="main-nav">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">
+        <img src="samara-logo-group.png" alt="Samara Group" class="nav-logo-img">
+      </a>
+      <ul class="nav-menu">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#founder" class="nav-link">Founder</a></li>
+        <li><a href="#board" class="nav-link">Board</a></li>
+        <li><a href="#companies" class="nav-link">Companies</a></li>
+        <li><a href="#timeline" class="nav-link">Journey</a></li>
+        <li><a href="#investments" class="nav-link">Investments</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" id="mobile-menu-btn" aria-label="Open menu">
+        <span class="hamburger"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu Slide Panel -->
+  <div class="mobile-menu" id="mobile-menu">
+    <button class="mobile-menu-close" id="mobile-menu-close" aria-label="Close menu">&times;</button>
+    <a href="#about" class="mobile-nav">About</a>
+    <a href="#founder" class="mobile-nav">Founder</a>
+    <a href="#board" class="mobile-nav">Board</a>
+    <a href="#companies" class="mobile-nav">Companies</a>
+    <a href="#timeline" class="mobile-nav">Journey</a>
+    <a href="#investments" class="mobile-nav">Investments</a>
+    <a href="#contact" class="mobile-nav">Contact</a>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-frame"></div>
+    <div class="hero-bg">
+      <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop" alt="Saudi Arabia skyline">
+    </div>
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <div class="hero-badge">ESTABLISHED 1984</div>
+      <h1 class="hero-title-wrapper">
+        <span class="hero-line">BUILDING THE FUTURE</span>
+        <span class="hero-line">OF SAUDI ARABIA</span>
+      </h1>
+      <p class="hero-sub">A diversified family business group with over four decades of excellence across the GCC, leading in refrigeration, real estate, healthcare, and industrial solutions.</p>
+      <div class="hero-metrics">
+        <div class="metric-item">
+          <span class="stat-number counter" data-target="7">0</span>
+          <span class="stat-label">Companies</span>
+        </div>
+        <div class="metric-item">
+          <span class="stat-number counter" data-target="40">0</span>
+          <span class="stat-label">Years</span>
+        </div>
+        <div class="metric-item">
+          <span class="stat-number">GCC</span>
+          <span class="stat-label">Presence</span>
+        </div>
+      </div>
+      <div class="hero-cta">
+        <a href="#companies" class="btn btn-primary">Explore Our Companies</a>
+        <a href="#contact" class="btn btn-outline">Get In Touch</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about-section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">About Us</span>
+        <h2 class="section-title">Who We Are</h2>
+        <div class="section-line"></div>
+        <p class="section-subtitle">Four Decades of Business Excellence</p>
+      </div>
+      
+      <div class="about-sticky-container">
+        <div class="about-sticky-left">
+          <!-- Wheel Selector -->
+          <div class="wheel-selector">
+            <div class="radio-input">
+              <label for="value-2" class="next-trigger" id="trigger-for-1"></label>
+              <label for="value-3" class="next-trigger" id="trigger-for-2"></label>
+              <label for="value-1" class="next-trigger" id="trigger-for-3"></label>
+
+              <div class="glass-overlay"></div>
+
+              <input value="value-1" name="value-radio" id="value-1" type="radio" checked />
+              <label class="wheel-label" for="value-1" style="--angle: -30deg">
+                <span class="num">01</span>
+                <span class="label">40 Years of Trust</span>
+              </label>
+
+              <input value="value-2" name="value-radio" id="value-2" type="radio" />
+              <label class="wheel-label" for="value-2" style="--angle: 0deg">
+                <span class="num">02</span>
+                <span class="label">Regional Impact</span>
+              </label>
+
+              <input value="value-3" name="value-radio" id="value-3" type="radio" />
+              <label class="wheel-label" for="value-3" style="--angle: 30deg">
+                <span class="num">03</span>
+                <span class="label">High-Growth Industries</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Image -->
+          <div class="about-image">
+            <div class="image-frame">
+              <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069&auto=format&fit=crop" alt="Samara Group office">
+              <div class="frame-overlay"></div>
+            </div>
+            <div class="experience-badge">
+              <span class="years">40+</span>
+              <span class="label">Years of Excellence</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-sticky-right">
+          <!-- Sticky Text Segments -->
+          <div class="about-text-segment active" data-segment="1">
+            <p>Samara Group is a prominent family-based business group based in the Kingdom of Saudi Arabia, with a strategic presence across the GCC region.</p>
+          </div>
+
+          <div class="about-text-segment" data-segment="2">
+            <p>Since our foundation in 1984, we have grown into a diversified conglomerate operating in key sectors including commercial refrigeration, real estate development, healthcare management, parking solutions, ready-mix concrete, and chemical additives.</p>
+          </div>
+
+          <div class="about-text-segment" data-segment="3">
+            <p>Our commitment to quality, innovation, and sustainable growth drives our operations, ensuring we deliver value to our partners, clients, and the communities we serve.</p>
+          </div>
+
+          <!-- Company Showcase - Moved from Hero -->
+          <div class="about-company-showcase">
+            <h3 class="about-heading">Our Companies</h3>
+            <div class="company-buttons">
+              <button class="company-btn" data-company="samara">Samara</button>
+              <button class="company-btn" data-company="realestate">Real Estate</button>
+              <button class="company-btn" data-company="sararyah">Sararyah</button>
+              <button class="company-btn" data-company="parking">Parking</button>
+              <button class="company-btn active" data-company="builmix">Builmix</button>
+            </div>
+            <div class="company-info-box">
+              <div class="company-info-header">
+                <h3 class="company-info-title" data-info-title>Builmix LLC</h3>
+                <div class="company-info-meta">
+                  <span class="company-info-category" data-info-category>Industrial Growth</span>
+                </div>
+              </div>
+              <p class="company-info-desc" data-info-desc>Specialty chemical additives and general construction services delivering quality-driven outcomes for industrial and civil projects across the Kingdom.</p>
+              <div class="company-info-divider"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Founder Message Section -->
+  <section class="founder-section" id="founder">
+    <div class="founder-wrapper">
+      <div class="founder-portrait">
+        <div class="founder-portrait-frame">
+          <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1974&auto=format&fit=crop" alt="Founder portrait">
+        </div>
+        <div class="founder-portrait-accent"></div>
+      </div>
+      <div class="founder-content">
+        <span class="founder-label">A Message From Our Founder</span>
+        <span class="founder-quote-mark">&ldquo;</span>
+        <p class="founder-quote">
+          When we laid the first stone of Samara Group in 1984, our vision was simple yet ambitious: to build a legacy rooted in <strong>integrity, quality, and service</strong> to our nation. Four decades later, that vision continues to guide every decision we make.
+          <br><br>
+          We are not just a business group; we are a family committed to contributing to the Kingdom's growth and to the prosperity of the communities we serve. Our journey from a single refrigeration company to a diversified conglomerate is a testament to the trust of our partners and the dedication of our team.
+          <br><br>
+          As Saudi Arabia strides boldly toward Vision 2030, we stand ready to play our part, building the infrastructure, healthcare, and innovations that will shape the future of generations to come.
+        </p>
+        <div class="founder-signature">
+          <div class="founder-name">The Founder</div>
+          <div class="founder-title">Chairman, Samara Group</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Board Members Section -->
+  <section class="board-section" id="board">
+    <div class="container">
+      <div class="board-header">
+        <div class="board-header-left">
+          <div class="board-label-wrapper">
+            <div class="board-label-line"></div>
+            <span class="board-label">Our People</span>
+          </div>
+          <h2 class="board-title">Board Members & Directors</h2>
+        </div>
+        <div class="board-nav-desktop">
+          <button class="board-nav-btn" id="board-prev" aria-label="Previous">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"></path></svg>
+          </button>
+          <button class="board-nav-btn" id="board-next" aria-label="Next">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="board-main">
+        <div class="board-image-wrapper">
+          <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1974&auto=format&fit=crop" alt="Board Member 1" class="board-main-img active" data-index="0">
+          <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1976&auto=format&fit=crop" alt="Board Member 2" class="board-main-img" data-index="1">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1974&auto=format&fit=crop" alt="Board Member 3" class="board-main-img" data-index="2">
+          <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=1961&auto=format&fit=crop" alt="Board Member 4" class="board-main-img" data-index="3">
+          <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=1974&auto=format&fit=crop" alt="Board Member 5" class="board-main-img" data-index="4">
+          <div class="board-image-overlay"></div>
+          <div class="board-image-badge">Leadership</div>
+        </div>
+
+        <div class="board-content">
+          <p class="board-content-subtitle" data-board-subtitle>Samara Group</p>
+          <p class="board-content-role" data-board-role>Chairman & Founder</p>
+          <h3 class="board-content-name" data-board-name>Board Member 1</h3>
+          <p class="board-content-desc" data-board-desc>Visionary leader with over 40 years of experience in the GCC business landscape. Founded Samara Group in 1984 and has guided its growth from a single refrigeration company to a diversified conglomerate across multiple sectors.</p>
+          
+          <div class="board-content-links">
+            <button class="board-social-btn" aria-label="LinkedIn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </button>
+            <button class="board-social-btn" aria-label="Email">
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+            </button>
+          </div>
+
+          <div class="board-indicators">
+            <button class="board-indicator active" data-slide="0"></button>
+            <button class="board-indicator" data-slide="1"></button>
+            <button class="board-indicator" data-slide="2"></button>
+            <button class="board-indicator" data-slide="3"></button>
+            <button class="board-indicator" data-slide="4"></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="board-thumbnails">
+        <button class="board-thumb active" data-index="0">
+          <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1974&auto=format&fit=crop" alt="Board Member 1">
+          <div class="board-thumb-overlay"></div>
+          <div class="board-thumb-info">
+            <p class="board-thumb-name">Board Member 1</p>
+            <p class="board-thumb-role">Chairman & Founder</p>
+          </div>
+        </button>
+        <button class="board-thumb" data-index="1">
+          <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1976&auto=format&fit=crop" alt="Board Member 2">
+          <div class="board-thumb-overlay"></div>
+          <div class="board-thumb-info">
+            <p class="board-thumb-name">Board Member 2</p>
+            <p class="board-thumb-role">Vice Chairman</p>
+          </div>
+        </button>
+        <button class="board-thumb" data-index="2">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1974&auto=format&fit=crop" alt="Board Member 3">
+          <div class="board-thumb-overlay"></div>
+          <div class="board-thumb-info">
+            <p class="board-thumb-name">Board Member 3</p>
+            <p class="board-thumb-role">Managing Director</p>
+          </div>
+        </button>
+        <button class="board-thumb" data-index="3">
+          <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=1961&auto=format&fit=crop" alt="Board Member 4">
+          <div class="board-thumb-overlay"></div>
+          <div class="board-thumb-info">
+            <p class="board-thumb-name">Board Member 4</p>
+            <p class="board-thumb-role">Financial Director</p>
+          </div>
+        </button>
+        <button class="board-thumb" data-index="4">
+          <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=1974&auto=format&fit=crop" alt="Board Member 5">
+          <div class="board-thumb-overlay"></div>
+          <div class="board-thumb-info">
+            <p class="board-thumb-name">Board Member 5</p>
+            <p class="board-thumb-role">Operations Director</p>
+          </div>
+        </button>
+      </div>
+
+      <div class="board-nav-mobile">
+        <button class="board-nav-btn" id="board-prev-mobile" aria-label="Previous">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"></path></svg>
+        </button>
+        <button class="board-nav-btn" id="board-next-mobile" aria-label="Next">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Timeline Section -->
+  <section class="timeline-section" id="timeline">
+    <div class="container">
+      <div style="text-align:center;">
+        <span class="timeline-label">Our Journey</span>
+      </div>
+      <h2 class="timeline-title">Milestones of Growth Since 1984</h2>
+      <p class="timeline-subtitle">Key moments that shaped our legacy</p>
+      <div id="timeline-container">
+        <div class="timeline-track"></div>
+        <div id="timeline-progress"></div>
+        <div id="timeline-node"></div>
+        
+        <div class="timeline-milestone">
+          <div class="timeline-content-wrapper">
+            <div class="timeline-media">
+              <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2070&auto=format&fit=crop" alt="Foundation">
+            </div>
+            <div class="timeline-text">
+              <div class="timeline-year">1984</div>
+              <h3>The Foundation</h3>
+              <p>Samara Group was founded in Riyadh, beginning its journey with a focus on commercial refrigeration services for local businesses.</p>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-milestone">
+          <div class="timeline-content-wrapper">
+            <div class="timeline-text">
+              <div class="timeline-year">1990</div>
+              <h3>Regional Expansion</h3>
+              <p>Expanded operations across the Kingdom, establishing a reputation for reliability and securing major contracts with leading retailers and food processors.</p>
+            </div>
+            <div class="timeline-media">
+              <img src="https://images.unsplash.com/photo-1581094794329-8328d52e0028?q=80&w=2070&auto=format&fit=crop" alt="Expansion">
+            </div>
+          </div>
+        </div>
+        <div class="timeline-milestone">
+          <div class="timeline-content-wrapper">
+            <div class="timeline-media">
+              <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop" alt="Diversification">
+            </div>
+            <div class="timeline-text">
+              <div class="timeline-year">2001</div>
+              <h3>Diversification Era</h3>
+              <p>Launched Samara Real Estate & Contracting and entered the healthcare sector with Saryryah Healthcare, marking a new chapter of growth.</p>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-milestone">
+          <div class="timeline-content-wrapper">
+            <div class="timeline-text">
+              <div class="timeline-year">2012</div>
+              <h3>Industrial Growth</h3>
+              <p>Established Saudi Builmix LLC and Samara Chemical Additives, expanding into heavy industry and manufacturing to support the Kingdom's infrastructure boom.</p>
+            </div>
+            <div class="timeline-media">
+              <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?q=80&w=2070&auto=format&fit=crop" alt="Industrial">
+            </div>
+          </div>
+        </div>
+        <div class="timeline-milestone">
+          <div class="timeline-content-wrapper">
+            <div class="timeline-media">
+              <img src="https://images.unsplash.com/photo-1590674899505-1c5c41951f89?q=80&w=2070&auto=format&fit=crop" alt="Digital">
+            </div>
+            <div class="timeline-text">
+              <div class="timeline-year">2020</div>
+              <h3>Digital Transformation</h3>
+              <p>Embraced smart technologies and launched Samara Parking Solutions, delivering intelligent urban mobility systems aligned with Saudi Vision 2030.</p>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-milestone">
+          <div class="timeline-content-wrapper">
+            <div class="timeline-text">
+              <div class="timeline-year">2026</div>
+              <h3>Future Vision</h3>
+              <p>Continuing to innovate with sustainable construction materials and advanced parking solutions, strengthening our role in shaping the Kingdom's future.</p>
+            </div>
+            <div class="timeline-media">
+              <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069&auto=format&fit=crop" alt="Future">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Companies Section -->
+  <section class="companies-section" id="companies">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Our Companies</span>
+        <h2 class="section-title">Specialized Entities Driving Excellence</h2>
+        <div class="section-line"></div>
+        <p class="section-subtitle">Six pillars of our diversified portfolio</p>
+      </div>
+      <div class="companies-grid">
+        <div class="company-card" data-card>
+          <div class="card-bg-glow"></div>
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070&auto=format&fit=crop" alt="Samara Refrigeration">
+            <div class="card-overlay"></div>
+          </div>
+          <div class="card-content">
+            <div class="card-category">Est. 1984</div>
+            <h3 class="card-title">Samara Refrigeration</h3>
+            <p class="card-description">Leading provider of commercial and industrial refrigeration solutions, serving supermarkets, cold storage, and food processing facilities across the Kingdom.</p>
+            <a href="#" class="card-link">Learn More <span>&rarr;</span></a>
+          </div>
+        </div>
+
+        <div class="company-card" data-card>
+          <div class="card-bg-glow"></div>
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop" alt="Samara Real Estate">
+            <div class="card-overlay"></div>
+          </div>
+          <div class="card-content">
+            <div class="card-category">Est. 2001</div>
+            <h3 class="card-title">Samara Real Estate & Contracting</h3>
+            <p class="card-description">Developing premium residential and commercial properties while delivering high-quality general contracting services for major infrastructure projects.</p>
+            <a href="#" class="card-link">Learn More <span>&rarr;</span></a>
+          </div>
+        </div>
+
+        <div class="company-card" data-card>
+          <div class="card-bg-glow"></div>
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=2053&auto=format&fit=crop" alt="Saryryah Healthcare">
+            <div class="card-overlay"></div>
+          </div>
+          <div class="card-content">
+            <div class="card-category">Est. 2001</div>
+            <h3 class="card-title">Saryryah Healthcare</h3>
+            <p class="card-description">Operating and managing hospitals and medical centers, providing world-class healthcare services with a focus on patient care and medical excellence.</p>
+            <a href="#" class="card-link">Learn More <span>&rarr;</span></a>
+          </div>
+        </div>
+
+        <div class="company-card" data-card>
+          <div class="card-bg-glow"></div>
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1590674899505-1c5c41951f89?q=80&w=2070&auto=format&fit=crop" alt="Samara Parking Solutions">
+            <div class="card-overlay"></div>
+          </div>
+          <div class="card-content">
+            <div class="card-category">Recent Venture</div>
+            <h3 class="card-title">Samara Parking Solutions (SPS)</h3>
+            <p class="card-description">Delivering advanced parking management systems and smart city solutions to optimize urban mobility and traffic flow in major cities.</p>
+            <a href="#" class="card-link">Learn More <span>&rarr;</span></a>
+          </div>
+        </div>
+
+        <div class="company-card" data-card>
+          <div class="card-bg-glow"></div>
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?q=80&w=2070&auto=format&fit=crop" alt="Saudi Builmix">
+            <div class="card-overlay"></div>
+          </div>
+          <div class="card-content">
+            <div class="card-category">Est. 2012</div>
+            <h3 class="card-title">Saudi Builmix LLC</h3>
+            <p class="card-description">Producing high-quality ready-mix concrete for large-scale construction projects, ensuring durability and compliance with international standards.</p>
+            <a href="#" class="card-link">Learn More <span>&rarr;</span></a>
+          </div>
+        </div>
+
+        <div class="company-card" data-card>
+          <div class="card-bg-glow"></div>
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1628131336414-82eb609216ca?q=80&w=2070&auto=format&fit=crop" alt="Samara Chemical Additives">
+            <div class="card-overlay"></div>
+          </div>
+          <div class="card-content">
+            <div class="card-category">Est. 2012</div>
+            <h3 class="card-title">Samara Chemical Additives</h3>
+            <p class="card-description">Manufacturing and supplying specialized chemical additives for the construction and industrial sectors, enhancing material performance.</p>
+            <a href="#" class="card-link">Learn More <span>&rarr;</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ecosystem Section -->
+  <section class="ecosystem-section" id="investments">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label" data-ecosystem-label>Investment Ecosystem</span>
+        <h2 class="section-title" data-ecosystem-title>Strategic Sectors Driving Value</h2>
+        <div class="section-line"></div>
+        <p class="section-subtitle" data-ecosystem-desc>Four core pillars powering our diversified portfolio</p>
+      </div>
+      <div class="ecosystem-grid" data-ecosystem-stats>
+        <div class="eco-card">
+          <span class="eco-icon"><i data-lucide="factory"></i></span>
+          <h3>Industrial</h3>
+          <p>Manufacturing and processing facilities supporting national infrastructure.</p>
+        </div>
+        <div class="eco-card">
+          <span class="eco-icon"><i data-lucide="building-2"></i></span>
+          <h3>Real Estate</h3>
+          <p>Development of residential, commercial, and mixed-use communities.</p>
+        </div>
+        <div class="eco-card">
+          <span class="eco-icon"><i data-lucide="heart-pulse"></i></span>
+          <h3>Healthcare</h3>
+          <p>Investing in medical infrastructure and patient-centric services.</p>
+        </div>
+        <div class="eco-card">
+          <span class="eco-icon"><i data-lucide="cpu"></i></span>
+          <h3>Technology</h3>
+          <p>Smart solutions for urban challenges and operational efficiency.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="contact-wrapper">
+        <div class="contact-info">
+          <span class="contact-label">Get In Touch</span>
+          <h2 class="contact-title">Let's Build Together</h2>
+          <p class="contact-desc">Headquarters: Riyadh, Saudi Arabia</p>
+          <div class="info-item">
+            <div class="info-icon"><i data-lucide="mail"></i></div>
+            <div class="info-text">
+              <h4>Email</h4>
+              <p><a href="mailto:info@samaragroup.biz" style="color: var(--gray); text-decoration: none;">info@samaragroup.biz</a></p>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon"><i data-lucide="phone"></i></div>
+            <div class="info-text">
+              <h4>Phone</h4>
+              <p>+966 13 3301222</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon"><i data-lucide="map-pin"></i></div>
+            <div class="info-text">
+              <h4>Location</h4>
+              <p>1st Floor, Firas Ibn Al Nudur St, Al-Olaya Dist., Al-Khobar 34445, KSA</p>
+            </div>
+          </div>
+        </div>
+        <form class="contact-form" id="contact-form">
+          <div class="form-group">
+            <input type="text" placeholder="Your Name" required>
+          </div>
+          <div class="form-group">
+            <input type="email" placeholder="Your Email" required>
+          </div>
+          <div class="form-group">
+            <select required>
+              <option value="">Inquiry Type</option>
+              <option value="business">Business Partnership</option>
+              <option value="careers">Careers</option>
+              <option value="general">General Inquiry</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <textarea placeholder="Your Message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+      <a href="#" class="nav-logo">
+        <img src="samara-logo-group.png" alt="Samara Group" class="nav-logo-img">
+      </a>          <p>A family-based business group in Saudi Arabia & GCC, operating across refrigeration, real estate, healthcare, parking, construction, and chemicals since 1984.</p>
+          <div class="social-links">
+            <a href="#" aria-label="LinkedIn">in</a>
+            <a href="#" aria-label="Twitter">X</a>
+            <a href="#" aria-label="Facebook">f</a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>Companies</h4>
+          <ul>
+            <li><a href="#">Samara Refrigeration</a></li>
+            <li><a href="#">Real Estate & Contracting</a></li>
+            <li><a href="#">Saryryah Healthcare</a></li>
+            <li><a href="#">Parking Solutions</a></li>
+            <li><a href="#">Saudi Builmix LLC</a></li>
+            <li><a href="#">Chemical Additives</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#founder">Founder</a></li>
+            <li><a href="#investments">Investments</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-newsletter">
+          <h4>Stay Updated</h4>
+          <p style="color: var(--gray); font-size: 0.95rem;">Subscribe to our newsletter for the latest updates.</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Your email" required>
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Samara Group. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+      <div class="location-tag">Riyadh · Jeddah · Dammam · GCC</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
