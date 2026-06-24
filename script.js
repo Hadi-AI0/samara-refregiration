@@ -56,6 +56,16 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // ===== MOBILE DROPDOWN TOGGLE =====
+  const mobileDropdownToggle = document.querySelector('.mobile-dropdown-toggle');
+  const mobileDropdown = document.querySelector('.mobile-dropdown');
+  
+  if (mobileDropdownToggle && mobileDropdown) {
+    mobileDropdownToggle.addEventListener('click', () => {
+      mobileDropdown.classList.toggle('active');
+    });
+  }
+
   // ===== SMOOTH SCROLL FOR NAV LINKS =====
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
