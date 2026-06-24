@@ -64,6 +64,14 @@ document.addEventListener('DOMContentLoaded', () => {
     mobileDropdownToggle.addEventListener('click', () => {
       mobileDropdown.classList.toggle('active');
     });
+    
+    // Prevent closing when clicking inside dropdown menu
+    const mobileDropdownMenu = mobileDropdown.querySelector('.mobile-dropdown-menu');
+    if (mobileDropdownMenu) {
+      mobileDropdownMenu.addEventListener('click', (e) => {
+        e.stopPropagation();
+      });
+    }
   }
 
   // ===== SMOOTH SCROLL FOR NAV LINKS =====

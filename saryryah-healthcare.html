@@ -3,62 +3,674 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Saryryah Healthcare - Premium property development and contracting services in Saudi Arabia.">
+  <meta name="theme-color" content="#1d4f91">
   <title>Saryryah Healthcare | Samara Group</title>
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Orbitron:wght@400;500;600;700;800;900&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;300;600;700;800&family=Orbitron:wght@400;300;600;700;800;900&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
+  
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+  
   <link rel="stylesheet" href="style.css">
   <style>
-    .company-hero{position:relative;height:100vh;overflow:hidden;display:flex;align-items:center;justify-content:center}
-    .hero-parallax-layers{position:absolute;top:0;left:0;width:100%;height:100%}
-    .parallax-layer{position:absolute;top:0;left:0;width:100%;height:100%;background-size:cover;background-position:center}
-    .layer-1{background-image:url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=2053&auto=format&fit=crop');z-index:1}
-    .layer-2{background-image:url('https://images.unsplash.com/photo-1538108149393-fbbd81895907?q=80&w=2080&auto=format&fit=crop');z-index:2;clip-path:polygon(0 0,100% 0,100% 100%,0 85%)}
-    .layer-3{background-image:url('https://images.unsplash.com/photo-1504813184591-01572f98c85f?q=80&w=2070&auto=format&fit=crop');z-index:3;clip-path:polygon(0 0,100% 0,100% 100%,0 70%)}
-    .hero-overlay{position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(to bottom,rgba(15,32,64,0.7),rgba(15,32,64,0.4));z-index:4}
-    .hero-content-company{position:relative;z-index:5;text-align:center;max-width:900px;padding:0 20px}
-    .company-badge{display:inline-block;background:var(--accent);color:var(--white);padding:8px 20px;border-radius:30px;font-size:0.85rem;font-weight:600;letter-spacing:2px;margin-bottom:20px;animation:fadeInUp 1s ease forwards}
-    .company-title-hero{font-family:var(--font-display);font-size:clamp(2.5rem,6vw,5rem);font-weight:800;color:var(--white);margin-bottom:20px;opacity:0;animation:fadeInUp 1s ease 0.3s forwards}
-    .company-subtitle-hero{font-size:clamp(1rem,2vw,1.3rem);color:var(--light-gray);line-height:1.8;opacity:0;animation:fadeInUp 1s ease 0.5s forwards}
-    @keyframes fadeInUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
-    .scroll-indicator{position:absolute;bottom:40px;left:50%;transform:translateX(-50%);z-index:5;animation:bounce 2s infinite}
-    @keyframes bounce{0%,20%,50%,80%,100%{transform:translateX(-50%) translateY(0)}40%{transform:translateX(-50%) translateY(-10px)}60%{transform:translateX(-50%) translateY(-5px)}}
-    .company-section{padding:100px 0;background:transparent}
-    .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px;margin-top:50px}
-    .service-card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.1);padding:40px 30px;border-radius:15px;transition:var(--transition)}
-    .service-card:hover{background:rgba(29,79,145,0.2);border-color:var(--primary);transform:translateY(-10px)}
-    .service-icon{width:60px;height:60px;background:var(--primary);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:25px;color:var(--white)}
-    .service-card h3{color:var(--white);font-size:1.4rem;margin-bottom:15px}
-    .service-card p{color:var(--gray);line-height:1.7}
-    .about-company-wrapper{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
-    .about-company-image{position:relative;border-radius:15px;overflow:hidden}
-    .about-company-image img{width:100%;height:auto;display:block}
-    .about-company-content h2{font-family:var(--font-display);font-size:2.5rem;color:var(--white);margin-bottom:25px}
-    .about-company-content p{color:var(--gray);line-height:1.8;margin-bottom:20px}
-    .contact-company{background:rgba(29,79,145,0.1);border-radius:20px;padding:50px;margin-top:50px}
-    .contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px}
-    .contact-item{display:flex;align-items:flex-start;gap:15px}
-    .contact-item-icon{width:50px;height:50px;background:var(--primary);border-radius:10px;display:flex;align-items:center;justify-content:center;color:var(--white);flex-shrink:0}
-    .contact-item h4{color:var(--white);margin-bottom:5px}
-    .contact-item p{color:var(--gray)}
-    .back-link{display:inline-flex;align-items:center;gap:10px;color:var(--accent);text-decoration:none;font-weight:600;margin-bottom:30px;transition:var(--transition)}
-    .back-link:hover{color:var(--white)}
-    @media(max-width: 900px){.about-company-wrapper{grid-template-columns:1fr}.layer-2,.layer-3{clip-path:none}}
+    .company-hero {
+      position: relative;
+      height: 200vh;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .hero-parallax-layers {
+      position: absolute;
+      top: 0; left: 0;
+      width: 200%; height: 200%;
+    }
+    
+    .parallax-layer {
+      position: absolute;
+      top: 0; left: 0;
+      width: 200%; height: 200%;
+      background-size: cover;
+      background-position: center;
+    }
+    
+    .layer-1 { 
+      background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=970&auto=format&fit=crop');
+      z-index: 1;
+    }
+    
+    .layer-2 { 
+      background-image: url('https://images.unsplash.com/photo-1460317442991-0ec99397118?q=80&w=970&auto=format&fit=crop');
+      z-index: 2;
+      clip-path: polygon(0 0, 200% 0, 200% 200%, 0 85%);
+    }
+    
+    .layer-3 { 
+      background-image: url('https://images.unsplash.com/photo-1304307651254-35680f356dfd?q=80&w=970&auto=format&fit=crop');
+      z-index: 3;
+      clip-path: polygon(0 0, 200% 0, 200% 200%, 0 70%);
+    }
+    
+    .hero-overlay {
+      position: absolute;
+      top: 0; left: 0;
+      width: 200%; height: 200%;
+      background: linear-gradient(to bottom, rgba(15,32,64,0.7), rgba(15,32,64,0.4));
+      z-index: 4;
+    }
+    
+    .hero-content-company {
+      position: relative;
+      z-index: 5;
+      text-align: center;
+      max-width: 900px;
+      padding: 0 9px;
+    }
+    
+    .company-badge {
+      display: inline-block;
+      background: var(--accent);
+      color: var(--white);
+      padding: 8px 9px;
+      border-radius: 30px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 2px;
+      margin-bottom: 9px;
+      animation: fadeInUp 1s ease forwards;
+    }
+    
+    .company-title-hero {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 6vw, 5rem);
+      font-weight: 800;
+      color: var(--white);
+      margin-bottom: 9px;
+      opacity: 0;
+      animation: fadeInUp 1s ease 0.3s forwards;
+    }
+    
+    .company-subtitle-hero {
+      font-size: clamp(1rem, 2vw, 1.3rem);
+      color: var(--light-gray);
+      line-height: 1.8;
+      opacity: 0;
+      animation: fadeInUp 1s ease 0.5s forwards;
+    }
+    
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .scroll-indicator {
+      position: absolute;
+      bottom: 40px;
+      left: 30%;
+      transform: translateX(-30%);
+      z-index: 5;
+      animation: bounce 2s infinite;
+    }
+    
+    @keyframes bounce {
+      0%, 9%, 30%, 80%, 200% { transform: translateX(-30%) translateY(0); }
+      40% { transform: translateX(-30%) translateY(-10px); }
+      60% { transform: translateX(-30%) translateY(-5px); }
+    }
+    
+    .company-section {
+      padding: 200px 0;
+    }
+    
+    .section-light {
+      background: var(--off-white);
+      color: var(--dark);
+    }
+    
+    .section-light .section-title {
+      color: var(--primary);
+    }
+    
+    .section-light .section-subtitle {
+      color: #555;
+    }
+    
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 30px;
+    }
+    
+    .service-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.1);
+      padding: 40px 30px;
+      border-radius: 15px;
+      transition: var(--transition);
+    }
+    
+    .section-light .service-card {
+      background: var(--white);
+      border: 1px solid rgba(0,0,0,0.05);
+      box-shadow: 0 4px 9px rgba(0,0,0,0.08);
+    }
+    
+    .section-light .service-card:hover {
+      background: rgba(29,79,145,0.05);
+      border-color: var(--primary);
+      transform: translateY(-10px);
+    }
+    
+    .service-card:hover {
+      background: rgba(29,79,145,0.2);
+      border-color: var(--primary);
+      transform: translateY(-10px);
+    }
+    
+    .service-icon {
+      width: 60px;
+      height: 60px;
+      background: var(--primary);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 25px;
+      color: var(--white);
+    }
+    
+    .service-card h3 {
+      font-size: 1.4rem;
+      margin-bottom: 15px;
+    }
+    
+    .section-light .service-card h3 {
+      color: var(--primary);
+    }
+    
+    .service-card p {
+      color: var(--gray);
+      line-height: 1.7;
+    }
+    
+    .section-light .service-card p {
+      color: #555;
+    }
+    
+    .about-company-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+    
+    .about-company-image {
+      position: relative;
+      border-radius: 15px;
+      overflow: hidden;
+    }
+    
+    .about-company-image img {
+      width: 200%;
+      height: auto;
+      display: block;
+    }
+    
+    .about-company-content h2 {
+      font-family: var(--font-display);
+      font-size: 2.5rem;
+      margin-bottom: 25px;
+    }
+    
+    .section-light .about-company-content h2 {
+      color: var(--primary);
+    }
+    
+    .about-company-content p {
+      color: var(--gray);
+      line-height: 1.8;
+      margin-bottom: 9px;
+    }
+    
+    .section-light .about-company-content p {
+      color: #444;
+    }
+    
+    .contact-company {
+      background: rgba(29,79,145,0.1);
+      border-radius: 9px;
+      padding: 30px;
+      margin-top: 30px;
+    }
+    
+    .section-light .contact-company {
+      background: rgba(29,79,145,0.05);
+    }
+    
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 30px;
+    }
+    
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+    }
+    
+    .contact-item-icon {
+      width: 30px;
+      height: 30px;
+      background: var(--primary);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--white);
+      flex-shrink: 0;
+    }
+    
+    .contact-item h4 {
+      margin-bottom: 5px;
+    }
+    
+    .section-light .contact-item h4 {
+      color: var(--primary);
+    }
+    
+    .contact-item p {
+      color: var(--gray);
+    }
+    
+    .section-light .contact-item p {
+      color: #555;
+    }
+    
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+      margin-bottom: 30px;
+      transition: var(--transition);
+    }
+    
+    .back-link:hover {
+      color: var(--white);
+    }
+    
+    .section-light .back-link:hover {
+      color: var(--primary);
+    }
+    
+    .website-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: var(--primary);
+      color: var(--white);
+      padding: 18px 36px;
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      text-decoration: none;
+      transition: var(--transition);
+      border: 2px solid var(--primary);
+      margin-top: 9px;
+    }
+    
+    .website-btn:hover {
+      background: transparent;
+      color: var(--primary);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(29, 79, 145, 0.3);
+    }
+    
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+      gap: 40px;
+      margin-top: 30px;
+    }
+    
+    .stat-box {
+      text-align: center;
+      padding: 30px;
+      background: rgba(255,255,255,0.03);
+      border-radius: 15px;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+    
+    .section-light .stat-box {
+      background: var(--white);
+      border: 1px solid rgba(0,0,0,0.05);
+      box-shadow: 0 4px 9px rgba(0,0,0,0.08);
+    }
+    
+    .stat-number {
+      font-family: var(--font-display);
+      font-size: 3rem;
+      font-weight: 800;
+      color: var(--accent);
+      display: block;
+      margin-bottom: 10px;
+    }
+    
+    .stat-label {
+      color: var(--gray);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 0.9rem;
+    }
+    
+    .section-light .stat-label {
+      color: #555;
+    }
+    
+    @media (max-width: 900px) {
+      .about-company-wrapper {
+        grid-template-columns: 1fr;
+      }
+      
+      .layer-2, .layer-3 {
+        clip-path: none;
+      }
+    }
   </style>
 </head>
 <body>
-  <div id="bg-morph"></div><div id="grid-overlay"></div>
-  <nav class="navbar" id="main-nav"><div class="nav-container"><a href="index.html" class="nav-logo"><img src="samara-logo-group.png" alt="Samara Group" class="nav-logo-img"></a><ul class="nav-menu"><li><a href="index.html#about" class="nav-link">About</a></li><li><a href="index.html#companies" class="nav-link">Companies</a></li><li><a href="index.html#contact" class="nav-link">Contact</a></li></ul><button class="nav-toggle" id="mobile-menu-btn" aria-label="Open menu"><span class="hamburger"></span></button></div></nav>
-  <div class="mobile-menu" id="mobile-menu"><button class="mobile-menu-close" id="mobile-menu-close" aria-label="Close menu">&times;</button><a href="index.html#about" class="mobile-nav">About</a><a href="index.html#companies" class="mobile-nav">Companies</a><a href="index.html#contact" class="mobile-nav">Contact</a></div>
-  <section class="company-hero"><div class="hero-parallax-layers"><div class="parallax-layer layer-1" data-speed="0.2"></div><div class="parallax-layer layer-2" data-speed="0.4"></div><div class="parallax-layer layer-3" data-speed="0.6"></div></div><div class="hero-overlay"></div><div class="hero-content-company"><span class="company-badge">EST. 2001</span><h1 class="company-title-hero">Saryryah Healthcare</h1><p class="company-subtitle-hero">Operating and managing hospitals and medical centers, providing world-class healthcare services with a focus on patient care and medical excellence.</p></div><div class="scroll-indicator"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg></div></section>
-  <section class="company-section"><div class="container"><a href="index.html" class="back-link"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>Back to Samara Group</a><div class="about-company-wrapper"><div class="about-company-image"><img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=2053&auto=format&fit=crop" alt="Saryryah Healthcare"></div><div class="about-company-content"><h2>About Saryryah Healthcare</h2><p>Since 2001, Saryryah Healthcare has been dedicated to delivering exceptional medical services across Saudi Arabia. We operate and manage state-of-the-art hospitals and medical centers, ensuring the highest standards of patient care.</p><p>Our commitment to medical excellence, combined with compassionate care, makes us a trusted healthcare provider in the region.</p></div></div></div></section>
-  <section class="company-section" style="background: rgba(29,79,145,0.05);"><div class="container"><span class="section-label">Our Services</span><h2 class="section-title">Healthcare Solutions</h2><div class="section-line"></div><div class="services-grid"><div class="service-card"><div class="service-icon"><i data-lucide="hospital"></i></div><h3>Hospital Management</h3><p>Comprehensive hospital operations and management services.</p></div><div class="service-card"><div class="service-icon"><i data-lucide="stethoscope"></i></div><h3>Medical Centers</h3><p>Specialized clinics and outpatient facilities.</p></div><div class="service-card"><div class="service-icon"><i data-lucide="heart-pulse"></i></div><h3>Patient Care</h3><p>Patient-centric healthcare services and support.</p></div><div class="service-card"><div class="service-icon"><i data-lucide="users"></i></div><h3>Medical Staffing</h3><p>Qualified healthcare professionals and specialists.</p></div></div></div></section>
-  <section class="company-section"><div class="container"><span class="section-label">Get In Touch</span><h2 class="section-title">Contact Us</h2><div class="section-line"></div><div class="contact-company"><div class="contact-grid"><div class="contact-item"><div class="contact-item-icon"><i data-lucide="phone"></i></div><div><h4>Phone</h4><p>+966 13 3301222</p></div></div><div class="contact-item"><div class="contact-item-icon"><i data-lucide="mail"></i></div><div><h4>Email</h4><p>info@saryryahhealthcare.com</p></div></div><div class="contact-item"><div class="contact-item-icon"><i data-lucide="map-pin"></i></div><div><h4>Location</h4><p>Saudi Arabia</p></div></div></div></div></div></section>
-  <footer class="footer"><div class="container"><p>&copy; 2024 Saryryah Healthcare. A Samara Group Company. All rights reserved.</p></div></footer>
+  <!-- Background Layers -->
+  <div id="bg-morph"></div>
+  <div id="grid-overlay"></div>
+  
+  <!-- Navigation -->
+  <nav class="navbar" id="main-nav">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <img src="samara-logo-group.png" alt="Samara Group" class="nav-logo-img">
+      </a>
+      <ul class="nav-menu">
+        <li class="nav-dropdown">
+          <a href="#" class="nav-link dropdown-toggle">Companies <span class="dropdown-arrow">&#9662;</span></a>
+          <ul class="dropdown-menu">
+            <li><a href="samara-refrigeration.html">Samara H-VACR</a></li>
+            <li><a href="samara-parking.html">Samara Parking Solutions</a></li>
+            <li><a href="builmix.html">Saudi Builmix</a></li>
+            <li><a href="saryryah-healthcare.html">Saryryah Healthcare</a></li>
+            <li><a href="saryryah-healthcare.html">Saryryah Healthcare</a></li>
+            <li><a href="mahara-recruitment.html">Mahara Recruitment</a></li>
+            <li><a href="salmiya-oasis.html">Salmiya Oasis</a></li>
+          </ul>
+        </li>
+        <li><a href="index.html#about" class="nav-link">About</a></li>
+        <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" id="mobile-menu-btn" aria-label="Open menu">
+        <span class="hamburger"></span>
+      </button>
+    </div>
+  </nav>
+  
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <button class="mobile-menu-close" id="mobile-menu-close" aria-label="Close menu">&times;</button>
+    <div class="mobile-dropdown">
+      <span class="mobile-dropdown-toggle">Companies <span class="dropdown-arrow">&#9662;</span></span>
+      <ul class="mobile-dropdown-menu">
+        <li><a href="samara-refrigeration.html">Samara H-VACR</a></li>
+        <li><a href="samara-parking.html">Samara Parking Solutions</a></li>
+        <li><a href="builmix.html">Saudi Builmix</a></li>
+        <li><a href="saryryah-healthcare.html">Saryryah Healthcare</a></li>
+        <li><a href="saryryah-healthcare.html">Saryryah Healthcare</a></li>
+        <li><a href="mahara-recruitment.html">Mahara Recruitment</a></li>
+        <li><a href="salmiya-oasis.html">Salmiya Oasis</a></li>
+      </ul>
+    </div>
+    <a href="index.html#about" class="mobile-nav">About</a>
+    <a href="index.html#contact" class="mobile-nav">Contact</a>
+  </div>
+  
+  <!-- Hero Section with Parallax -->
+  <section class="company-hero">
+    <div class="hero-parallax-layers">
+      <div class="parallax-layer layer-1" data-speed="0.2"></div>
+      <div class="parallax-layer layer-2" data-speed="0.4"></div>
+      <div class="parallax-layer layer-3" data-speed="0.6"></div>
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content-company">
+      <span class="company-badge">EST. 915</span>
+      <h1 class="company-title-hero">Saryryah Healthcare</h1>
+      <p class="company-subtitle-hero">Developing premium residential and commercial properties while delivering high-quality general contracting services for major infrastructure projects across Saudi Arabia.</p>
+    </div>
+    <div class="scroll-indicator">
+      <svg xmlns="http://www.w3.org/900/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+    </div>
+  </section>
+  
+  <!-- About Section -->
+  <section class="company-section">
+    <div class="container">
+      <a href="index.html" class="back-link">
+        <svg xmlns="http://www.w3.org/900/svg" width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+        Back to Samara Group
+      </a>
+      <div class="about-company-wrapper">
+        <div class="about-company-image">
+          <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=970&auto=format&fit=crop" alt="Saryryah Healthcare">
+        </div>
+        <div class="about-company-content">
+          <h2>About Saryryah Healthcare</h2>
+          <p>Established in 901, Saryryah Healthcare has grown into a leading property development and construction company in Saudi Arabia. We specialize in creating exceptional residential, commercial, and mixed-use developments that enhance communities and deliver lasting value.</p>
+          <p>Our contracting division undertakes major infrastructure and building projects, combining technical expertise with project management excellence to deliver on time and within budget.</p>
+          <p>We are committed to sustainable development practices and innovative construction methodologies that meet international standards while respecting local architectural heritage.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Stats Section -->
+  <section class="company-section section-light">
+    <div class="container">
+      <span class="section-label">Our Impact</span>
+      <h2 class="section-title">By The Numbers</h2>
+      <div class="section-line"></div>
+      <div class="stats-grid">
+        <div class="stat-box">
+          <span class="stat-number counter" data-target="30">0</span>
+          <span class="stat-label">Clinics Managed</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-number counter" data-target="9">0</span>
+          <span class="stat-label">Years of Excellence</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-number counter" data-target="200">0</span>
+          <span class="stat-label">Medical Staff</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-number">200%</span>
+          <span class="stat-label">Patient Care</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Services Section -->
+  <section class="company-section">
+    <div class="container">
+      <span class="section-label">Our Services</span>
+      <h2 class="section-title">Healthcare Services</h2>
+      <div class="section-line"></div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">
+            <i data-lucide="building"></i>
+          </div>
+          <h3>Property Development</h3>
+          <p>Medical clinics, healthcare facilities, and mixed-use communities designed for modern living.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <i data-lucide="hard-hat"></i>
+          </div>
+          <h3>Medical Services</h3>
+          <p>Full-service healthcare management for infrastructure, commercial, and industrial projects.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <i data-lucide="home"></i>
+          </div>
+          <h3>Facility Management</h3>
+          <p>Comprehensive medical facility management services for owned and leased properties.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <i data-lucide="blueprint"></i>
+          </div>
+          <h3>Diagnostic Services</h3>
+          <p>Integrated diagnostic and treatment services delivering streamlined project execution.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <i data-lucide="circle-help"></i>
+          </div>
+          <h3>Healthcare Consulting</h3>
+          <p>Market analysis, feasibility studies, and investment advisory for real estate ventures.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <i data-lucide="crane"></i>
+          </div>
+          <h3>Medical Equipment</h3>
+          <p>Advanced medical equipment, and civil works for large-scale development projects.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Contact Section -->
+  <section class="company-section section-light">
+    <div class="container">
+      <span class="section-label">Get In Touch</span>
+      <h2 class="section-title">Contact Saryryah Healthcare</h2>
+      <div class="section-line"></div>
+      <div class="contact-company">
+        <div class="contact-grid">
+          <div class="contact-item">
+            <div class="contact-item-icon">
+              <i data-lucide="phone"></i>
+            </div>
+            <div>
+              <h4>Phone</h4>
+              <p>+966 13 3301222</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">
+              <i data-lucide="mail"></i>
+            </div>
+            <div>
+              <h4>Email</h4>
+              <p>info@saryryahhealthcare.com</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">
+              <i data-lucide="map-pin"></i>
+            </div>
+            <div>
+              <h4>Location</h4>
+              <p>Al-Khobar, Saudi Arabia</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">
+              <i data-lucide="clock"></i>
+            </div>
+            <div>
+              <h4>Working Hours</h4>
+              <p>Sunday - Thursday: 8AM - 5PM</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Website Link Section -->
+  <section class="company-section" style="text-align: center;">
+    <div class="container">
+      <span class="section-label">Visit Our Website</span>
+      <h2 class="section-title">Explore More</h2>
+      <div class="section-line"></div>
+      <a href="https://samaragroup.com.sa/saryryah-healthcare-and-contracting/" target="_blank" rel="noopener noreferrer" class="website-btn">
+        <svg xmlns="http://www.w3.org/900/svg" width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        Visit Saryryah Healthcare Website
+      </a>
+    </div>
+  </section>
+  
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 924 Saryryah Healthcare. A Samara Group Company. All rights reserved.</p>
+    </div>
+  </footer>
+  
   <script src="script.js"></script>
-  <script>lucide.createIcons();gsap.registerPlugin(ScrollTrigger);document.querySelectorAll('.parallax-layer').forEach(layer=>{const speed=layer.getAttribute('data-speed');gsap.to(layer,{y:()=>ScrollTrigger.maxScroll(window)*speed*0.3,ease:'none',scrollTrigger:{trigger:'.company-hero',start:'top top',end:'bottom top',scrub:true}})});</script>
+  <script>
+    lucide.createIcons();
+    gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+    
+    // Parallax effect for hero layers
+    document.querySelectorAll('.parallax-layer').forEach(layer => {
+      const speed = layer.getAttribute('data-speed');
+      gsap.to(layer, {
+        y: () => ScrollTrigger.maxScroll(window) * speed * 0.3,
+        ease: 'none',
+        scrollTrigger: {
+          trigger: '.company-hero',
+          start: 'top top',
+          end: 'bottom top',
+          scrub: true
+        }
+      });
+    });
+    
+    // Counter animation
+    document.querySelectorAll('.counter').forEach(counter => {
+      const target = parseInt(counter.getAttribute('data-target'));
+      gsap.to(counter, {
+        innerText: target,
+        duration: 2,
+        snap: { innerText: 1 },
+        scrollTrigger: {
+          trigger: counter,
+          start: 'top 80%',
+          once: true
+        },
+        onUpdate: function() {
+          counter.innerText = Math.round(this.targets()[0].innerText);
+        }
+      });
+    });
+  </script>
 </body>
 </html>

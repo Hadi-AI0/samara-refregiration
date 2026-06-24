@@ -769,6 +769,9 @@ section {
   position: sticky;
   top: 120px;
   height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 
 .about-sticky-right {
@@ -795,13 +798,13 @@ section {
 .about-text-segment p {
   font-size: 1.3rem;
   line-height: 1.8;
-  color: #1a1a1a;
-  font-weight: 400;
+  color: #0a0a0a;
+  font-weight: 500;
 }
 
 .about-text-segment.active p {
   color: #0f2040;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .image-frame {
@@ -1093,7 +1096,7 @@ section {
 
 /* Board Members Section */
 .board-section {
-  background: transparent;
+  background: var(--off-white);
   padding: 120px 0;
   position: relative;
 }
@@ -1134,7 +1137,7 @@ section {
   font-family: var(--font-serif);
   font-size: 3rem;
   font-weight: 900;
-  color: var(--white);
+  color: #0a0a0a;
   line-height: 1.1;
 }
 
@@ -1222,7 +1225,7 @@ section {
 }
 
 .board-content-subtitle {
-  color: rgba(255,255,255,0.3);
+  color: rgba(0,0,0,0.3);
   font-size: 0.65rem;
   text-transform: uppercase;
   letter-spacing: 0.25em;
@@ -1241,13 +1244,13 @@ section {
   font-family: var(--font-serif);
   font-size: 2.5rem;
   font-weight: 900;
-  color: var(--white);
+  color: #0a0a0a;
   margin-bottom: 24px;
   line-height: 1.1;
 }
 
 .board-content-desc {
-  color: rgba(255,255,255,0.55);
+  color: rgba(0,0,0,0.65);
   font-size: 1rem;
   line-height: 1.7;
   margin-bottom: 32px;
@@ -1732,7 +1735,7 @@ section {
   font-family: var(--font-display);
   font-size: 2.5rem;
   margin-bottom: 20px;
-  color: #1a1a1a;
+  color: #0a0a0a;
 }
 
 .contact-desc {
