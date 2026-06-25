@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Samara Group Company">
+  <meta name="description" content="Mahara Recruitment - Leading HR solutions and recruitment services in Saudi Arabia">
   <meta name="theme-color" content="#0f2040">
-  <title>Company | Samara Group</title>
+  <title>Mahara Recruitment | Samara Group</title>
   <link href="https://db.onlinewebfonts.com/c/860c3ec7bbc5da3e97233ccecafe512e?family=Circular+Std+Book" rel="stylesheet">
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
@@ -16,6 +16,8 @@
     :root{--primary:#0f2040;--secondary:#1a3a6e;--accent:#c9a227;--off-white:#f8f9fa;--text-dark:#222;--text-light:#fff;--font-main:"Circular Std Book",sans-serif}
     *{margin:0;padding:0;box-sizing:border-box}
     body{font-family:var(--font-main);background:var(--primary);color:var(--text-light);overflow-x:hidden}
+    
+    /* Hero Section */
     .hero-section{position:relative;height:100vh;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--primary) 0%,var(--secondary) 100%);overflow:hidden}
     .hero-circle{position:absolute;border-radius:50%;filter:blur(80px);opacity:0.4}
     .hero-circle-1{width:400px;height:400px;background:var(--accent);top:-100px;right:-100px}
@@ -31,26 +33,49 @@
     .btn-primary:hover{background:transparent;color:var(--accent)}
     .btn-outline{background:transparent;color:var(--text-light);border:2px solid var(--text-light)}
     .btn-outline:hover{background:var(--text-light);color:var(--primary)}
+    
+    /* Sections */
     section{padding:100px 20px;position:relative}
     .section-dark{background:var(--primary);color:var(--text-light)}
     .section-light{background:var(--off-white);color:var(--text-dark)}
     .container{max-width:1200px;margin:0 auto}
     .section-title{font-size:clamp(2rem,4vw,3rem);font-weight:700;text-align:center;margin-bottom:60px}
+    .section-subtitle{text-align:center;font-size:1.2rem;max-width:700px;margin:0 auto 60px;opacity:0.8;line-height:1.8}
+    
+    /* Services Grid */
     .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px;margin-top:50px}
-    .service-card{background:rgba(255,255,255,0.05);padding:40px 30px;border-radius:20px;backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,0.1);transition:transform 0.3s ease,box-shadow 0.3s ease;opacity:0}
+    .service-card{background:rgba(255,255,255,0.05);padding:40px 30px;border-radius:20px;backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,0.1);transition:transform 0.3s ease,box-shadow 0.3s ease;opacity:0;transform:translateY(30px)}
     .section-light .service-card{background:#fff;border:1px solid rgba(0,0,0,0.1);box-shadow:0 10px 30px rgba(0,0,0,0.1)}
     .service-card:hover{transform:translateY(-10px);box-shadow:0 20px 40px rgba(0,0,0,0.2)}
     .service-icon{width:60px;height:60px;background:var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:25px}
     .service-icon i{color:var(--text-light);width:30px;height:30px}
-    .service-card h3{font-size:1.5rem;margin-bottom:15px}
+    .service-card h3{font-size:1.5rem;margin-bottom:15px;color:inherit}
+    .service-card p{opacity:0.8;line-height:1.6}
+    
+    /* Stats */
     .stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:40px;margin-top:50px}
-    .stat-item{text-align:center;opacity:0}
+    .stat-item{text-align:center;opacity:0;transform:translateY(30px)}
     .stat-number{font-size:3.5rem;font-weight:700;color:var(--accent);display:block;margin-bottom:10px}
     .stat-label{font-size:1.1rem;opacity:0.8}
+    
+    /* Why Choose Us */
+    .features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px;margin-top:50px}
+    .feature-card{text-align:center;padding:30px;background:rgba(255,255,255,0.05);border-radius:15px;opacity:0;transform:translateY(30px)}
+    .section-light .feature-card{background:#fff;box-shadow:0 10px 30px rgba(0,0,0,0.1)}
+    .feature-icon{width:70px;height:70px;margin:0 auto 20px;background:var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center}
+    .feature-icon i{width:35px;height:35px;color:var(--text-light)}
+    .feature-card h3{font-size:1.3rem;margin-bottom:15px}
+    .feature-card p{opacity:0.8;line-height:1.6}
+    
+    /* Contact */
     .contact-section{text-align:center}
     .contact-info{display:flex;flex-wrap:wrap;justify-content:center;gap:40px;margin:50px 0}
-    .contact-item{display:flex;align-items:center;gap:15px}
+    .contact-item{display:flex;align-items:center;gap:15px;background:rgba(255,255,255,0.05);padding:20px 30px;border-radius:15px}
+    .section-light .contact-item{background:#fff;box-shadow:0 10px 30px rgba(0,0,0,0.1)}
     .contact-item i{width:40px;height:40px;background:var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--text-light)}
+    .contact-item span{font-size:1.1rem}
+    
+    /* Navigation */
     nav{position:fixed;top:0;width:100%;background:rgba(15,32,64,0.95);backdrop-filter:blur(10px);z-index:1000;padding:20px 0}
     .nav-container{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;padding:0 20px}
     .nav-logo{font-size:1.5rem;font-weight:700;color:var(--text-light);text-decoration:none}
@@ -65,17 +90,30 @@
     .dropdown-menu a:hover{background:rgba(255,255,255,0.1)}
     .hamburger{display:none;flex-direction:column;cursor:pointer;gap:5px}
     .hamburger span{width:25px;height:3px;background:var(--text-light);transition:all 0.3s ease}
-    @media(max-width:768px){.nav-menu{position:fixed;top:70px;left:-100%;width:100%;height:calc(100vh - 70px);background:var(--primary);flex-direction:column;align-items:center;justify-content:center;transition:left 0.3s ease}.nav-menu.active{left:0}.hamburger{display:flex}.dropdown-menu{position:static;opacity:1;visibility:visible;transform:none;background:rgba(255,255,255,0.05);margin-top:10px;display:none}.dropdown.active .dropdown-menu{display:block}}
+    
+    @media(max-width:768px){
+      .nav-menu{position:fixed;top:70px;left:-100%;width:100%;height:calc(100vh - 70px);background:var(--primary);flex-direction:column;align-items:center;justify-content:center;transition:left 0.3s ease}
+      .nav-menu.active{left:0}
+      .hamburger{display:flex}
+      .dropdown-menu{position:static;opacity:1;visibility:visible;transform:none;background:rgba(255,255,255,0.05);margin-top:10px;display:none}
+      .dropdown.active .dropdown-menu{display:block}
+      .hero-title{font-size:2.5rem}
+      .hero-subtitle{font-size:1rem}
+      .hero-buttons{flex-direction:column;align-items:center}
+      .btn{width:100%;max-width:300px;text-align:center}
+      section{padding:80px 20px}
+    }
   </style>
 </head>
 <body>
+  <!-- Navigation -->
   <nav>
     <div class="nav-container">
       <a href="index.html" class="nav-logo">SAMARA GROUP</a>
       <ul class="nav-menu" id="navMenu">
         <li><a href="#about">About</a></li>
         <li><a href="#services">Services</a></li>
-        <li><a href="#stats">Impact</a></li>
+        <li><a href="#why">Why Us</a></li>
         <li><a href="#contact">Contact</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle">Companies ▾</a>
@@ -93,69 +131,239 @@
       <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
     </div>
   </nav>
+
+  <!-- Hero Section -->
   <section class="hero-section">
     <div class="hero-circle hero-circle-1"></div>
     <div class="hero-circle hero-circle-2"></div>
     <div class="hero-circle hero-circle-3"></div>
     <div class="hero-content">
       <div class="hero-badge">A SAMARA GROUP COMPANY</div>
-      <h1 class="hero-title" id="heroTitle">Company Name</h1>
-      <p class="hero-subtitle" id="heroSubtitle">Company description goes here.</p>
+      <h1 class="hero-title">Mahara Recruitment</h1>
+      <p class="hero-subtitle">Leading HR solutions and talent acquisition services connecting businesses with exceptional professionals across Saudi Arabia and the GCC region.</p>
       <div class="hero-buttons">
-        <a href="#" target="_blank" class="btn btn-primary" id="websiteBtn">Visit Company Website</a>
+        <a href="https://mahararecruitment.com/services.php" target="_blank" class="btn btn-primary">Visit Company Website</a>
         <a href="#about" class="btn btn-outline">Learn More</a>
       </div>
     </div>
   </section>
+
+  <!-- About Section -->
   <section id="about" class="section-dark">
     <div class="container">
-      <h2 class="section-title">About Company</h2>
-      <div class="about-content" style="max-width:800px;margin:0 auto;text-align:center;line-height:1.8">
-        <p style="font-size:1.2rem;margin-bottom:30px" id="aboutP1">About paragraph 1.</p>
-        <p style="font-size:1.1rem" id="aboutP2">About paragraph 2.</p>
+      <h2 class="section-title">About Mahara Recruitment</h2>
+      <p class="section-subtitle">Your Trusted Partner in Human Capital Solutions</p>
+      <div class="about-content" style="max-width:900px;margin:0 auto;text-align:center;line-height:1.8">
+        <p style="font-size:1.2rem;margin-bottom:30px">Mahara Recruitment is a premier human resources consultancy specializing in connecting top-tier talent with leading organizations across the Kingdom of Saudi Arabia. As part of the prestigious Samara Group, we leverage decades of business excellence to deliver exceptional recruitment solutions.</p>
+        <p style="font-size:1.1rem;opacity:0.9">Our comprehensive approach combines deep market knowledge, advanced screening methodologies, and personalized service to ensure perfect matches between employers and candidates. We serve diverse industries including healthcare, engineering, finance, hospitality, and technology sectors.</p>
       </div>
     </div>
   </section>
+
+  <!-- Services Section -->
   <section id="services" class="section-light">
     <div class="container">
       <h2 class="section-title" style="color:var(--primary)">Our Services</h2>
-      <div class="services-grid" id="servicesGrid"></div>
+      <p class="section-subtitle" style="color:#666">Comprehensive HR solutions tailored to your business needs</p>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon"><i data-lucide="users"></i></div>
+          <h3>Executive Search</h3>
+          <p>Identifying and attracting C-level executives and senior management professionals who drive organizational success.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i data-lucide="user-check"></i></div>
+          <h3>Professional Recruitment</h3>
+          <p>Full-cycle recruitment services for mid to senior-level positions across all industries and specializations.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i data-lucide="briefcase"></i></div>
+          <h3>Contract Staffing</h3>
+          <p>Flexible workforce solutions providing qualified professionals for project-based and temporary assignments.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i data-lucide="clipboard-list"></i></div>
+          <h3>HR Consulting</h3>
+          <p>Strategic HR advisory services including organizational design, compensation benchmarking, and policy development.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i data-lucide="graduation-cap"></i></div>
+          <h3>Talent Assessment</h3>
+          <p>Comprehensive evaluation tools and psychometric testing to ensure candidate suitability and cultural fit.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i data-lucide="globe"></i></div>
+          <h3>International Recruitment</h3>
+          <p>Cross-border talent acquisition with expertise in visa processing, relocation, and compliance management.</p>
+        </div>
+      </div>
     </div>
   </section>
-  <section id="stats" class="section-dark">
+
+  <!-- Why Choose Us Section -->
+  <section id="why" class="section-dark">
     <div class="container">
-      <h2 class="section-title">Our Impact</h2>
-      <div class="stats-grid" id="statsGrid"></div>
+      <h2 class="section-title">Why Choose Mahara</h2>
+      <p class="section-subtitle">Delivering excellence in every placement</p>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon"><i data-lucide="award"></i></div>
+          <h3>Industry Expertise</h3>
+          <p>Deep understanding of multiple sectors with specialized recruiters for each industry vertical.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i data-lucide="target"></i></div>
+          <h3>Precision Matching</h3>
+          <p>Rigorous screening process ensuring perfect alignment of skills, experience, and company culture.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i data-lucide="clock"></i></div>
+          <h3>Rapid Delivery</h3>
+          <p>Streamlined processes and extensive networks enabling faster time-to-hire without compromising quality.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i data-lucide="shield-check"></i></div>
+          <h3>Guaranteed Quality</h3>
+          <p>Replacement guarantees and ongoing support to ensure long-term successful placements.</p>
+        </div>
+      </div>
     </div>
   </section>
+
+  <!-- Stats Section -->
   <section class="section-light">
     <div class="container">
-      <h2 class="section-title" style="color:var(--primary)">Why Choose Us</h2>
-      <div class="services-grid" id="whyGrid"></div>
+      <h2 class="section-title" style="color:var(--primary)">Our Impact</h2>
+      <div class="stats-grid">
+        <div class="stat-item">
+          <span class="stat-number" data-target="5000">0</span>
+          <span class="stat-label">Successful Placements</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="500">0</span>
+          <span class="stat-label">Corporate Clients</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="95">0</span>
+          <span class="stat-label">% Retention Rate</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="15">0</span>
+          <span class="stat-label">Years Experience</span>
+        </div>
+      </div>
     </div>
   </section>
+
+  <!-- Contact Section -->
   <section id="contact" class="section-dark contact-section">
     <div class="container">
       <h2 class="section-title">Get In Touch</h2>
-      <p style="font-size:1.2rem;max-width:600px;margin:0 auto 50px" id="contactDesc">Contact description.</p>
-      <div class="contact-info" id="contactInfo"></div>
-      <a href="#" target="_blank" class="btn btn-primary" style="margin-top:30px" id="contactBtn">Visit Company Website</a>
+      <p style="font-size:1.2rem;max-width:600px;margin:0 auto 50px;opacity:0.8">Ready to find your next great hire or advance your career? Contact our team today.</p>
+      <div class="contact-info">
+        <div class="contact-item">
+          <i data-lucide="phone"></i>
+          <span>+966 11 XXX XXXX</span>
+        </div>
+        <div class="contact-item">
+          <i data-lucide="mail"></i>
+          <span>info@mahararecruitment.com</span>
+        </div>
+        <div class="contact-item">
+          <i data-lucide="map-pin"></i>
+          <span>Riyadh, Saudi Arabia</span>
+        </div>
+      </div>
+      <a href="https://mahararecruitment.com/services.php" target="_blank" class="btn btn-primary" style="margin-top:30px">Visit Company Website</a>
     </div>
   </section>
-  <footer style="background:#0a1628;padding:40px 20px;text-align:center"><p style="opacity:0.7">&copy; 2024 Company. All rights reserved. | Part of Samara Group</p></footer>
+
+  <!-- Footer -->
+  <footer style="background:#0a1628;padding:40px 20px;text-align:center">
+    <p style="opacity:0.7">&copy; 2024 Mahara Recruitment. All rights reserved. | Part of Samara Group</p>
+  </footer>
+
   <script>
     lucide.createIcons();
     gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
-    const tl=gsap.timeline();
-    tl.to('.hero-badge',{opacity:1,duration:1,delay:0.2}).to('.hero-title',{opacity:1,y:0,duration:1},'-=0.5').to('.hero-subtitle',{opacity:1,y:0,duration:1},'-=0.5').to('.hero-buttons',{opacity:1,y:0,duration:1},'-=0.5');
-    gsap.to('.hero-circle-1',{y:30,duration:4,repeat:-1,yoyo:true,ease:'sine.inOut'});
-    gsap.to('.hero-circle-2',{y:-25,duration:5,repeat:-1,yoyo:true,ease:'sine.inOut',delay:1});
-    gsap.to('.hero-circle-3',{scale:1.1,duration:3,repeat:-1,yoyo:true,ease:'sine.inOut',delay:0.5});
-    gsap.utils.toArray('.service-card').forEach((card,i)=>{gsap.to(card,{scrollTrigger:{trigger:card,start:'top 85%'},opacity:1,y:0,duration:0.6,delay:i*0.1})});
-    gsap.utils.toArray('.stat-item').forEach((stat,i)=>{const number=stat.querySelector('.stat-number');const target=parseInt(number.getAttribute('data-target'));gsap.to(stat,{scrollTrigger:{trigger:stat,start:'top 85%'},opacity:1,duration:0.6,onComplete:()=>{let current=0;const increment=target/50;const timer=setInterval(()=>{current+=increment;if(current>=target){number.textContent=target.toLocaleString();clearInterval(timer)}else{number.textContent=Math.floor(current).toLocaleString()}},30)}})});
-    const hamburger=document.getElementById('hamburger');const navMenu=document.getElementById('navMenu');hamburger.addEventListener('click',()=>{navMenu.classList.toggle('active')});
-    document.querySelectorAll('.dropdown-toggle').forEach(toggle=>{toggle.addEventListener('click',(e)=>{if(window.innerWidth<=768){e.preventDefault();toggle.parentElement.classList.toggle('active')}})});
+    
+    // Hero animations
+    const tl = gsap.timeline();
+    tl.to('.hero-badge', {opacity: 1, duration: 1, delay: 0.2})
+      .to('.hero-title', {opacity: 1, y: 0, duration: 1}, '-=0.5')
+      .to('.hero-subtitle', {opacity: 1, y: 0, duration: 1}, '-=0.5')
+      .to('.hero-buttons', {opacity: 1, y: 0, duration: 1}, '-=0.5');
+    
+    // Floating circles animation
+    gsap.to('.hero-circle-1', {y: 30, duration: 4, repeat: -1, yoyo: true, ease: 'sine.inOut'});
+    gsap.to('.hero-circle-2', {y: -25, duration: 5, repeat: -1, yoyo: true, ease: 'sine.inOut', delay: 1});
+    gsap.to('.hero-circle-3', {scale: 1.1, duration: 3, repeat: -1, yoyo: true, ease: 'sine.inOut', delay: 0.5});
+    
+    // Service cards animation
+    gsap.utils.toArray('.service-card').forEach((card, i) => {
+      gsap.to(card, {
+        scrollTrigger: {trigger: card, start: 'top 85%'},
+        opacity: 1,
+        y: 0,
+        duration: 0.6,
+        delay: i * 0.1
+      });
+    });
+    
+    // Feature cards animation
+    gsap.utils.toArray('.feature-card').forEach((card, i) => {
+      gsap.to(card, {
+        scrollTrigger: {trigger: card, start: 'top 85%'},
+        opacity: 1,
+        y: 0,
+        duration: 0.6,
+        delay: i * 0.1
+      });
+    });
+    
+    // Stats counter animation
+    gsap.utils.toArray('.stat-item').forEach((stat, i) => {
+      const number = stat.querySelector('.stat-number');
+      const target = parseInt(number.getAttribute('data-target'));
+      
+      gsap.to(stat, {
+        scrollTrigger: {trigger: stat, start: 'top 85%'},
+        opacity: 1,
+        y: 0,
+        duration: 0.6,
+        onComplete: () => {
+          let current = 0;
+          const increment = target / 50;
+          const timer = setInterval(() => {
+            current += increment;
+            if (current >= target) {
+              number.textContent = target.toLocaleString();
+              clearInterval(timer);
+            } else {
+              number.textContent = Math.floor(current).toLocaleString();
+            }
+          }, 30);
+        }
+      });
+    });
+    
+    // Mobile menu
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('navMenu');
+    
+    hamburger.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+    });
+    
+    // Mobile dropdown
+    document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
+      toggle.addEventListener('click', (e) => {
+        if (window.innerWidth <= 768) {
+          e.preventDefault();
+          toggle.parentElement.classList.toggle('active');
+        }
+      });
+    });
   </script>
-  <script id="pageData" type="application/json"></script>
 </body>
 </html>
