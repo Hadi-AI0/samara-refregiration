@@ -1,7 +1,4 @@
-# Examples 1:
-(No output - empty because only source/config files were modified)
-
-# Example 2:
+```
 # Compiled and build artifacts
 *.pyc
 __pycache__/
@@ -9,24 +6,23 @@ __pycache__/
 *.obj
 dist/
 build/
-target/
 
 # Dependencies
 .venv/
 venv/
 node_modules/
-.env
-.env.local
-.env.*
 
 # Logs and temp files
 *.log
 *.tmp
 *.swp
 
+# Environment
+.env
+.env.local
+.env.*
+
 # Editors
 .vscode/
 .idea/
-
-# Original rules preserved
-*.log
+```
