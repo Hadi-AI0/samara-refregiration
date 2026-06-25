@@ -3,322 +3,85 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Mahara Recruitment - Professional HR and recruitment solutions in Saudi Arabia.">
-  <meta name="theme-color" content="#1d4f91">
-  <title>Mahara Recruitment | Samara Group</title>
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Orbitron:wght@400;500;600;700;800;900&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
-  
+  <meta name="description" content="Samara Group Company">
+  <meta name="theme-color" content="#0f2040">
+  <title>Company | Samara Group</title>
+  <link href="https://db.onlinewebfonts.com/c/860c3ec7bbc5da3e97233ccecafe512e?family=Circular+Std+Book" rel="stylesheet">
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
-  
   <link rel="stylesheet" href="style.css">
   <style>
-    .company-hero {
-      position: relative;
-      height: 100vh;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    
-    .hero-parallax-layers {
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-    }
-    
-    .parallax-layer {
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background-size: cover;
-      background-position: center;
-    }
-    
-    .layer-1 { 
-      background-image: url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=2070&auto=format&fit=crop');
-      z-index: 1;
-    }
-    
-    .layer-2 { 
-      background-image: url('https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=2070&auto=format&fit=crop');
-      z-index: 2;
-      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
-    }
-    
-    .layer-3 { 
-      background-image: url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2070&auto=format&fit=crop');
-      z-index: 3;
-      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 70%);
-    }
-    
-    .hero-overlay {
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: linear-gradient(to bottom, rgba(15,32,64,0.7), rgba(15,32,64,0.4));
-      z-index: 4;
-    }
-    
-    .hero-content-company {
-      position: relative;
-      z-index: 5;
-      text-align: center;
-      max-width: 900px;
-      padding: 0 20px;
-    }
-    
-    .company-badge {
-      display: inline-block;
-      background: var(--accent);
-      color: var(--white);
-      padding: 8px 20px;
-      border-radius: 30px;
-      font-size: 0.85rem;
-      font-weight: 600;
-      letter-spacing: 2px;
-      margin-bottom: 20px;
-      animation: fadeInUp 1s ease forwards;
-    }
-    
-    .company-title-hero {
-      font-family: var(--font-display);
-      font-size: clamp(2.5rem, 6vw, 5rem);
-      font-weight: 800;
-      color: var(--white);
-      margin-bottom: 20px;
-      opacity: 0;
-      animation: fadeInUp 1s ease 0.3s forwards;
-    }
-    
-    .company-subtitle-hero {
-      font-size: clamp(1rem, 2vw, 1.3rem);
-      color: var(--light-gray);
-      line-height: 1.8;
-      opacity: 0;
-      animation: fadeInUp 1s ease 0.5s forwards;
-    }
-    
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-    
-    .scroll-indicator {
-      position: absolute;
-      bottom: 40px;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 5;
-      animation: bounce 2s infinite;
-    }
-    
-    @keyframes bounce {
-      0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
-      40% { transform: translateX(-50%) translateY(-10px); }
-      60% { transform: translateX(-50%) translateY(-5px); }
-    }
-    
-    .company-section {
-      padding: 100px 0;
-      background: transparent;
-    }
-    
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
-      margin-top: 50px;
-    }
-    
-    .service-card {
-      background: rgba(255,255,255,0.03);
-      border: 1px solid rgba(255,255,255,0.1);
-      padding: 40px 30px;
-      border-radius: 15px;
-      transition: var(--transition);
-    }
-    
-    .service-card:hover {
-      background: rgba(29,79,145,0.2);
-      border-color: var(--primary);
-      transform: translateY(-10px);
-    }
-    
-    .service-icon {
-      width: 60px;
-      height: 60px;
-      background: var(--primary);
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 25px;
-      color: var(--white);
-    }
-    
-    .service-card h3 {
-      color: var(--white);
-      font-size: 1.4rem;
-      margin-bottom: 15px;
-    }
-    
-    .service-card p {
-      color: var(--gray);
-      line-height: 1.7;
-    }
-    
-    .about-company-wrapper {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
-      align-items: center;
-    }
-    
-    .about-company-image {
-      position: relative;
-      border-radius: 15px;
-      overflow: hidden;
-    }
-    
-    .about-company-image img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-    
-    .about-company-content h2 {
-      font-family: var(--font-display);
-      font-size: 2.5rem;
-      color: var(--white);
-      margin-bottom: 25px;
-    }
-    
-    .about-company-content p {
-      color: var(--gray);
-      line-height: 1.8;
-      margin-bottom: 20px;
-    }
-    
-    .contact-company {
-      background: rgba(29,79,145,0.1);
-      border-radius: 20px;
-      padding: 50px;
-      margin-top: 50px;
-    }
-    
-    .contact-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
-    }
-    
-    .contact-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 15px;
-    }
-    
-    .contact-item-icon {
-      width: 50px;
-      height: 50px;
-      background: var(--primary);
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--white);
-      flex-shrink: 0;
-    }
-    
-    .contact-item h4 {
-      color: var(--white);
-      margin-bottom: 5px;
-    }
-    
-    .contact-item p {
-      color: var(--gray);
-    }
-    
-    .back-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      color: var(--accent);
-      text-decoration: none;
-      font-weight: 600;
-      margin-bottom: 30px;
-      transition: var(--transition);
-    }
-    
-    .back-link:hover {
-      color: var(--white);
-    }
-    
-    .website-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 12px;
-      background: var(--primary);
-      color: var(--white);
-      padding: 18px 36px;
-      border-radius: 50px;
-      font-weight: 600;
-      font-size: 1.1rem;
-      text-decoration: none;
-      transition: var(--transition);
-      border: 2px solid var(--primary);
-      margin-top: 20px;
-    }
-    
-    .website-btn:hover {
-      background: transparent;
-      color: var(--primary);
-      transform: translateY(-3px);
-      box-shadow: 0 10px 30px rgba(29, 79, 145, 0.3);
-    }
-    
-    @media (max-width: 900px) {
-      .about-company-wrapper {
-        grid-template-columns: 1fr;
-      }
-      
-      .layer-2, .layer-3 {
-        clip-path: none;
-      }
-    }
+    :root{--primary:#0f2040;--secondary:#1a3a6e;--accent:#c9a227;--off-white:#f8f9fa;--text-dark:#222;--text-light:#fff;--font-main:"Circular Std Book",sans-serif}
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:var(--font-main);background:var(--primary);color:var(--text-light);overflow-x:hidden}
+    .hero-section{position:relative;height:100vh;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--primary) 0%,var(--secondary) 100%);overflow:hidden}
+    .hero-circle{position:absolute;border-radius:50%;filter:blur(80px);opacity:0.4}
+    .hero-circle-1{width:400px;height:400px;background:var(--accent);top:-100px;right:-100px}
+    .hero-circle-2{width:300px;height:300px;background:#3b6fb6;bottom:-50px;left:-50px}
+    .hero-circle-3{width:200px;height:200px;background:#6b8fb6;top:50%;left:50%;transform:translate(-50%,-50%)}
+    .hero-content{position:relative;z-index:2;text-align:center;max-width:900px;padding:0 20px}
+    .hero-badge{display:inline-block;background:var(--accent);color:var(--text-light);padding:10px 25px;border-radius:30px;font-size:0.9rem;font-weight:600;letter-spacing:2px;margin-bottom:25px;opacity:0}
+    .hero-title{font-size:clamp(2.5rem,6vw,5rem);font-weight:700;color:var(--text-light);margin-bottom:20px;line-height:1.1;opacity:0}
+    .hero-subtitle{font-size:clamp(1.1rem,2vw,1.4rem);color:rgba(255,255,255,0.9);margin-bottom:40px;opacity:0}
+    .hero-buttons{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;opacity:0}
+    .btn{padding:15px 35px;border-radius:50px;font-weight:600;text-decoration:none;transition:all 0.3s ease;display:inline-block}
+    .btn-primary{background:var(--accent);color:var(--text-light);border:2px solid var(--accent)}
+    .btn-primary:hover{background:transparent;color:var(--accent)}
+    .btn-outline{background:transparent;color:var(--text-light);border:2px solid var(--text-light)}
+    .btn-outline:hover{background:var(--text-light);color:var(--primary)}
+    section{padding:100px 20px;position:relative}
+    .section-dark{background:var(--primary);color:var(--text-light)}
+    .section-light{background:var(--off-white);color:var(--text-dark)}
+    .container{max-width:1200px;margin:0 auto}
+    .section-title{font-size:clamp(2rem,4vw,3rem);font-weight:700;text-align:center;margin-bottom:60px}
+    .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px;margin-top:50px}
+    .service-card{background:rgba(255,255,255,0.05);padding:40px 30px;border-radius:20px;backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,0.1);transition:transform 0.3s ease,box-shadow 0.3s ease;opacity:0}
+    .section-light .service-card{background:#fff;border:1px solid rgba(0,0,0,0.1);box-shadow:0 10px 30px rgba(0,0,0,0.1)}
+    .service-card:hover{transform:translateY(-10px);box-shadow:0 20px 40px rgba(0,0,0,0.2)}
+    .service-icon{width:60px;height:60px;background:var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:25px}
+    .service-icon i{color:var(--text-light);width:30px;height:30px}
+    .service-card h3{font-size:1.5rem;margin-bottom:15px}
+    .stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:40px;margin-top:50px}
+    .stat-item{text-align:center;opacity:0}
+    .stat-number{font-size:3.5rem;font-weight:700;color:var(--accent);display:block;margin-bottom:10px}
+    .stat-label{font-size:1.1rem;opacity:0.8}
+    .contact-section{text-align:center}
+    .contact-info{display:flex;flex-wrap:wrap;justify-content:center;gap:40px;margin:50px 0}
+    .contact-item{display:flex;align-items:center;gap:15px}
+    .contact-item i{width:40px;height:40px;background:var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--text-light)}
+    nav{position:fixed;top:0;width:100%;background:rgba(15,32,64,0.95);backdrop-filter:blur(10px);z-index:1000;padding:20px 0}
+    .nav-container{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;padding:0 20px}
+    .nav-logo{font-size:1.5rem;font-weight:700;color:var(--text-light);text-decoration:none}
+    .nav-menu{display:flex;list-style:none;gap:30px}
+    .nav-menu a{color:var(--text-light);text-decoration:none;font-weight:500;transition:color 0.3s ease}
+    .nav-menu a:hover{color:var(--accent)}
+    .dropdown{position:relative}
+    .dropdown-menu{position:absolute;top:100%;left:0;background:var(--primary);min-width:250px;border-radius:10px;padding:10px 0;opacity:0;visibility:hidden;transform:translateY(10px);transition:all 0.3s ease;box-shadow:0 10px 30px rgba(0,0,0,0.3)}
+    .dropdown:hover .dropdown-menu{opacity:1;visibility:visible;transform:translateY(0)}
+    .dropdown-menu li{list-style:none}
+    .dropdown-menu a{display:block;padding:12px 20px;color:var(--text-light);text-decoration:none;transition:background 0.3s ease}
+    .dropdown-menu a:hover{background:rgba(255,255,255,0.1)}
+    .hamburger{display:none;flex-direction:column;cursor:pointer;gap:5px}
+    .hamburger span{width:25px;height:3px;background:var(--text-light);transition:all 0.3s ease}
+    @media(max-width:768px){.nav-menu{position:fixed;top:70px;left:-100%;width:100%;height:calc(100vh - 70px);background:var(--primary);flex-direction:column;align-items:center;justify-content:center;transition:left 0.3s ease}.nav-menu.active{left:0}.hamburger{display:flex}.dropdown-menu{position:static;opacity:1;visibility:visible;transform:none;background:rgba(255,255,255,0.05);margin-top:10px;display:none}.dropdown.active .dropdown-menu{display:block}}
   </style>
 </head>
 <body>
-  <!-- Background Layers -->
-  <div id="bg-morph"></div>
-  <div id="grid-overlay"></div>
-  
-  <!-- Navigation -->
-  <nav class="navbar" id="main-nav">
+  <nav>
     <div class="nav-container">
-      <a href="index.html" class="nav-logo">
-        <img src="samara-logo-group.png" alt="Samara Group" class="nav-logo-img">
-      </a>
-      <ul class="nav-menu">
-        <li><a href="index.html#about" class="nav-link">About</a></li>
-        <li class="nav-dropdown">
-          <a href="#" class="nav-link dropdown-toggle">Companies <span class="dropdown-arrow">▼</span></a>
+      <a href="index.html" class="nav-logo">SAMARA GROUP</a>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#stats">Impact</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle">Companies ▾</a>
           <ul class="dropdown-menu">
-            <li><a href="samara-refrigeration.html">Samara H-VACR</a></li>
-            <li><a href="samara-parking.html">Samara Parking</a></li>
+            <li><a href="samara-H-VACR.html">Samara H-VACR</a></li>
+            <li><a href="samara-parking.html">Samara Parking Solutions</a></li>
             <li><a href="builmix.html">Saudi Builmix</a></li>
             <li><a href="samara-real-estate.html">Samara Real Estate</a></li>
             <li><a href="saryryah-healthcare.html">Saryryah Healthcare</a></li>
@@ -326,217 +89,73 @@
             <li><a href="salmiya-oasis.html">Salmiya Oasis</a></li>
           </ul>
         </li>
-        <li><a href="index.html#contact" class="nav-link">Contact</a></li>
       </ul>
-      <button class="nav-toggle" id="mobile-menu-btn" aria-label="Open menu">
-        <span class="hamburger"></span>
-      </button>
+      <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
     </div>
   </nav>
-  
-  <!-- Mobile Menu -->
-  <div class="mobile-menu" id="mobile-menu">
-    <button class="mobile-menu-close" id="mobile-menu-close" aria-label="Close menu">&times;</button>
-    <a href="index.html#about" class="mobile-nav">About</a>
-    <div class="mobile-dropdown">
-      <a href="#" class="mobile-nav mobile-dropdown-toggle">Companies <span class="dropdown-arrow">▼</span></a>
-      <div class="mobile-dropdown-content">
-        <a href="samara-refrigeration.html" class="mobile-subnav">Samara H-VACR</a>
-        <a href="samara-parking.html" class="mobile-subnav">Samara Parking</a>
-        <a href="builmix.html" class="mobile-subnav">Saudi Builmix</a>
-        <a href="samara-real-estate.html" class="mobile-subnav">Samara Real Estate</a>
-        <a href="saryryah-healthcare.html" class="mobile-subnav">Saryryah Healthcare</a>
-        <a href="mahara-recruitment.html" class="mobile-subnav">Mahara Recruitment</a>
-        <a href="salmiya-oasis.html" class="mobile-subnav">Salmiya Oasis</a>
-      </div>
-    </div>
-    <a href="index.html#contact" class="mobile-nav">Contact</a>
-  </div>
-  
-  <!-- Hero Section with Parallax -->
-  <section class="company-hero">
-    <div class="hero-bg-element hero-circle-1"></div>
-    <div class="hero-bg-element hero-circle-2"></div>
-    <div class="hero-bg-element hero-circle-3"></div>
-    
-    <div class="hero-content-wrapper">
-      <span class="hero-badge">HR SOLUTIONS</span>
-      <h1 class="hero-title">Mahara Recruitment</h1>
-      <p class="hero-subtitle">Professional recruitment and human resources services connecting talented individuals with leading organizations across Saudi Arabia and the GCC region.</p>
-      <div class="hero-cta-group">
-        <a href="#" class="btn-primary">Visit Company Website</a>
-        <a href="#about" class="btn-secondary">Learn More</a>
-      </div>
-    </div>
-    <div class="scroll-indicator">
-      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
-    </div>
-  </section>
-  
-  <!-- About Section -->
-  <section class="company-section">
-    <div class="container">
-      <a href="index.html" class="back-link">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
-        Back to Samara Group
-      </a>
-      <div class="about-company-wrapper">
-        <div class="about-company-image">
-          <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=2070&auto=format&fit=crop" alt="Mahara Recruitment Office">
-        </div>
-        <div class="about-company-content">
-          <h2>About Mahara Recruitment</h2>
-          <p>Mahara Recruitment is a leading human resources and recruitment agency in Saudi Arabia, specializing in connecting exceptional talent with prestigious organizations. We understand the unique dynamics of the regional job market and provide tailored recruitment solutions that meet the evolving needs of businesses.</p>
-          <p>Our comprehensive services include executive search, permanent staffing, temporary placements, contract hiring, and HR consulting. We serve diverse industries including oil & gas, construction, healthcare, finance, IT, hospitality, and manufacturing.</p>
-          <p>With our extensive network, rigorous screening processes, and deep industry knowledge, Mahara Recruitment ensures successful matches that drive organizational growth and career advancement.</p>
-        </div>
+  <section class="hero-section">
+    <div class="hero-circle hero-circle-1"></div>
+    <div class="hero-circle hero-circle-2"></div>
+    <div class="hero-circle hero-circle-3"></div>
+    <div class="hero-content">
+      <div class="hero-badge">A SAMARA GROUP COMPANY</div>
+      <h1 class="hero-title" id="heroTitle">Company Name</h1>
+      <p class="hero-subtitle" id="heroSubtitle">Company description goes here.</p>
+      <div class="hero-buttons">
+        <a href="#" target="_blank" class="btn btn-primary" id="websiteBtn">Visit Company Website</a>
+        <a href="#about" class="btn btn-outline">Learn More</a>
       </div>
     </div>
   </section>
-  
-  <!-- Services Section -->
-  <section class="company-section" style="background: rgba(29,79,145,0.05);">
+  <section id="about" class="section-dark">
     <div class="container">
-      <span class="section-label">Our Services</span>
-      <h2 class="section-title">Recruitment Solutions</h2>
-      <div class="section-line"></div>
-      <div class="services-grid">
-        <div class="service-card">
-          <div class="service-icon">
-            <i data-lucide="user-search"></i>
-          </div>
-          <h3>Executive Search</h3>
-          <p>Headhunting and recruitment services for C-level executives, senior management, and specialized leadership positions.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">
-            <i data-lucide="users"></i>
-          </div>
-          <h3>Permanent Staffing</h3>
-          <p>Full-cycle recruitment for permanent positions across all levels, from entry-level to senior professionals.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">
-            <i data-lucide="briefcase"></i>
-          </div>
-          <h3>Contract Hiring</h3>
-          <p>Flexible staffing solutions for project-based roles, seasonal requirements, and temporary assignments.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">
-            <i data-lucide="clipboard-list"></i>
-          </div>
-          <h3>HR Consulting</h3>
-          <p>Strategic HR advisory services including workforce planning, compensation benchmarking, and policy development.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">
-            <i data-lucide="file-check"></i>
-          </div>
-          <h3>Screening & Assessment</h3>
-          <p>Comprehensive candidate evaluation including technical assessments, psychometric testing, and background verification.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">
-            <i data-lucide="graduation-cap"></i>
-          </div>
-          <h3>Graduate Programs</h3>
-          <p>Campus recruitment and graduate trainee programs to help organizations build their future talent pipeline.</p>
-        </div>
+      <h2 class="section-title">About Company</h2>
+      <div class="about-content" style="max-width:800px;margin:0 auto;text-align:center;line-height:1.8">
+        <p style="font-size:1.2rem;margin-bottom:30px" id="aboutP1">About paragraph 1.</p>
+        <p style="font-size:1.1rem" id="aboutP2">About paragraph 2.</p>
       </div>
     </div>
   </section>
-  
-  <!-- Contact Section -->
-  <section class="company-section">
+  <section id="services" class="section-light">
     <div class="container">
-      <span class="section-label">Get In Touch</span>
-      <h2 class="section-title">Contact Mahara Recruitment</h2>
-      <div class="section-line"></div>
-      <div class="contact-company">
-        <div class="contact-grid">
-          <div class="contact-item">
-            <div class="contact-item-icon">
-              <i data-lucide="phone"></i>
-            </div>
-            <div>
-              <h4>Phone</h4>
-              <p>+966 13 3301222</p>
-            </div>
-          </div>
-          <div class="contact-item">
-            <div class="contact-item-icon">
-              <i data-lucide="mail"></i>
-            </div>
-            <div>
-              <h4>Email</h4>
-              <p>info@mahararecruitment.com</p>
-            </div>
-          </div>
-          <div class="contact-item">
-            <div class="contact-item-icon">
-              <i data-lucide="map-pin"></i>
-            </div>
-            <div>
-              <h4>Location</h4>
-              <p>Al-Khobar, Saudi Arabia</p>
-            </div>
-          </div>
-          <div class="contact-item">
-            <div class="contact-item-icon">
-              <i data-lucide="clock"></i>
-            </div>
-            <div>
-              <h4>Working Hours</h4>
-              <p>Sunday - Thursday: 8AM - 5PM</p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <h2 class="section-title" style="color:var(--primary)">Our Services</h2>
+      <div class="services-grid" id="servicesGrid"></div>
     </div>
   </section>
-  
-  <!-- Website Link Section -->
-  <section class="company-section" style="text-align: center;">
+  <section id="stats" class="section-dark">
     <div class="container">
-      <span class="section-label">Visit Our Website</span>
-      <h2 class="section-title">Explore More</h2>
-      <div class="section-line"></div>
-      <a href="https://mahararecruitment.com/services.php" target="_blank" rel="noopener noreferrer" class="website-btn">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-        Visit Mahara Recruitment Website
-      </a>
+      <h2 class="section-title">Our Impact</h2>
+      <div class="stats-grid" id="statsGrid"></div>
     </div>
   </section>
-  
-  <!-- Footer -->
-  <footer class="footer">
+  <section class="section-light">
     <div class="container">
-      <p>&copy; 2024 Mahara Recruitment. A Samara Group Company. All rights reserved.</p>
+      <h2 class="section-title" style="color:var(--primary)">Why Choose Us</h2>
+      <div class="services-grid" id="whyGrid"></div>
     </div>
-  </footer>
-  
-  <script src="script.js"></script>
+  </section>
+  <section id="contact" class="section-dark contact-section">
+    <div class="container">
+      <h2 class="section-title">Get In Touch</h2>
+      <p style="font-size:1.2rem;max-width:600px;margin:0 auto 50px" id="contactDesc">Contact description.</p>
+      <div class="contact-info" id="contactInfo"></div>
+      <a href="#" target="_blank" class="btn btn-primary" style="margin-top:30px" id="contactBtn">Visit Company Website</a>
+    </div>
+  </section>
+  <footer style="background:#0a1628;padding:40px 20px;text-align:center"><p style="opacity:0.7">&copy; 2024 Company. All rights reserved. | Part of Samara Group</p></footer>
   <script>
-    // Initialize Lucide icons
     lucide.createIcons();
-    
-    // Parallax effect for hero layers
-    gsap.registerPlugin(ScrollTrigger);
-    
-    document.querySelectorAll('.parallax-layer').forEach(layer => {
-      const speed = layer.getAttribute('data-speed');
-      gsap.to(layer, {
-        y: () => ScrollTrigger.maxScroll(window) * speed * 0.3,
-        ease: 'none',
-        scrollTrigger: {
-          trigger: '.company-hero',
-          start: 'top top',
-          end: 'bottom top',
-          scrub: true
-        }
-      });
-    });
+    gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+    const tl=gsap.timeline();
+    tl.to('.hero-badge',{opacity:1,duration:1,delay:0.2}).to('.hero-title',{opacity:1,y:0,duration:1},'-=0.5').to('.hero-subtitle',{opacity:1,y:0,duration:1},'-=0.5').to('.hero-buttons',{opacity:1,y:0,duration:1},'-=0.5');
+    gsap.to('.hero-circle-1',{y:30,duration:4,repeat:-1,yoyo:true,ease:'sine.inOut'});
+    gsap.to('.hero-circle-2',{y:-25,duration:5,repeat:-1,yoyo:true,ease:'sine.inOut',delay:1});
+    gsap.to('.hero-circle-3',{scale:1.1,duration:3,repeat:-1,yoyo:true,ease:'sine.inOut',delay:0.5});
+    gsap.utils.toArray('.service-card').forEach((card,i)=>{gsap.to(card,{scrollTrigger:{trigger:card,start:'top 85%'},opacity:1,y:0,duration:0.6,delay:i*0.1})});
+    gsap.utils.toArray('.stat-item').forEach((stat,i)=>{const number=stat.querySelector('.stat-number');const target=parseInt(number.getAttribute('data-target'));gsap.to(stat,{scrollTrigger:{trigger:stat,start:'top 85%'},opacity:1,duration:0.6,onComplete:()=>{let current=0;const increment=target/50;const timer=setInterval(()=>{current+=increment;if(current>=target){number.textContent=target.toLocaleString();clearInterval(timer)}else{number.textContent=Math.floor(current).toLocaleString()}},30)}})});
+    const hamburger=document.getElementById('hamburger');const navMenu=document.getElementById('navMenu');hamburger.addEventListener('click',()=>{navMenu.classList.toggle('active')});
+    document.querySelectorAll('.dropdown-toggle').forEach(toggle=>{toggle.addEventListener('click',(e)=>{if(window.innerWidth<=768){e.preventDefault();toggle.parentElement.classList.toggle('active')}})});
   </script>
+  <script id="pageData" type="application/json"></script>
 </body>
 </html>
