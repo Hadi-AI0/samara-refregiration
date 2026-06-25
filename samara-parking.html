@@ -267,6 +267,29 @@
       color: var(--white);
     }
     
+    .website-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: var(--primary);
+      color: var(--white);
+      padding: 18px 36px;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      text-decoration: none;
+      transition: var(--transition);
+      border: 2px solid var(--primary);
+      margin-top: 20px;
+    }
+    
+    .website-btn:hover {
+      background: transparent;
+      color: var(--primary);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(29, 79, 145, 0.3);
+    }
+    
     @media (max-width: 900px) {
       .about-company-wrapper {
         grid-template-columns: 1fr;
@@ -291,7 +314,18 @@
       </a>
       <ul class="nav-menu">
         <li><a href="index.html#about" class="nav-link">About</a></li>
-        <li><a href="index.html#companies" class="nav-link">Companies</a></li>
+        <li class="nav-dropdown">
+          <a href="#" class="nav-link dropdown-toggle">Companies <span class="dropdown-arrow">▼</span></a>
+          <ul class="dropdown-menu">
+            <li><a href="samara-refrigeration.html">Samara H-VACR</a></li>
+            <li><a href="samara-parking.html">Samara Parking</a></li>
+            <li><a href="builmix.html">Saudi Builmix</a></li>
+            <li><a href="samara-real-estate.html">Samara Real Estate</a></li>
+            <li><a href="saryryah-healthcare.html">Saryryah Healthcare</a></li>
+            <li><a href="mahara-recruitment.html">Mahara Recruitment</a></li>
+            <li><a href="salmiya-oasis.html">Salmiya Oasis</a></li>
+          </ul>
+        </li>
         <li><a href="index.html#contact" class="nav-link">Contact</a></li>
       </ul>
       <button class="nav-toggle" id="mobile-menu-btn" aria-label="Open menu">
@@ -304,7 +338,18 @@
   <div class="mobile-menu" id="mobile-menu">
     <button class="mobile-menu-close" id="mobile-menu-close" aria-label="Close menu">&times;</button>
     <a href="index.html#about" class="mobile-nav">About</a>
-    <a href="index.html#companies" class="mobile-nav">Companies</a>
+    <div class="mobile-dropdown">
+      <a href="#" class="mobile-nav mobile-dropdown-toggle">Companies <span class="dropdown-arrow">▼</span></a>
+      <div class="mobile-dropdown-content">
+        <a href="samara-refrigeration.html" class="mobile-subnav">Samara H-VACR</a>
+        <a href="samara-parking.html" class="mobile-subnav">Samara Parking</a>
+        <a href="builmix.html" class="mobile-subnav">Saudi Builmix</a>
+        <a href="samara-real-estate.html" class="mobile-subnav">Samara Real Estate</a>
+        <a href="saryryah-healthcare.html" class="mobile-subnav">Saryryah Healthcare</a>
+        <a href="mahara-recruitment.html" class="mobile-subnav">Mahara Recruitment</a>
+        <a href="salmiya-oasis.html" class="mobile-subnav">Salmiya Oasis</a>
+      </div>
+    </div>
     <a href="index.html#contact" class="mobile-nav">Contact</a>
   </div>
   
@@ -446,6 +491,19 @@
           </div>
         </div>
       </div>
+    </div>
+  </section>
+  
+  <!-- Website Link Section -->
+  <section class="company-section" style="text-align: center;">
+    <div class="container">
+      <span class="section-label">Visit Our Website</span>
+      <h2 class="section-title">Explore More</h2>
+      <div class="section-line"></div>
+      <a href="https://www.samaraparking.com/" target="_blank" rel="noopener noreferrer" class="website-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        Visit Samara Parking Website
+      </a>
     </div>
   </section>
   

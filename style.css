@@ -798,7 +798,7 @@ section {
 .about-text-segment p {
   font-size: 1.3rem;
   line-height: 1.8;
-  color: #0a0a0a;
+  color: #222222;
   font-weight: 500;
 }
 
@@ -1244,13 +1244,13 @@ section {
   font-family: var(--font-serif);
   font-size: 2.5rem;
   font-weight: 900;
-  color: #0a0a0a;
+  color: #ffffff;
   margin-bottom: 24px;
   line-height: 1.1;
 }
 
 .board-content-desc {
-  color: rgba(0,0,0,0.65);
+  color: rgba(255,255,255,0.75);
   font-size: 1rem;
   line-height: 1.7;
   margin-bottom: 32px;
@@ -1673,6 +1673,122 @@ section {
 .ecosystem-section .section-subtitle { color: #555; }
 .ecosystem-section .section-label { opacity: 1; }
 
+/* Expertise Grid */
+.expertise-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  margin-bottom: 60px;
+  align-items: center;
+}
+
+.expertise-content {
+  padding: 40px;
+  background: var(--off-white);
+  border-radius: 12px;
+}
+
+.expertise-header {
+  margin-bottom: 30px;
+}
+
+.expertise-superheadline {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--accent);
+  margin-bottom: 15px;
+}
+
+.expertise-title {
+  font-family: var(--font-serif);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--dark);
+  line-height: 1.4;
+}
+
+.progress-bars-container {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.progress-bar-item {
+  width: 100%;
+}
+
+.progress-bar-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.progress-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--dark);
+}
+
+.progress-value {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.progress-bar-bg {
+  width: 100%;
+  height: 8px;
+  background: rgba(15, 32, 64, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-bar-inner {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  border-radius: 4px;
+  width: 0;
+  transition: width 1.5s ease-out;
+}
+
+.expertise-visual {
+  position: relative;
+}
+
+.expertise-image-wrapper {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+}
+
+.expertise-main-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.expertise-image-wrapper:hover .expertise-main-img {
+  transform: scale(1.05);
+}
+
+.expertise-badge {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: var(--accent);
+  color: var(--white);
+  padding: 8px 20px;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
 .ecosystem-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -1735,7 +1851,7 @@ section {
   font-family: var(--font-display);
   font-size: 2.5rem;
   margin-bottom: 20px;
-  color: #0a0a0a;
+  color: #1a1a1a;
 }
 
 .contact-desc {
@@ -2059,6 +2175,25 @@ section {
   .company-info-title { font-size: 1.1rem; }
   .company-info-desc { font-size: 0.9rem; }
   
+  /* Mobile About Section - Sticky Wheel Selector */
+  .about-sticky-left {
+    position: sticky;
+    top: 80px;
+    z-index: 10;
+    background: var(--off-white);
+    padding-bottom: 20px;
+  }
+  .wheel-selector-container {
+    margin-bottom: 20px;
+  }
+  .about-image-wrapper-mobile {
+    display: none;
+  }
+  .about-text-segment:nth-child(3) .about-image-wrapper {
+    order: -1;
+    margin-bottom: 20px;
+  }
+  
   .board-title { font-size: 2rem; }
   .board-content { padding: 30px; }
   .board-content-name { font-size: 1.8rem; }
@@ -2066,6 +2201,7 @@ section {
   
   .companies-grid { grid-template-columns: 1fr; }
   .ecosystem-grid { grid-template-columns: 1fr; }
+  .expertise-grid { grid-template-columns: 1fr; gap: 40px; }
   .footer-grid { grid-template-columns: 1fr; gap: 30px; }
   .footer-bottom { flex-direction: column; text-align: center; }
   .footer-legal { justify-content: center; }
