@@ -287,7 +287,7 @@ function initScrollAnimations() {
  * Number Counters - Animate once when visible
  */
 function initCounters() {
-  const counters = document.querySelectorAll('.stat-number, .metric-number');
+  const counters = document.querySelectorAll('.counter, .stat-number, .metric-number');
   const animatedCounters = new WeakSet();
 
   counters.forEach(counter => {
