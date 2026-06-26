@@ -477,3 +477,29 @@ window.addEventListener('resize', () => {
     }
   }, 250);
 });
+
+/**
+ * Progress Bars Animation - For expertise section
+ */
+function initProgressBars() {
+  const progressBars = document.querySelectorAll('.progress-bar-inner');
+  
+  progressBars.forEach(bar => {
+    ScrollTrigger.create({
+      trigger: bar,
+      start: 'top 80%',
+      onEnter: () => {
+        const width = bar.getAttribute('data-width') || '0';
+        gsap.to(bar, {
+          width: width + '%',
+          duration: 1.5,
+          ease: 'power2.out'
+        });
+      },
+      once: true
+    });
+  });
+}
+
+// Initialize progress bars
+initProgressBars();
