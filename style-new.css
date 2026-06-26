@@ -2273,34 +2273,62 @@ a:focus-visible {
    ============================================ */
 #preloader {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
   background: var(--color-navy);
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 9999;
-  transition: opacity 0.5s ease, visibility 0.5s ease;
+  transition: opacity 0.5s ease;
 }
 
 #preloader.hidden {
   opacity: 0;
-  visibility: hidden;
+  pointer-events: none;
 }
 
-.preloader-spinner {
-  width: 60px;
-  height: 60px;
-  border: 4px solid rgba(255, 255, 255, 0.1);
-  border-top-color: var(--color-gold);
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
+.loader-content { text-align: center; }
+
+.loader-logo {
+  font-family: var(--font-heading);
+  font-size: 4rem;
+  font-weight: 900;
+  color: var(--color-gold);
+  margin-bottom: 1rem;
+  animation: pulse 2s infinite;
 }
 
-@keyframes spin {
-  to { transform: rotate(360deg); }
+.loader-text {
+  font-size: 1.2rem;
+  letter-spacing: 4px;
+  color: var(--color-gold);
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+
+.loader-bar {
+  width: 200px; height: 2px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 2px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.loader-progress {
+  width: 0%; height: 100%;
+  background: var(--color-gold);
+  animation: load 2s ease-in-out forwards;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.7; transform: scale(1.05); }
+}
+
+@keyframes load {
+  0% { width: 0%; }
+  100% { width: 100%; }
 }
 
 /* ============================================
