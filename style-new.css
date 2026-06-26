@@ -3048,8 +3048,8 @@ a:focus-visible {
   --color-text-local: var(--color-white);
   --color-card-bg: rgba(255, 255, 255, 0.05);
   --color-border: rgba(255, 255, 255, 0.1);
-  background-color: var(--color-navy);
-  color: var(--color-white);
+  background-color: var(--color-navy) !important;
+  color: var(--color-white) !important;
 }
 
 .light-section {
@@ -3057,8 +3057,43 @@ a:focus-visible {
   --color-text-local: var(--color-charcoal);
   --color-card-bg: var(--color-white);
   --color-border: rgba(0, 0, 0, 0.1);
-  background-color: var(--color-off-white);
-  color: var(--color-charcoal);
+  background-color: var(--color-off-white) !important;
+  color: var(--color-charcoal) !important;
+}
+
+/* Force text colors in sections */
+.dark-section h1, .dark-section h2, .dark-section h3, .dark-section h4, .dark-section h5, .dark-section h6,
+.dark-section p, .dark-section span, .dark-section a, .dark-section li {
+  color: var(--color-white) !important;
+}
+
+.light-section h1, .light-section h2, .light-section h3, .light-section h4, .light-section h5, .light-section h6,
+.light-section p, .light-section span, .light-section a, .light-section li {
+  color: var(--color-charcoal) !important;
+}
+
+/* Card Contrast Fix - Force inheritance */
+.card, .service-card, .metric-card, .showcase-card, 
+.board-member, .board-member-card, .founder-card, .eco-card,
+.company-card, .expertise-card {
+  background-color: var(--color-card-bg) !important;
+  color: var(--color-text-local) !important;
+  border: 1px solid var(--color-border) !important;
+}
+
+/* Ensure headings inside cards match context */
+.card h3, .card h4, .service-card h3, .metric-card h3, .showcase-card h3,
+.board-member h4, .founder-card h3, .eco-card h3 {
+  color: inherit !important;
+}
+
+/* Muted text in sections */
+.dark-section .text-muted, .dark-section .subtitle, .dark-section .label {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.light-section .text-muted, .light-section .subtitle, .light-section .label {
+  color: rgba(0, 0, 0, 0.6) !important;
 }
 
 /* ============================================
@@ -3256,35 +3291,54 @@ a:focus-visible {
 /* --- Dark/Light Section Contrast Logic --- */
 /* Ensures text and cards contrast against section backgrounds */
 .dark-section {
-  --color-bg-local: var(--color-dark);
+  --color-bg-local: var(--color-navy);
   --color-text-local: var(--color-white);
   --color-card-bg: rgba(255, 255, 255, 0.05);
   --color-border: rgba(255, 255, 255, 0.1);
-  background-color: var(--color-dark);
-  color: var(--color-white);
+  background-color: var(--color-navy) !important;
+  color: var(--color-white) !important;
 }
 
 .light-section {
-  --color-bg-local: var(--color-white);
-  --color-text-local: var(--color-dark);
+  --color-bg-local: var(--color-off-white);
+  --color-text-local: var(--color-charcoal);
   --color-card-bg: var(--color-white);
   --color-border: rgba(0, 0, 0, 0.1);
-  background-color: var(--color-white);
-  color: var(--color-dark);
+  background-color: var(--color-off-white) !important;
+  color: var(--color-charcoal) !important;
 }
 
 /* Apply local variables to generic containers */
 .section-container, .container {
-  background-color: var(--color-bg-local, transparent);
-  color: var(--color-text-local, inherit);
+  background-color: var(--color-bg-local, transparent) !important;
+  color: var(--color-text-local, inherit) !important;
 }
 
-/* Card Contrast Fix */
+/* Card Contrast Fix - Force inheritance */
 .card, .service-card, .metric-card, .showcase-card, 
-.board-member-card, .founder-card, .eco-card {
-  background-color: var(--color-card-bg, var(--color-white));
-  color: var(--color-text-local, var(--color-dark));
-  border: 1px solid var(--color-border, rgba(0,0,0,0.1));
+.board-member, .board-member-card, .founder-card, .eco-card,
+.company-card, .expertise-card {
+  background-color: var(--color-card-bg) !important;
+  color: var(--color-text-local) !important;
+  border: 1px solid var(--color-border) !important;
+}
+
+/* Ensure headings inside cards match context */
+.card h3, .card h4, .service-card h3, .metric-card h3, .showcase-card h3,
+.board-member h4, .board-member-card h4, .founder-card h3, .eco-card h3,
+.company-card h3, .expertise-card h3 {
+  color: inherit !important;
+}
+
+/* Muted text in sections */
+.dark-section .text-muted, .dark-section .subtitle, .dark-section .label,
+.dark-section .board-label, .dark-section .milestone-year {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.light-section .text-muted, .light-section .subtitle, .light-section .label,
+.light-section .board-label, .light-section .milestone-year {
+  color: rgba(0, 0, 0, 0.6) !important;
 }
 
 /* Ensure headings inside cards match context */
