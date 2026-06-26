@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Samara Real Estate | Samara Group</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://db.onlinewebfonts.com/c/860c3ec7bbc5da3e97233ccecafe512e?family=Circular+Std+Book" rel="stylesheet">
+    <link rel="stylesheet" href="style-new.css">
     <script src="https://unpkg.com/lucide@latest"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
@@ -59,126 +58,167 @@
             <a href="index.html#contact">Contact</a>
         </div>
     </nav>
-
+    
+    <!-- HERO SECTION -->
     <section class="hero company-hero">
-        <div class="hero-bg-circle hero-circle-1"></div>
-        <div class="hero-bg-circle hero-circle-2"></div>
-        <div class="hero-bg-circle hero-circle-3"></div>
         <div class="container hero-content">
-            <div class="hero-badge fade-in-element"><span>Samara Group Company</span></div>
-            <h1 class="hero-title fade-in-element">Samara Real Estate & Contracting</h1>
-            <p class="hero-subtitle fade-in-element">Premium real estate development and construction services across Saudi Arabia.</p>
-            <div class="hero-buttons fade-in-element">
-                <a href="https://samaragroup.com.sa/samara-real-estate-and-contracting/" target="_blank" class="btn btn-primary">Visit Company Website</a>
-                <a href="#about" class="btn btn-outline">Learn More</a>
+            <div class="hero-badge animate-fade-up"><span>Samara Group Company</span></div>
+            <h1 class="hero-title animate-fade-up">Samara Real Estate & Contracting</h1>
+            <p class="hero-subtitle animate-fade-up">Premium real estate development and construction services across Saudi Arabia.</p>
+            <div class="hero-metrics animate-fade-up">
+                <div class="hero-metric"><h3><span class="counter" data-target="25">0</span>+</h3><p>Years Experience</p></div>
+                <div class="hero-metric"><h3><span class="counter" data-target="50">0</span>+</h3><p>Projects Delivered</p></div>
+                <div class="hero-metric"><h3><span class="counter" data-target="2">0</span>B+</h3><p>SAR Project Value</p></div>
+            </div>
+            <div class="hero-buttons animate-fade-up">
+                <a href="#about" class="btn btn-primary">Our Services</a>
+                <a href="#contact" class="btn btn-outline">Contact Us</a>
             </div>
         </div>
     </section>
 
-    <section id="about" class="section section-dark">
+    <!-- ABOUT SECTION -->
+    <section id="about" class="section section-light">
         <div class="container">
             <div class="section-grid">
-                <div class="section-content gsap-fade-up">
+                <div class="section-image animate-fade-up">
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop" alt="Samara Real Estate Building">
+                </div>
+                <div class="section-content animate-fade-up">
                     <h2 class="section-title">About Samara Real Estate</h2>
-                    <p class="section-text">Samara Real Estate & Contracting is a leading developer and contractor specializing in residential, commercial, and mixed-use projects. With a commitment to quality and innovation, we deliver exceptional spaces that enhance communities and provide lasting value.</p>
-                    <p class="section-text">Our comprehensive services include project management, general contracting, and real estate investment advisory. We leverage decades of industry experience to navigate complex developments from conception to completion.</p>
+                    <p class="section-text">Samara Real Estate & Contracting is a premier developer and contractor within the Samara Group, specializing in residential, commercial, and mixed-use projects across the Kingdom of Saudi Arabia. With over 25 years of industry expertise, we deliver exceptional spaces that enhance communities and provide lasting value to investors and occupants alike.</p>
+                    <p class="section-text">Our comprehensive approach covers every phase of the real estate lifecycle—from initial land acquisition and feasibility studies to design, construction, and property management. We leverage deep market knowledge and strategic partnerships to navigate complex developments efficiently, ensuring on-time delivery and superior quality standards.</p>
                     <div class="stats-grid">
                         <div class="stat-item"><h3 class="counter" data-target="25">0</h3><p>Years Experience</p></div>
-                        <div class="stat-item"><h3 class="counter" data-target="80">0</h3><p>Projects Delivered</p></div>
-                        <div class="stat-item"><h3 class="counter" data-target="500">0</h3><p>Units Developed</p></div>
+                        <div class="stat-item"><h3 class="counter" data-target="50">0</h3><p>Projects Completed</p></div>
+                        <div class="stat-item"><h3 class="counter" data-target="100">0</h3><p>% On-Time Delivery</p></div>
                     </div>
-                </div>
-                <div class="section-image gsap-fade-up">
-                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop" alt="Real Estate Development">
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="section section-light">
+    <!-- SERVICES SECTION -->
+    <section class="section section-dark">
         <div class="container">
-            <div class="section-header gsap-fade-up">
+            <div class="section-header animate-fade-up">
                 <h2 class="section-title">Our Services</h2>
                 <p class="section-subtitle">Comprehensive real estate and construction solutions</p>
             </div>
             <div class="services-grid">
-                <div class="service-card gsap-fade-up">
+                <div class="service-card animate-fade-up">
                     <div class="service-icon"><i data-lucide="building"></i></div>
-                    <h3>Property Development</h3>
-                    <p>End-to-end development of residential complexes, office buildings, and retail centers.</p>
+                    <h3>Real Estate Development</h3>
+                    <p>End-to-end development of residential compounds, office towers, retail centers, and mixed-use communities tailored to market demands.</p>
                 </div>
-                <div class="service-card gsap-fade-up">
+                <div class="service-card animate-fade-up">
                     <div class="service-icon"><i data-lucide="hammer"></i></div>
                     <h3>General Contracting</h3>
-                    <p>Full-service construction management with focus on quality, safety, and timelines.</p>
+                    <p>Full-service construction management with rigorous focus on quality control, safety protocols, and adherence to project timelines.</p>
                 </div>
-                <div class="service-card gsap-fade-up">
-                    <div class="service-icon"><i data-lucide="circle-help"></i></div>
-                    <h3>Property Management</h3>
-                    <p>Professional management services for commercial and residential properties.</p>
+                <div class="service-card animate-fade-up">
+                    <div class="service-icon"><i data-lucide="clipboard-list"></i></div>
+                    <h3>Project Management</h3>
+                    <p>Professional oversight from conception to handover, coordinating stakeholders, budgets, and resources for optimal outcomes.</p>
                 </div>
-                <div class="service-card gsap-fade-up">
-                    <div class="service-icon"><i data-lucide="trending-up"></i></div>
-                    <h3>Investment Advisory</h3>
-                    <p>Strategic guidance on real estate investments and portfolio optimization.</p>
+                <div class="service-card animate-fade-up">
+                    <div class="service-icon"><i data-lucide="hard-hat"></i></div>
+                    <h3>Infrastructure Development</h3>
+                    <p>Design and execution of essential infrastructure including roads, utilities, and site preparation for large-scale developments.</p>
                 </div>
-                <div class="service-card gsap-fade-up">
-                    <div class="service-icon"><i data-lucide="blueprint"></i></div>
-                    <h3>Design & Build</h3>
-                    <p>Integrated design and construction services for streamlined project delivery.</p>
+                <div class="service-card animate-fade-up">
+                    <div class="service-icon"><i data-lucide="paintbrush"></i></div>
+                    <h3>Fit-Out & Interiors</h3>
+                    <p>Custom interior fit-out services for commercial offices, retail spaces, and hospitality venues with premium finishes.</p>
                 </div>
-                <div class="service-card gsap-fade-up">
-                    <div class="service-icon"><i data-lucide="key"></i></div>
-                    <h3>Leasing Services</h3>
-                    <p>Expert leasing representation for landlords and tenants across all property types.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section section-dark">
-        <div class="container">
-            <div class="section-header gsap-fade-up">
-                <h2 class="section-title">Why Choose Us</h2>
-            </div>
-            <div class="features-grid">
-                <div class="feature-card gsap-fade-up">
-                    <h3>Proven Track Record</h3>
-                    <p>Successfully delivered numerous high-profile projects across the Kingdom.</p>
-                </div>
-                <div class="feature-card gsap-fade-up">
-                    <h3>Quality Standards</h3>
-                    <p>Rigorous quality control processes ensuring superior construction outcomes.</p>
-                </div>
-                <div class="feature-card gsap-fade-up">
-                    <h3>Client Focus</h3>
-                    <p>Dedicated to understanding and exceeding client expectations at every stage.</p>
-                </div>
-                <div class="feature-card gsap-fade-up">
-                    <h3>Sustainable Practices</h3>
-                    <p>Commitment to environmentally responsible building practices and materials.</p>
+                <div class="service-card animate-fade-up">
+                    <div class="service-icon"><i data-lucide="wrench"></i></div>
+                    <h3>Facility Maintenance</h3>
+                    <p>Ongoing maintenance and facility management services to preserve asset value and ensure operational efficiency.</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- METRICS SECTION -->
     <section class="section section-light">
         <div class="container">
-            <div class="contact-wrapper gsap-fade-up">
-                <div class="contact-info">
-                    <h2 class="contact-title">Get in Touch</h2>
-                    <p>Interested in our real estate services? Contact us today.</p>
-                    <div class="contact-details">
-                        <div class="detail-item"><i data-lucide="map-pin"></i><span>Riyadh, Saudi Arabia</span></div>
-                        <div class="detail-item"><i data-lucide="phone"></i><span>+966 11 456 7890</span></div>
-                        <div class="detail-item"><i data-lucide="mail"></i><span>info@samararealestate.com</span></div>
+            <div class="section-header animate-fade-up">
+                <h2 class="section-title">Our Impact</h2>
+                <p class="section-subtitle">Delivering value through numbers</p>
+            </div>
+            <div class="metrics-grid">
+                <div class="metric-card animate-fade-up">
+                    <div class="metric-icon"><i data-lucide="calendar"></i></div>
+                    <h3 class="counter" data-target="25">0</h3>
+                    <p>Years of Excellence</p>
+                </div>
+                <div class="metric-card animate-fade-up">
+                    <div class="metric-icon"><i data-lucide="briefcase"></i></div>
+                    <h3 class="counter" data-target="50">0</h3>
+                    <p>Projects Delivered</p>
+                </div>
+                <div class="metric-card animate-fade-up">
+                    <div class="metric-icon"><i data-lucide="dollar-sign"></i></div>
+                    <h3 class="counter" data-target="2">0</h3>
+                    <p>Billion SAR Value</p>
+                </div>
+                <div class="metric-card animate-fade-up">
+                    <div class="metric-icon"><i data-lucide="check-circle"></i></div>
+                    <h3 class="counter" data-target="100">0</h3>
+                    <p>% Client Satisfaction</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMPANY SHOWCASE SECTION -->
+    <section class="section section-dark">
+        <div class="container">
+            <div class="section-header animate-fade-up">
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">Showcasing our commitment to excellence</p>
+            </div>
+            <div class="showcase-grid">
+                <div class="showcase-card animate-fade-up">
+                    <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?q=80&w=2070&auto=format&fit=crop" alt="Commercial Complex">
+                    <div class="showcase-content">
+                        <h3>Al-Khobar Commercial Complex</h3>
+                        <p>A mixed-use development featuring retail outlets, office spaces, and parking facilities in the heart of Al-Khobar.</p>
                     </div>
+                </div>
+                <div class="showcase-card animate-fade-up">
+                    <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=2070&auto=format&fit=crop" alt="Residential Compound">
+                    <div class="showcase-content">
+                        <h3>Riyadh Residential Compound</h3>
+                        <p>Luxury residential community with 200+ units, amenities including pools, gyms, and landscaped gardens.</p>
+                    </div>
+                </div>
+                <div class="showcase-card animate-fade-up">
+                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=2070&auto=format&fit=crop" alt="Industrial Warehouse">
+                    <div class="showcase-content">
+                        <h3>Dammam Industrial Warehouse</h3>
+                        <p>State-of-the-art logistics and warehousing facility spanning 15,000 sqm with advanced automation systems.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMPANY LINK SECTION -->
+    <section class="section section-light">
+        <div class="container">
+            <div class="company-link-wrapper animate-fade-up">
+                <div class="company-link-content">
+                    <h2 class="company-link-title">Explore Samara Real Estate</h2>
+                    <p>Discover more about our projects, capabilities, and vision for the future of Saudi real estate.</p>
                     <a href="https://samaragroup.com.sa/samara-real-estate-and-contracting/" target="_blank" class="btn btn-primary">Visit Official Website</a>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- FOOTER -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
@@ -210,31 +250,6 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
-    <script>
-        lucide.createIcons();
-        gsap.registerPlugin(ScrollTrigger);
-        const tl = gsap.timeline();
-        tl.from(".hero-badge", { y: 30, opacity: 0, duration: 1, ease: "power3.out" })
-          .from(".hero-title", { y: 30, opacity: 0, duration: 1, ease: "power3.out" }, "-=0.8")
-          .from(".hero-subtitle", { y: 30, opacity: 0, duration: 1, ease: "power3.out" }, "-=0.8")
-          .from(".hero-buttons", { y: 30, opacity: 0, duration: 1, ease: "power3.out" }, "-=0.8");
-        gsap.to(".hero-circle-1", { y: -30, x: 20, duration: 6, repeat: -1, yoyo: true, ease: "sine.inOut" });
-        gsap.to(".hero-circle-2", { y: 30, x: -20, duration: 8, repeat: -1, yoyo: true, ease: "sine.inOut", delay: 1 });
-        gsap.to(".hero-circle-3", { y: -20, x: 10, duration: 7, repeat: -1, yoyo: true, ease: "sine.inOut", delay: 2 });
-        gsap.utils.toArray('.gsap-fade-up').forEach(element => {
-            gsap.from(element, {
-                scrollTrigger: { trigger: element, start: "top 85%", toggleActions: "play none none reverse" },
-                y: 50, opacity: 0, duration: 1, ease: "power3.out"
-            });
-        });
-        gsap.utils.toArray('.counter').forEach(counter => {
-            const target = +counter.getAttribute('data-target');
-            gsap.to(counter, {
-                scrollTrigger: { trigger: counter, start: "top 85%" },
-                innerHTML: target, duration: 2, snap: { innerHTML: 1 }, ease: "power1.inOut"
-            });
-        });
-    </script>
+    <script src="script-new.js"></script>
 </body>
 </html>

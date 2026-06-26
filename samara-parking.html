@@ -3,301 +3,319 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Samara Parking | Samara Group</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- Circular Std Book Font -->
-    <link href="https://db.onlinewebfonts.com/c/860c3ec7bbc5da3e97233ccecafe512e?family=Circular+Std+Book" rel="stylesheet">
-    <!-- Lucide Icons -->
+    <title>Samara Parking Solutions | Samara Group</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
-    <!-- GSAP -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="style-new.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container nav-container">
-            <a href="index.html" class="logo">
-                <img src="https://samaragroup.com.sa/wp-content/uploads/2021/04/samara-logo.png" alt="Samara Group Logo">
-            </a>
-            
-            <div class="nav-links">
-                <a href="index.html">Home</a>
-                <div class="dropdown">
-                    <button class="dropbtn">Companies <i data-lucide="chevron-down" class="icon-sm"></i></button>
-                    <div class="dropdown-content">
-                        <a href="samara-H-VACR.html">Samara H-VACR</a>
-                        <a href="samara-parking.html">Samara Parking</a>
-                        <a href="builmix.html">Saudi Builmix</a>
-                        <a href="samara-real-estate.html">Samara Real Estate</a>
-                        <a href="saryryah-healthcare.html">Saryryah Healthcare</a>
-                        <a href="mahara-recruitment.html">Mahara Recruitment</a>
-                        <a href="salmiya-oasis.html">Salmiya Oasis</a>
-                    </div>
-                </div>
-                <a href="index.html#investments">Investments</a>
-                <a href="index.html#board">Board</a>
-                <a href="index.html#contact">Contact</a>
-            </div>
+    <a href="#main-content" class="skip-link">Skip to content</a>
 
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </div>
-        
-        <!-- Mobile Menu -->
-        <div class="mobile-menu">
-            <a href="index.html">Home</a>
-            <div class="mobile-dropdown">
-                <div class="mobile-drop-header">Companies <i data-lucide="chevron-down" class="icon-sm"></i></div>
-                <div class="mobile-drop-content">
-                    <a href="samara-H-VACR.html">Samara H-VACR</a>
-                    <a href="samara-parking.html">Samara Parking</a>
-                    <a href="builmix.html">Saudi Builmix</a>
-                    <a href="samara-real-estate.html">Samara Real Estate</a>
-                    <a href="saryryah-healthcare.html">Saryryah Healthcare</a>
-                    <a href="mahara-recruitment.html">Mahara Recruitment</a>
-                    <a href="salmiya-oasis.html">Salmiya Oasis</a>
-                </div>
-            </div>
-            <a href="index.html#investments">Investments</a>
-            <a href="index.html#board">Board</a>
-            <a href="index.html#contact">Contact</a>
+    <nav class="navbar" id="main-nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="samara-logo-group.png" alt="Samara Group" class="nav-logo-img">
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li class="nav-dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">Companies <span class="dropdown-arrow">&#9662;</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="samara-H-VACR.html">Samara H-VACR</a></li>
+                        <li><a href="samara-parking.html">Samara Parking Solutions</a></li>
+                        <li><a href="builmix.html">Saudi Builmix</a></li>
+                        <li><a href="samara-real-estate.html">Samara Real Estate</a></li>
+                        <li><a href="saryryah-healthcare.html">Saryryah Healthcare</a></li>
+                        <li><a href="mahara-recruitment.html">Mahara Recruitment</a></li>
+                        <li><a href="salmiya-oasis.html">Salmiya Oasis</a></li>
+                    </ul>
+                </li>
+                <li><a href="index.html#investments">Investments</a></li>
+                <li><a href="index.html#board">Board</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" id="mobile-menu-btn"><span class="hamburger"></span></button>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero company-hero">
-        <div class="hero-bg-circle hero-circle-1"></div>
-        <div class="hero-bg-circle hero-circle-2"></div>
-        <div class="hero-bg-circle hero-circle-3"></div>
-        
-        <div class="container hero-content">
-            <div class="hero-badge fade-in-element">
-                <span>Samara Group Company</span>
-            </div>
-            <h1 class="hero-title fade-in-element">Samara Parking Solutions</h1>
-            <p class="hero-subtitle fade-in-element">Smart parking management systems and valet services across Saudi Arabia.</p>
-            <div class="hero-buttons fade-in-element">
-                <a href="https://www.samaraparking.com/" target="_blank" class="btn btn-primary">Visit Company Website</a>
-                <a href="#about" class="btn btn-outline">Learn More</a>
-            </div>
+    <div class="mobile-menu" id="mobile-menu">
+        <button class="mobile-menu-close" id="mobile-menu-close">&times;</button>
+        <a href="index.html" class="mobile-nav">Home</a>
+        <div class="mobile-dropdown">
+            <span class="mobile-dropdown-toggle">Companies <span class="dropdown-arrow">&#9662;</span></span>
+            <ul class="mobile-dropdown-menu">
+                <li><a href="samara-H-VACR.html">Samara H-VACR</a></li>
+                <li><a href="samara-parking.html">Samara Parking</a></li>
+                <li><a href="builmix.html">Saudi Builmix</a></li>
+                <li><a href="samara-real-estate.html">Samara Real Estate</a></li>
+                <li><a href="saryryah-healthcare.html">Saryryah Healthcare</a></li>
+                <li><a href="mahara-recruitment.html">Mahara Recruitment</a></li>
+                <li><a href="salmiya-oasis.html">Salmiya Oasis</a></li>
+            </ul>
         </div>
-    </section>
+        <a href="index.html#investments" class="mobile-nav">Investments</a>
+        <a href="index.html#board" class="mobile-nav">Board</a>
+        <a href="index.html#contact" class="mobile-nav">Contact</a>
+    </div>
 
-    <!-- About Section -->
-    <section id="about" class="section section-dark">
-        <div class="container">
-            <div class="section-grid">
-                <div class="section-content gsap-fade-up">
-                    <h2 class="section-title">About Samara Parking</h2>
-                    <p class="section-text">
-                        Samara Parking Solutions is a leading provider of comprehensive parking management services in Saudi Arabia. We specialize in delivering efficient, technology-driven parking solutions for commercial complexes, healthcare facilities, shopping malls, and residential communities.
-                    </p>
-                    <p class="section-text">
-                        Our services include valet parking, automated parking systems, revenue management, and 24/7 facility operations. With a focus on customer satisfaction and operational excellence, we ensure seamless parking experiences across all our locations.
-                    </p>
-                    <div class="stats-grid">
-                        <div class="stat-item">
-                            <h3 class="counter" data-target="15">0</h3>
-                            <p>Years Experience</p>
-                        </div>
-                        <div class="stat-item">
-                            <h3 class="counter" data-target="50">0</h3>
-                            <p>Locations Managed</p>
-                        </div>
-                        <div class="stat-item">
-                            <h3 class="counter" data-target="10000">0</h3>
-                            <p>Daily Vehicles</p>
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-bg"></div>
+            <div class="hero-overlay"></div>
+            <div class="container hero-content">
+                <div class="hero-badge fade-in-up">Samara Group Company</div>
+                <h1 class="hero-title fade-in-up">Samara Parking Solutions</h1>
+                <p class="hero-subtitle fade-in-up">Advanced Automatic Parking Systems & Smart Solutions for Modern Communities</p>
+                
+                <div class="hero-metrics fade-in-up">
+                    <div class="metric-item">
+                        <span class="metric-number" data-target="50">0</span>
+                        <span class="metric-label">Projects Completed</span>
+                    </div>
+                    <div class="metric-item">
+                        <span class="metric-number" data-target="100">0</span>
+                        <span class="metric-label">% CE Certified</span>
+                    </div>
+                    <div class="metric-item">
+                        <span class="metric-number" data-target="24">0</span>
+                        <span class="metric-label">/7 Support</span>
+                    </div>
+                </div>
+
+                <div class="hero-cta fade-in-up">
+                    <a href="#services" class="btn btn-primary">Our Solutions</a>
+                    <a href="#contact" class="btn btn-outline">Contact Us</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about" id="about">
+            <div class="container">
+                <div class="section-header">
+                    <h2>About Samara Parking Solutions</h2>
+                    <div class="section-divider"></div>
+                </div>
+                <div class="about-grid">
+                    <div class="about-image">
+                        <img src="https://images.unsplash.com/photo-1590674899505-1c5c4195f1fa?auto=format&fit=crop&q=80&w=800" alt="Automatic Parking System" loading="lazy">
+                    </div>
+                    <div class="about-content">
+                        <h3>We didn't rename ourselves.. we redefined our ambition.</h3>
+                        <p>Since day one of our journey of innovation and manufacturing, we worked on providing advanced and suitable solutions for the various needs of developing communities and decreasing percentages of tensions resulting from congestion and the multiplying numbers of vehicles.</p>
+                        <p>This is our main drive in partnership with Qingdao GG Lifters Co. to resolve said problems through our Research and Development systems administered by experienced and scientifically-competent engineers in the automatic parking engineering field.</p>
+                        <p>We have already achieved international accreditation of our automatic units via CE certified according to EC machinery directive 2006/42/CE to guarantee to present to you the best automatic units aligning with the most accurate details accredited internationally.</p>
+                        
+                        <div class="values-grid">
+                            <div class="value-card">
+                                <i data-lucide="award"></i>
+                                <h4>CE Certified</h4>
+                            </div>
+                            <div class="value-card">
+                                <i data-lucide="users"></i>
+                                <h4>Expert Engineers</h4>
+                            </div>
+                            <div class="value-card">
+                                <i data-lucide="shield-check"></i>
+                                <h4>International Standards</h4>
+                            </div>
+                            <div class="value-card">
+                                <i data-lucide="refresh-cw"></i>
+                                <h4>R&D Focused</h4>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="section-image gsap-fade-up">
-                    <img src="https://images.unsplash.com/photo-1590674899505-1c5c4195f1fa?q=80&w=2070&auto=format&fit=crop" alt="Parking Management">
-                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Services Section -->
-    <section class="section section-light">
-        <div class="container">
-            <div class="section-header gsap-fade-up">
-                <h2 class="section-title">Our Services</h2>
-                <p class="section-subtitle">Comprehensive parking solutions for every need</p>
-            </div>
-            <div class="services-grid">
-                <div class="service-card gsap-fade-up">
-                    <div class="service-icon"><i data-lucide="car"></i></div>
-                    <h3>Valet Parking</h3>
-                    <p>Professional valet services with trained staff ensuring safe and efficient vehicle handling.</p>
+        <!-- Services Section -->
+        <section class="services" id="services">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Parking Solutions</h2>
+                    <p>Comprehensive automatic parking systems for every need</p>
+                    <div class="section-divider"></div>
                 </div>
-                <div class="service-card gsap-fade-up">
-                    <div class="service-icon"><i data-lucide="monitor"></i></div>
-                    <h3>Automated Systems</h3>
-                    <p>State-of-the-art ticketing, access control, and payment processing systems.</p>
-                </div>
-                <div class="service-card gsap-fade-up">
-                    <div class="service-icon"><i data-lucide="chart-bar"></i></div>
-                    <h3>Revenue Management</h3>
-                    <p>Optimized pricing strategies and financial reporting to maximize parking revenues.</p>
-                </div>
-                <div class="service-card gsap-fade-up">
-                    <div class="service-icon"><i data-lucide="shield-check"></i></div>
-                    <h3>Security & Surveillance</h3>
-                    <p>24/7 monitoring and security protocols to protect vehicles and premises.</p>
-                </div>
-                <div class="service-card gsap-fade-up">
-                    <div class="service-icon"><i data-lucide="users"></i></div>
-                    <h3>Facility Operations</h3>
-                    <p>Complete facility management including cleaning, maintenance, and customer service.</p>
-                </div>
-                <div class="service-card gsap-fade-up">
-                    <div class="service-icon"><i data-lucide="smartphone"></i></div>
-                    <h3>Mobile Solutions</h3>
-                    <p>App-based booking, contactless payments, and real-time space availability.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Why Choose Us -->
-    <section class="section section-dark">
-        <div class="container">
-            <div class="section-header gsap-fade-up">
-                <h2 class="section-title">Why Choose Samara Parking</h2>
-            </div>
-            <div class="features-grid">
-                <div class="feature-card gsap-fade-up">
-                    <h3>Experienced Team</h3>
-                    <p>Highly trained professionals dedicated to exceptional customer service.</p>
-                </div>
-                <div class="feature-card gsap-fade-up">
-                    <h3>Technology Driven</h3>
-                    <p>Leveraging cutting-edge parking technology for efficiency and convenience.</p>
-                </div>
-                <div class="feature-card gsap-fade-up">
-                    <h3>Proven Track Record</h3>
-                    <p>Successfully managing high-traffic locations across the Kingdom.</p>
-                </div>
-                <div class="feature-card gsap-fade-up">
-                    <h3>Customer Focused</h3>
-                    <p>Prioritizing user experience and satisfaction in every interaction.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="section section-light">
-        <div class="container">
-            <div class="contact-wrapper gsap-fade-up">
-                <div class="contact-info">
-                    <h2 class="contact-title">Get in Touch</h2>
-                    <p>Looking for reliable parking management? Contact us today.</p>
-                    <div class="contact-details">
-                        <div class="detail-item">
-                            <i data-lucide="map-pin"></i>
-                            <span>Riyadh, Saudi Arabia</span>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i data-lucide="layers"></i>
                         </div>
-                        <div class="detail-item">
-                            <i data-lucide="phone"></i>
-                            <span>+966 11 234 5678</span>
+                        <h3>Dependent Car Parking</h3>
+                        <p>Space-efficient multi-level parking systems that maximize capacity in limited areas.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i data-lucide="square-stack"></i>
                         </div>
-                        <div class="detail-item">
-                            <i data-lucide="mail"></i>
-                            <span>info@samaraparking.com</span>
+                        <h3>Independent Car Parking</h3>
+                        <p>Autonomous parking units allowing individual vehicle access without moving other cars.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i data-lucide="arrow-up-down"></i>
+                        </div>
+                        <h3>Car Elevators</h3>
+                        <p>Vertical transportation systems for vehicles in multi-story parking facilities.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i data-lucide="cpu"></i>
+                        </div>
+                        <h3>Automatic Solutions</h3>
+                        <p>Fully automated parking systems with smart controls and seamless operation.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i data-lucide="settings"></i>
+                        </div>
+                        <h3>Installation & Maintenance</h3>
+                        <p>Professional installation and periodic maintenance services for all parking units.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i data-lucide="headphones"></i>
+                        </div>
+                        <h3>After-Sales Services</h3>
+                        <p>Comprehensive after-sale support including spare parts and technical assistance.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Metrics Section -->
+        <section class="metrics-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Our Capabilities</h2>
+                    <p>End-to-end parking solutions from planning to after-sales support</p>
+                    <div class="section-divider"></div>
+                </div>
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <i data-lucide="clipboard-list"></i>
+                        <h3>Planning & Design</h3>
+                        <p>Custom solutions tailored to your space requirements</p>
+                    </div>
+                    <div class="metric-card">
+                        <i data-lucide="ruler"></i>
+                        <h3>Implementation</h3>
+                        <p>Precision installation by certified technicians</p>
+                    </div>
+                    <div class="metric-card">
+                        <i data-lucide="flask-conical"></i>
+                        <h3>R&D Systems</h3>
+                        <p>Continuous innovation in parking technology</p>
+                    </div>
+                    <div class="metric-card">
+                        <i data-lucide="circle-check"></i>
+                        <h3>Quality Assurance</h3>
+                        <p>CE certified according to EC directive 2006/42/CE</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Company Showcase -->
+        <section class="showcase">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Featured Projects</h2>
+                    <div class="section-divider"></div>
+                </div>
+                <div class="showcase-grid">
+                    <div class="showcase-item">
+                        <img src="https://images.unsplash.com/photo-1486006920555-c77dcf18193c?auto=format&fit=crop&q=80&w=600" alt="Multi-Level Parking" loading="lazy">
+                        <div class="showcase-overlay">
+                            <h4>Commercial Complex</h4>
+                            <p>High-capacity automated system</p>
                         </div>
                     </div>
-                    <a href="https://www.samaraparking.com/" target="_blank" class="btn btn-primary">Visit Official Website</a>
+                    <div class="showcase-item">
+                        <img src="https://images.unsplash.com/photo-1506521781263-d8422e82f27a?auto=format&fit=crop&q=80&w=600" alt="Car Elevator" loading="lazy">
+                        <div class="showcase-overlay">
+                            <h4>Healthcare Facility</h4>
+                            <p>Efficient vertical parking solution</p>
+                        </div>
+                    </div>
+                    <div class="showcase-item">
+                        <img src="https://images.unsplash.com/photo-1573348722427-f1d6819fdf98?auto=format&fit=crop&q=80&w=600" alt="Smart Parking" loading="lazy">
+                        <div class="showcase-overlay">
+                            <h4>Residential Tower</h4>
+                            <p>Independent parking units</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer -->
+        <!-- Company Link -->
+        <section class="company-link">
+            <div class="container">
+                <h2>Ready to Optimize Your Parking?</h2>
+                <p>Contact our team for custom parking solutions and expert consultation.</p>
+                <div class="contact-details">
+                    <p><strong>Phone:</strong> +966 13 3301222</p>
+                    <p><strong>Email:</strong> Info@comparking.com</p>
+                    <p><strong>Location:</strong> Al-Olia Dist., Consumer Oasis Complex-2nd Floor, Al-Khobar-31952, Saudi Arabia</p>
+                    <p><strong>Hours:</strong> Mon - Fri: 7am - 10pm</p>
+                </div>
+                <a href="https://www.samaraparking.com/" target="_blank" class="btn btn-primary">Visit Official Website</a>
+            </div>
+        </section>
+    </main>
+
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <img src="https://samaragroup.com.sa/wp-content/uploads/2021/04/samara-logo.png" alt="Samara Group">
-                    <p>Building the future together.</p>
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <img src="samara-logo-group.png" alt="Samara Group" class="footer-logo">
+                    <p>Building the future through innovation and excellence across diverse industries.</p>
                 </div>
-                <div class="footer-links">
+                <div class="footer-col">
                     <h4>Quick Links</h4>
-                    <a href="index.html">Home</a>
-                    <a href="index.html#about">About</a>
-                    <a href="index.html#companies">Companies</a>
-                    <a href="index.html#contact">Contact</a>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#companies">Companies</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
                 </div>
-                <div class="footer-companies">
-                    <h4>Our Companies</h4>
-                    <a href="samara-H-VACR.html">Samara H-VACR</a>
-                    <a href="samara-parking.html">Samara Parking</a>
-                    <a href="builmix.html">Saudi Builmix</a>
-                    <a href="samara-real-estate.html">Samara Real Estate</a>
-                    <a href="saryryah-healthcare.html">Saryryah Healthcare</a>
-                    <a href="mahara-recruitment.html">Mahara Recruitment</a>
-                    <a href="salmiya-oasis.html">Salmiya Oasis</a>
+                <div class="footer-col">
+                    <h4>Companies</h4>
+                    <ul>
+                        <li><a href="samara-H-VACR.html">Samara H-VACR</a></li>
+                        <li><a href="samara-parking.html">Samara Parking</a></li>
+                        <li><a href="builmix.html">Saudi Builmix</a></li>
+                        <li><a href="samara-real-estate.html">Samara Real Estate</a></li>
+                        <li><a href="saryryah-healthcare.html">Saryryah Healthcare</a></li>
+                        <li><a href="mahara-recruitment.html">Mahara Recruitment</a></li>
+                        <li><a href="salmiya-oasis.html">Salmiya Oasis</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <p>Al-Olia Dist., Consumer Oasis Complex-2nd Floor, Al-Khobar-31952, Saudi Arabia</p>
+                    <p>info@samara-group.com</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+                        <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+                    </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Samara Group. All rights reserved.</p>
+                <p>&copy; 2026 Samara Group. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
-    <script>
-        // Initialize Lucide Icons
-        lucide.createIcons();
-
-        // Register ScrollTrigger
-        gsap.registerPlugin(ScrollTrigger);
-
-        // Hero Animations
-        const tl = gsap.timeline();
-        tl.from(".hero-badge", { y: 30, opacity: 0, duration: 1, ease: "power3.out" })
-          .from(".hero-title", { y: 30, opacity: 0, duration: 1, ease: "power3.out" }, "-=0.8")
-          .from(".hero-subtitle", { y: 30, opacity: 0, duration: 1, ease: "power3.out" }, "-=0.8")
-          .from(".hero-buttons", { y: 30, opacity: 0, duration: 1, ease: "power3.out" }, "-=0.8");
-
-        // Floating Circles Animation
-        gsap.to(".hero-circle-1", { y: -30, x: 20, duration: 6, repeat: -1, yoyo: true, ease: "sine.inOut" });
-        gsap.to(".hero-circle-2", { y: 30, x: -20, duration: 8, repeat: -1, yoyo: true, ease: "sine.inOut", delay: 1 });
-        gsap.to(".hero-circle-3", { y: -20, x: 10, duration: 7, repeat: -1, yoyo: true, ease: "sine.inOut", delay: 2 });
-
-        // Section Fade Ups
-        gsap.utils.toArray('.gsap-fade-up').forEach(element => {
-            gsap.from(element, {
-                scrollTrigger: {
-                    trigger: element,
-                    start: "top 85%",
-                    toggleActions: "play none none reverse"
-                },
-                y: 50,
-                opacity: 0,
-                duration: 1,
-                ease: "power3.out"
-            });
-        });
-
-        // Counter Animation
-        gsap.utils.toArray('.counter').forEach(counter => {
-            const target = +counter.getAttribute('data-target');
-            gsap.to(counter, {
-                scrollTrigger: {
-                    trigger: counter,
-                    start: "top 85%"
-                },
-                innerHTML: target,
-                duration: 2,
-                snap: { innerHTML: 1 },
-                ease: "power1.inOut"
-            });
-        });
-    </script>
+    <script src="script-new.js"></script>
 </body>
 </html>

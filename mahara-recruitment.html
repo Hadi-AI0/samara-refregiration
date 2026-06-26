@@ -4,207 +4,252 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mahara Recruitment | Samara Group</title>
-    <link href="https://db.onlinewebfonts.com/c/860c3ec7bbc5da3e97233ccecafe512e?family=Circular+Std+Book" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Orbitron:wght@400;500;600;700;800;900&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style-new.css">
     <script src="https://unpkg.com/lucide@latest"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
 <body>
-    <div id="bg-morph"></div>
-    <div id="grid-overlay"></div>
-    <nav class="navbar" id="main-nav">
-        <div class="nav-container">
-            <a href="index.html" class="nav-logo"><img src="samara-logo-group.png" alt="Samara Group" class="nav-logo-img"></a>
-            <ul class="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li class="nav-dropdown">
-                    <a href="#" class="nav-link dropdown-toggle">Companies <span class="dropdown-arrow">&#9662;</span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="samara-H-VACR.html">Samara H-VACR</a></li>
-                        <li><a href="samara-parking.html">Samara Parking</a></li>
-                        <li><a href="builmix.html">Saudi Builmix</a></li>
-                        <li><a href="samara-real-estate.html">Samara Real Estate</a></li>
-                        <li><a href="saryryah-healthcare.html">Saryryah Healthcare</a></li>
-                        <li><a href="mahara-recruitment.html">Mahara Recruitment</a></li>
-                        <li><a href="salmiya-oasis.html">Salmiya Oasis</a></li>
-                    </ul>
-                </li>
-                <li><a href="index.html#investments">Investments</a></li>
-                <li><a href="index.html#board">Board</a></li>
-                <li><a href="index.html#contact">Contact</a></li>
-            </ul>
-            <button class="nav-toggle" id="mobile-menu-btn"><span class="hamburger"></span></button>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="https://samaragroup.com.sa/wp-content/uploads/2021/04/samara-logo.png" alt="Samara Group Logo">
+            </a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <div class="dropdown">
+                    <button class="dropbtn">Companies <i data-lucide="chevron-down" class="icon-sm"></i></button>
+                    <div class="dropdown-content">
+                        <a href="samara-H-VACR.html">Samara H-VACR</a>
+                        <a href="samara-parking.html">Samara Parking</a>
+                        <a href="builmix.html">Saudi Builmix</a>
+                        <a href="samara-real-estate.html">Samara Real Estate</a>
+                        <a href="saryryah-healthcare.html">Saryryah Healthcare</a>
+                        <a href="mahara-recruitment.html">Mahara Recruitment</a>
+                        <a href="salmiya-oasis.html">Salmiya Oasis</a>
+                    </div>
+                </div>
+                <a href="index.html#investments">Investments</a>
+                <a href="index.html#board">Board</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+        <div class="mobile-menu">
+            <a href="index.html">Home</a>
+            <div class="mobile-dropdown">
+                <div class="mobile-drop-header">Companies <i data-lucide="chevron-down" class="icon-sm"></i></div>
+                <div class="mobile-drop-content">
+                    <a href="samara-H-VACR.html">Samara H-VACR</a>
+                    <a href="samara-parking.html">Samara Parking</a>
+                    <a href="builmix.html">Saudi Builmix</a>
+                    <a href="samara-real-estate.html">Samara Real Estate</a>
+                    <a href="saryryah-healthcare.html">Saryryah Healthcare</a>
+                    <a href="mahara-recruitment.html">Mahara Recruitment</a>
+                    <a href="salmiya-oasis.html">Salmiya Oasis</a>
+                </div>
+            </div>
+            <a href="index.html#investments">Investments</a>
+            <a href="index.html#board">Board</a>
+            <a href="index.html#contact">Contact</a>
         </div>
     </nav>
-    <div class="mobile-menu" id="mobile-menu">
-        <button class="mobile-menu-close" id="mobile-menu-close">&times;</button>
-        <a href="index.html" class="mobile-nav">Home</a>
-        <div class="mobile-dropdown">
-            <span class="mobile-dropdown-toggle">Companies <span class="dropdown-arrow">&#9662;</span></span>
-            <ul class="mobile-dropdown-menu">
-                <li><a href="samara-H-VACR.html">Samara H-VACR</a></li>
-                <li><a href="samara-parking.html">Samara Parking</a></li>
-                <li><a href="builmix.html">Saudi Builmix</a></li>
-                <li><a href="samara-real-estate.html">Samara Real Estate</a></li>
-                <li><a href="saryryah-healthcare.html">Saryryah Healthcare</a></li>
-                <li><a href="mahara-recruitment.html">Mahara Recruitment</a></li>
-                <li><a href="salmiya-oasis.html">Salmiya Oasis</a></li>
-            </ul>
-        </div>
-        <a href="index.html#investments" class="mobile-nav">Investments</a>
-        <a href="index.html#board" class="mobile-nav">Board</a>
-        <a href="index.html#contact" class="mobile-nav">Contact</a>
-    </div>
+    
+    <!-- HERO SECTION -->
     <section class="hero company-hero">
-        <div class="hero-frame"></div>
-        <div class="hero-bg"><img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=2070&auto=format&fit=crop" alt="Professional Team"></div>
-        <div class="overlay"></div>
-        <div class="hero-circle-1"></div><div class="hero-circle-2"></div><div class="hero-circle-3"></div>
         <div class="container hero-content">
-            <div class="hero-badge fade-in-element"><span>Samara Group Company</span></div>
-            <h1 class="hero-title fade-in-element">Mahara Recruitment</h1>
-            <p class="hero-subtitle fade-in-element">Connecting top talent with leading organizations across Saudi Arabia</p>
-            <div class="hero-cta fade-in-element">
-                <a href="https://mahararecruitment.com/" target="_blank" class="btn btn-primary">Visit Company Website</a>
-                <a href="#about" class="btn btn-outline">Learn More</a>
+            <div class="hero-badge animate-fade-up"><span>Samara Group Company</span></div>
+            <h1 class="hero-title animate-fade-up">Mahara Recruitment</h1>
+            <p class="hero-subtitle animate-fade-up">Bridging talent between Saudi Arabia and Egypt across all industries.</p>
+            <div class="hero-metrics animate-fade-up">
+                <div class="hero-metric"><h3><span class="counter" data-target="15">0</span>+</h3><p>Years Experience</p></div>
+                <div class="hero-metric"><h3><span class="counter" data-target="1600">0</span>+</h3><p>Remote Seats</p></div>
+                <div class="hero-metric"><h3><span class="counter" data-target="100">0</span>+</h3><p>Corporate Clients</p></div>
+            </div>
+            <div class="hero-buttons animate-fade-up">
+                <a href="#about" class="btn btn-primary">Our Services</a>
+                <a href="#contact" class="btn btn-outline">Contact Us</a>
             </div>
         </div>
     </section>
-    <section class="about-section company-about" id="about">
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="section section-light">
         <div class="container">
-            <div class="section-header gsap-fade-up">
-                <span class="section-label">About Us</span>
-                <h2 class="section-title">Premier HR Solutions Provider</h2>
-                <div class="section-line"></div>
-                <p class="section-subtitle">Expert recruitment and workforce solutions</p>
-            </div>
-            <div class="founder-wrapper">
-                <div class="founder-portrait gsap-fade-up">
-                    <div class="image-frame"><img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=2070&auto=format&fit=crop" alt="Recruitment Services"><div class="frame-overlay"></div></div>
+            <div class="section-grid">
+                <div class="section-image animate-fade-up">
+                    <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=2070&auto=format&fit=crop" alt="Mahara Recruitment Office">
                 </div>
-                <div class="founder-message gsap-fade-up">
-                    <p class="founder-quote">Mahara Recruitment is a leading human resources consultancy specializing in connecting exceptional talent with premier organizations across Saudi Arabia and the GCC region.</p>
-                    <p class="founder-quote">We offer comprehensive recruitment solutions including executive search, permanent placement, temporary staffing, and workforce development programs tailored to meet the evolving needs of businesses in today's competitive market.</p>
+                <div class="section-content animate-fade-up">
+                    <h2 class="section-title">About Mahara Recruitment</h2>
+                    <p class="section-text">Mahara Recruitment is a leading human resources solutions provider within the Samara Group, specializing in connecting exceptional talent with top-tier organizations across Saudi Arabia and Egypt. With over 15 years of industry expertise, we serve as a strategic bridge for businesses seeking skilled professionals in medical, engineering, technology, finance, and sales sectors.</p>
+                    <p class="section-text">Our comprehensive recruitment services include permanent placement, remote workforce solutions, visa processing, and talent outsourcing. We leverage extensive networks and rigorous screening processes to deliver candidates who not only meet technical requirements but also align with organizational culture and long-term business objectives.</p>
                     <div class="stats-grid">
-                        <div class="stat-item"><h3 class="counter stat-number" data-target="10">0</h3><p class="stat-label">Years Experience</p></div>
-                        <div class="stat-item"><h3 class="counter stat-number" data-target="2000">0</h3><p class="stat-label">Placements Made</p></div>
-                        <div class="stat-item"><h3 class="counter stat-number" data-target="500">0</h3><p class="stat-label">Client Companies</p></div>
+                        <div class="stat-item"><h3 class="counter" data-target="15">0</h3><p>Years Experience</p></div>
+                        <div class="stat-item"><h3 class="counter" data-target="1600">0</h3><p>Remote Seats Managed</p></div>
+                        <div class="stat-item"><h3 class="counter" data-target="60">0</h3><p>% Cost Savings</p></div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <section class="companies-section section-light">
+
+    <!-- SERVICES SECTION -->
+    <section class="section section-dark">
         <div class="container">
-            <div class="section-header gsap-fade-up">
-                <span class="section-label">Our Services</span>
-                <h2 class="section-title">Comprehensive HR Solutions</h2>
-                <div class="section-line"></div>
-                <p class="section-subtitle">End-to-end recruitment and workforce management</p>
+            <div class="section-header animate-fade-up">
+                <h2 class="section-title">Our Services</h2>
+                <p class="section-subtitle">Comprehensive HR and recruitment solutions</p>
             </div>
-            <div class="companies-grid">
-                <div class="company-card gsap-fade-up">
-                    <div class="company-icon"><i data-lucide="search"></i></div>
-                    <h3 class="company-name">Executive Search</h3>
-                    <p class="company-desc">Specialized headhunting services for C-level and senior management positions across industries.</p>
+            <div class="services-grid">
+                <div class="service-card animate-fade-up">
+                    <div class="service-icon"><i data-lucide="users"></i></div>
+                    <h3>Talent Recruitment</h3>
+                    <p>End-to-end recruitment services for permanent positions across medical, engineering, tech, finance, and sales domains.</p>
                 </div>
-                <div class="company-card gsap-fade-up">
-                    <div class="company-icon"><i data-lucide="users"></i></div>
-                    <h3 class="company-name">Permanent Placement</h3>
-                    <p class="company-desc">Full-cycle recruitment for permanent positions ensuring perfect candidate-company fit.</p>
+                <div class="service-card animate-fade-up">
+                    <div class="service-icon"><i data-lucide="laptop"></i></div>
+                    <h3>Remote Recruitment</h3>
+                    <p>Building and managing remote teams with 1600+ seats, providing cost-effective talent solutions up to 60% savings.</p>
                 </div>
-                <div class="company-card gsap-fade-up">
-                    <div class="company-icon"><i data-lucide="clock"></i></div>
-                    <h3 class="company-name">Temporary Staffing</h3>
-                    <p class="company-desc">Flexible workforce solutions for short-term projects and seasonal staffing needs.</p>
+                <div class="service-card animate-fade-up">
+                    <div class="service-icon"><i data-lucide="file-check"></i></div>
+                    <h3>Visa & Immigration</h3>
+                    <p>Complete visa processing, work permits, and immigration support for international placements and transfers.</p>
                 </div>
-                <div class="company-card gsap-fade-up">
-                    <div class="company-icon"><i data-lucide="graduation-cap"></i></div>
-                    <h3 class="company-name">Training & Development</h3>
-                    <p class="company-desc">Customized training programs to enhance employee skills and organizational capabilities.</p>
+                <div class="service-card animate-fade-up">
+                    <div class="service-icon"><i data-lucide="heart-pulse"></i></div>
+                    <h3>Medical Staff Placement</h3>
+                    <p>Specialized recruitment of doctors, nurses, technicians, and healthcare administrators for hospitals and clinics.</p>
                 </div>
-                <div class="company-card gsap-fade-up">
-                    <div class="company-icon"><i data-lucide="briefcase"></i></div>
-                    <h3 class="company-name">HR Consulting</h3>
-                    <p class="company-desc">Strategic HR advisory services including policy development and organizational design.</p>
+                <div class="service-card animate-fade-up">
+                    <div class="service-icon"><i data-lucide="hard-hat"></i></div>
+                    <h3>Engineering Recruitment</h3>
+                    <p>Sourcing qualified engineers across civil, mechanical, electrical, software, and petroleum disciplines.</p>
                 </div>
-                <div class="company-card gsap-fade-up">
-                    <div class="company-icon"><i data-lucide="file-check"></i></div>
-                    <h3 class="company-name">Visa Processing</h3>
-                    <p class="company-desc">Complete visa and work permit processing services for expatriate employees.</p>
+                <div class="service-card animate-fade-up">
+                    <div class="service-icon"><i data-lucide="trending-up"></i></div>
+                    <h3>Sales & Marketing Talent</h3>
+                    <p>Connecting businesses with dynamic sales professionals and marketing experts to drive growth and market presence.</p>
                 </div>
             </div>
         </div>
     </section>
-    <section class="board-section section-dark">
+
+    <!-- METRICS SECTION -->
+    <section class="section section-light">
         <div class="container">
-            <div class="section-header gsap-fade-up">
-                <span class="section-label">Why Choose Us</span>
-                <h2 class="section-title">The Mahara Advantage</h2>
-                <div class="section-line"></div>
+            <div class="section-header animate-fade-up">
+                <h2 class="section-title">Our Impact</h2>
+                <p class="section-subtitle">Delivering talent solutions by the numbers</p>
             </div>
-            <div class="board-main">
-                <div class="board-image-wrapper gsap-fade-up"><img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop" alt="Team Collaboration" class="board-main-img"></div>
-                <div class="board-content gsap-fade-up">
-                    <div class="feature-item"><h4 class="feature-title">Industry Expertise</h4><p class="feature-desc">Deep understanding of multiple sectors enabling precise candidate matching.</p></div>
-                    <div class="feature-item"><h4 class="feature-title">Extensive Network</h4><p class="feature-desc">Access to a vast pool of pre-screened, qualified professionals across the region.</p></div>
-                    <div class="feature-item"><h4 class="feature-title">Personalized Approach</h4><p class="feature-desc">Tailored recruitment strategies aligned with your company culture and goals.</p></div>
-                    <div class="feature-item"><h4 class="feature-title">Fast Turnaround</h4><p class="feature-desc">Efficient processes ensuring timely hiring without compromising quality.</p></div>
+            <div class="metrics-grid">
+                <div class="metric-card animate-fade-up">
+                    <div class="metric-icon"><i data-lucide="clock"></i></div>
+                    <h3 class="counter" data-target="15">0</h3>
+                    <p>Years of Excellence</p>
+                </div>
+                <div class="metric-card animate-fade-up">
+                    <div class="metric-icon"><i data-lucide="monitor"></i></div>
+                    <h3 class="counter" data-target="1600">0</h3>
+                    <p>Remote Workstations</p>
+                </div>
+                <div class="metric-card animate-fade-up">
+                    <div class="metric-icon"><i data-lucide="building-2"></i></div>
+                    <h3 class="counter" data-target="100">0</h3>
+                    <p>Corporate Clients</p>
+                </div>
+                <div class="metric-card animate-fade-up">
+                    <div class="metric-icon"><i data-lucide="percent"></i></div>
+                    <h3 class="counter" data-target="60">0</h3>
+                    <p>% Average Cost Savings</p>
                 </div>
             </div>
         </div>
     </section>
-    <section class="contact-section section-light" id="contact">
+
+    <!-- COMPANY SHOWCASE SECTION -->
+    <section class="section section-dark">
         <div class="container">
-            <div class="contact-wrapper gsap-fade-up">
-                <div class="contact-info">
-                    <span class="contact-label">Get In Touch</span>
-                    <h2 class="contact-title">Find Your Perfect Talent</h2>
-                    <p class="contact-desc">Looking for recruitment solutions or your next career opportunity?</p>
-                    <div class="info-item"><div class="info-icon"><i data-lucide="globe"></i></div><div class="info-text"><h4>Website</h4><p><a href="https://mahararecruitment.com/" target="_blank">www.mahararecruitment.com</a></p></div></div>
-                    <div class="info-item"><div class="info-icon"><i data-lucide="mail"></i></div><div class="info-text"><h4>Email</h4><p><a href="mailto:info@mahararecruitment.com">info@mahararecruitment.com</a></p></div></div>
-                    <div class="info-item"><div class="info-icon"><i data-lucide="phone"></i></div><div class="info-text"><h4>Phone</h4><p>+966 13 3301222</p></div></div>
-                    <a href="https://mahararecruitment.com/" target="_blank" class="btn btn-primary" style="margin-top: 30px;">Visit Company Website</a>
+            <div class="section-header animate-fade-up">
+                <h2 class="section-title">Success Stories</h2>
+                <p class="section-subtitle">Transforming businesses through talent</p>
+            </div>
+            <div class="showcase-grid">
+                <div class="showcase-card animate-fade-up">
+                    <img src="https://images.unsplash.com/photo-1576091160550-217358c7db81?q=80&w=2070&auto=format&fit=crop" alt="Healthcare Excellence">
+                    <div class="showcase-content">
+                        <h3>Healthcare Excellence</h3>
+                        <p>Placed 200+ medical professionals including specialists, nurses, and technicians in leading Saudi hospitals within 6 months.</p>
+                    </div>
                 </div>
-                <div class="contact-form-wrapper">
-                    <form class="contact-form">
-                        <div class="form-group"><input type="text" placeholder="Your Name" required></div>
-                        <div class="form-group"><input type="email" placeholder="Your Email" required></div>
-                        <div class="form-group"><input type="text" placeholder="Subject"></div>
-                        <div class="form-group"><textarea placeholder="Your Message" rows="5" required></textarea></div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
-                    </form>
+                <div class="showcase-card animate-fade-up">
+                    <img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?q=80&w=2070&auto=format&fit=crop" alt="Remote Work Revolution">
+                    <div class="showcase-content">
+                        <h3>Remote Work Revolution</h3>
+                        <p>Established 1600-seat remote operations center enabling clients to access skilled talent while reducing operational costs by 60%.</p>
+                    </div>
+                </div>
+                <div class="showcase-card animate-fade-up">
+                    <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=2070&auto=format&fit=crop" alt="Engineering Excellence">
+                    <div class="showcase-content">
+                        <h3>Engineering Excellence</h3>
+                        <p>Recruited 500+ engineers for mega infrastructure projects, ensuring timely project delivery with qualified technical teams.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-    <script>
-        lucide.createIcons();
-        gsap.registerPlugin(ScrollTrigger);
-        const heroTl = gsap.timeline();
-        heroTl.from('.fade-in-element', {y: 30, opacity: 0, duration: 1, stagger: 0.2, ease: 'power3.out'});
-        gsap.to('.hero-circle-1', {y: -20, duration: 3, repeat: -1, yoyo: true, ease: 'sine.inOut'});
-        gsap.to('.hero-circle-2', {y: 20, duration: 4, repeat: -1, yoyo: true, ease: 'sine.inOut', delay: 0.5});
-        gsap.to('.hero-circle-3', {y: -15, duration: 3.5, repeat: -1, yoyo: true, ease: 'sine.inOut', delay: 1});
-        gsap.utils.toArray('.gsap-fade-up').forEach(el => {
-            gsap.from(el, {scrollTrigger: {trigger: el, start: 'top 85%', toggleActions: 'play none none none'}, y: 50, opacity: 0, duration: 1, ease: 'power3.out'});
-        });
-        gsap.utils.toArray('.counter').forEach(counter => {
-            const target = parseInt(counter.getAttribute('data-target'));
-            gsap.to(counter, {scrollTrigger: {trigger: counter, start: 'top 85%'}, innerHTML: target, duration: 2, snap: {innerHTML: 1}, ease: 'power2.out'});
-        });
-        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
-            document.getElementById('mobile-menu').classList.add('active');
-            document.body.style.overflow = 'hidden';
-        });
-        document.getElementById('mobile-menu-close').addEventListener('click', () => {
-            document.getElementById('mobile-menu').classList.remove('active');
-            document.body.style.overflow = '';
-        });
-    </script>
+
+    <!-- COMPANY LINK SECTION -->
+    <section class="section section-light">
+        <div class="container">
+            <div class="company-link-wrapper animate-fade-up">
+                <div class="company-link-content">
+                    <h2 class="company-link-title">Explore Mahara Recruitment</h2>
+                    <p>Discover how we can help you find the perfect talent or advance your career with leading organizations.</p>
+                    <a href="https://mahararecruitment.com/" target="_blank" class="btn btn-primary">Visit Official Website</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="https://samaragroup.com.sa/wp-content/uploads/2021/04/samara-logo.png" alt="Samara Group">
+                    <p>Building the future together.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <a href="index.html">Home</a>
+                    <a href="index.html#about">About</a>
+                    <a href="index.html#companies">Companies</a>
+                    <a href="index.html#contact">Contact</a>
+                </div>
+                <div class="footer-companies">
+                    <h4>Our Companies</h4>
+                    <a href="samara-H-VACR.html">Samara H-VACR</a>
+                    <a href="samara-parking.html">Samara Parking</a>
+                    <a href="builmix.html">Saudi Builmix</a>
+                    <a href="samara-real-estate.html">Samara Real Estate</a>
+                    <a href="saryryah-healthcare.html">Saryryah Healthcare</a>
+                    <a href="mahara-recruitment.html">Mahara Recruitment</a>
+                    <a href="salmiya-oasis.html">Salmiya Oasis</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Samara Group. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script-new.js"></script>
 </body>
 </html>
