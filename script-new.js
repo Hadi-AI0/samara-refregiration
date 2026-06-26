@@ -14,7 +14,17 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollAnimations();
   initCounters();
   initSmoothScroll();
+  initLucideIcons();
 });
+
+/**
+ * Initialize Lucide Icons
+ */
+function initLucideIcons() {
+  if (typeof lucide !== 'undefined' && lucide.createIcons) {
+    lucide.createIcons();
+  }
+}
 
 /**
  * Navigation - Sticky header with scroll detection
@@ -228,7 +238,7 @@ function initScrollAnimations() {
   });
 
   // Animate about images
-  const aboutImages = document.querySelectorAll('.about-image, .about-company-image');
+  const aboutImages = document.querySelectorAll('.about-image, .about-company-image, .section-image');
   
   aboutImages.forEach(img => {
     ScrollTrigger.create({
@@ -240,6 +250,26 @@ function initScrollAnimations() {
           opacity: 0,
           duration: 0.8,
           ease: 'power3.out'
+        });
+      },
+      once: true
+    });
+  });
+
+  // Animate fade-up elements (for company pages)
+  const fadeUpElements = document.querySelectorAll('.animate-fade-up');
+  
+  fadeUpElements.forEach((el, index) => {
+    ScrollTrigger.create({
+      trigger: el,
+      start: 'top 85%',
+      onEnter: () => {
+        gsap.to(el, {
+          opacity: 1,
+          y: 0,
+          duration: 0.8,
+          ease: 'power3.out',
+          delay: Math.min(index * 0.1, 0.5)
         });
       },
       once: true

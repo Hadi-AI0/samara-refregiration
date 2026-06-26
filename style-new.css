@@ -821,6 +821,25 @@ p {
   opacity: 0.9;
 }
 
+/* Section Text */
+.section-text {
+  font-size: var(--text-base);
+  line-height: var(--leading-relaxed);
+  color: var(--color-charcoal);
+  margin-bottom: var(--space-4);
+  max-width: 65ch;
+}
+
+.section-dark .section-text {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Company Section */
+.company-section {
+  padding: var(--space-20) 0;
+  background-color: transparent;
+}
+
 /* Stats Grid */
 .stats-grid {
   display: grid;
@@ -1078,6 +1097,25 @@ p {
   color: var(--color-charcoal);
   opacity: 0.8;
   font-size: var(--text-base);
+}
+
+/* Service cards in dark sections */
+.section-dark .service-card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.section-dark .service-card:hover {
+  background: rgba(29,79,145,0.2);
+  border-color: var(--color-gold);
+}
+
+.section-dark .service-card h3 {
+  color: var(--color-white);
+}
+
+.section-dark .service-card p {
+  color: rgba(255, 255, 255, 0.8);
 }
 
 /* About Company */
@@ -1525,29 +1563,66 @@ a:focus-visible {
   background: rgba(255,255,255,0.03);
   border: 1px solid rgba(255,255,255,0.1);
   border-radius: 12px;
-  transition: var(--transition);
+  transition: var(--transition-base);
 }
 
 .metric-card:hover {
   background: rgba(29,79,145,0.15);
-  border-color: var(--primary);
+  border-color: var(--color-gold);
   transform: translateY(-5px);
 }
 
+.metric-icon {
+  width: 60px;
+  height: 60px;
+  background: var(--color-gold);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 15px;
+  color: var(--color-white);
+}
+
 .metric-number {
-  font-family: var(--font-display);
+  font-family: var(--font-heading);
   font-size: 3.5rem;
   font-weight: 700;
-  color: var(--accent);
+  color: var(--color-gold);
   margin-bottom: 10px;
 }
 
 .metric-label {
-  color: var(--gray);
+  color: rgba(255, 255, 255, 0.8);
   font-size: 1rem;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 1px;
+}
+
+/* Light section metrics */
+.section-light .metric-card {
+  background: var(--color-white);
+  border: 1px solid rgba(0,0,0,0.1);
+  box-shadow: var(--shadow-md);
+}
+
+.section-light .metric-card:hover {
+  background: var(--color-off-white);
+  border-color: var(--color-gold);
+}
+
+.section-light .metric-icon {
+  background: var(--color-gold);
+  color: var(--color-white);
+}
+
+.section-light .metric-number {
+  color: var(--color-navy);
+}
+
+.section-light .metric-label {
+  color: var(--color-charcoal);
 }
 
 /* Company Showcase Section */
@@ -1601,18 +1676,163 @@ a:focus-visible {
 }
 
 .showcase-content p {
-  color: var(--gray);
+  color: rgba(255, 255, 255, 0.8);
   line-height: 1.7;
   margin-bottom: 15px;
+}
+
+/* Light section showcase */
+.section-light .showcase-card {
+  background: var(--color-white);
+  border: 1px solid rgba(0,0,0,0.1);
+  box-shadow: var(--shadow-md);
+}
+
+.section-light .showcase-card:hover {
+  border-color: var(--color-gold);
+}
+
+.section-light .showcase-content h3 {
+  color: var(--color-navy);
+}
+
+.section-light .showcase-content p {
+  color: var(--color-charcoal);
 }
 
 .showcase-tag {
   display: inline-block;
   padding: 6px 14px;
   background: rgba(197, 160, 89, 0.15);
-  color: var(--accent);
+  color: var(--color-gold);
   border-radius: 20px;
   font-size: 0.85rem;
   font-weight: 600;
   letter-spacing: 0.5px;
+}
+
+/* ============================================
+   FOOTER STYLES FOR COMPANY PAGES
+   ============================================ */
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-12);
+  margin-bottom: var(--space-12);
+}
+
+.footer-logo img {
+  height: 40px;
+  width: auto;
+  margin-bottom: var(--space-4);
+}
+
+.footer-logo p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: var(--text-sm);
+}
+
+.footer-links h4,
+.footer-companies h4 {
+  color: var(--color-white);
+  font-size: var(--text-lg);
+  margin-bottom: var(--space-6);
+}
+
+.footer-links a,
+.footer-companies a {
+  display: block;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: var(--text-base);
+  padding: var(--space-2) 0;
+  transition: color var(--transition-fast);
+}
+
+.footer-links a:hover,
+.footer-companies a:hover {
+  color: var(--color-gold);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: var(--space-8);
+  text-align: center;
+}
+
+.footer-bottom p {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: var(--text-sm);
+}
+
+/* Hero content wrapper for company pages */
+.hero-content-wrapper {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  max-width: 900px;
+  padding: 2rem;
+}
+
+.hero-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, #ffffff 0%, #e0e0e0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.company-hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.company-hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform-origin: center;
+  will-change: transform, filter;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(15,32,64,0.8), rgba(15,32,64,0.4));
+  z-index: 2;
+}
+
+.hero-metrics {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-12);
+  margin-bottom: var(--space-10);
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.hero-buttons {
+  display: flex;
+  gap: var(--space-4);
+  justify-content: center;
+  flex-wrap: wrap;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.animate-fade-up {
+  opacity: 0;
+  transform: translateY(20px);
 }
