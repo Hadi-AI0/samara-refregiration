@@ -18,6 +18,9 @@ document.addEventListener('DOMContentLoaded', () => {
   initCounters();
   initSmoothScroll();
   initLucideIcons();
+  initBoardCarousel();
+  initCompanyShowcase();
+  initTimeline();
 });
 
 /**
@@ -30,7 +33,11 @@ function initPreloader() {
     window.addEventListener('load', () => {
       setTimeout(() => {
         preloader.classList.add('hidden');
-      }, 500);
+        // Remove from DOM after transition completes
+        setTimeout(() => {
+          preloader.style.display = 'none';
+        }, 500);
+      }, 800);
     });
   }
 }
@@ -644,6 +651,131 @@ function animateProgressBars() {
   }, { threshold: 0.5 });
   
   progressBars.forEach(bar => observer.observe(bar));
+}
+
+/**
+ * Board Carousel - Navigation for board members section
+ */
+function initBoardCarousel() {
+  const boardPrevBtns = document.querySelectorAll('#board-prev, #board-prev-mobile');
+  const boardNextBtns = document.querySelectorAll('#board-next, #board-next-mobile');
+  const boardThumbs = document.querySelectorAll('.board-thumb');
+  const boardIndicators = document.querySelectorAll('.board-indicator');
+  const boardMainImages = document.querySelectorAll('.board-main-img');
+  const boardContentElements = {
+    subtitle: document.querySelector('[data-board-subtitle]'),
+    role: document.querySelector('[data-board-role]'),
+    name: document.querySelector('[data-board-name]'),
+    desc: document.querySelector('[data-board-desc]')
+  };
+
+  if (boardThumbs.length === 0) return;
+
+  let currentSlide = 0;
+  const totalSlides = boardThumbs.length;
+
+  function updateBoardContent(index) {
+    // Update main image
+    boardMainImages.forEach((img, i) => {
+      if (i === index) {
+        img.classList.add('active');
+      } else {
+        img.classList.remove('active');
+      }
+    });
+
+    // Update thumbnails
+    boardThumbs.forEach((thumb, i) => {
+      if (i === index) {
+        thumb.classList.add('active');
+      } else {
+        thumb.classList.remove('active');
+      }
+    });
+
+    // Update indicators
+    boardIndicators.forEach((indicator, i) => {
+      if (i === index) {
+        indicator.classList.add('active');
+      } else {
+        indicator.classList.remove('active');
+      }
+    });
+
+    // Update content with fade animation
+    if (boardContentElements.subtitle && boardContentElements.role && 
+        boardContentElements.name && boardContentElements.desc) {
+      const targetThumb = boardThumbs[index];
+      const newName = targetThumb.querySelector('.board-thumb-name')?.textContent || '';
+      const newRole = targetThumb.querySelector('.board-thumb-role')?.textContent || '';
+
+      gsap.to([boardContentElements.name, boardContentElements.role, boardContentElements.desc], {
+        opacity: 0,
+        y: 10,
+        duration: 0.2,
+        onComplete: () => {
+          boardContentElements.name.textContent = newName;
+          boardContentElements.role.textContent = newRole;
+          gsap.to([boardContentElements.name, boardContentElements.role, boardContentElements.desc], {
+            opacity: 1,
+            y: 0,
+            duration: 0.3
+          });
+        }
+      });
+    }
+
+    currentSlide = index;
+  }
+
+  // Thumbnail click handlers
+  boardThumbs.forEach((thumb, index) => {
+    thumb.addEventListener('click', () => {
+      updateBoardContent(index);
+    });
+  });
+
+  // Indicator click handlers
+  boardIndicators.forEach((indicator, index) => {
+    indicator.addEventListener('click', () => {
+      updateBoardContent(index);
+    });
+  });
+
+  // Previous button handlers
+  boardPrevBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const newIndex = (currentSlide - 1 + totalSlides) % totalSlides;
+      updateBoardContent(newIndex);
+    });
+  });
+
+  // Next button handlers
+  boardNextBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const newIndex = (currentSlide + 1) % totalSlides;
+      updateBoardContent(newIndex);
+    });
+  });
+
+  // Keyboard navigation
+  document.addEventListener('keydown', (e) => {
+    const boardSection = document.getElementById('board');
+    if (!boardSection) return;
+
+    const rect = boardSection.getBoundingClientRect();
+    const isInView = rect.top < window.innerHeight && rect.bottom > 0;
+
+    if (!isInView) return;
+
+    if (e.key === 'ArrowLeft') {
+      const newIndex = (currentSlide - 1 + totalSlides) % totalSlides;
+      updateBoardContent(newIndex);
+    } else if (e.key === 'ArrowRight') {
+      const newIndex = (currentSlide + 1) % totalSlides;
+      updateBoardContent(newIndex);
+    }
+  });
 }
 
 // Initialize everything when DOM is ready

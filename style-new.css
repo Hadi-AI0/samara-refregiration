@@ -4033,3 +4033,123 @@ a:focus-visible {
   transform: translateX(-50%);
   width: 2px;
   height: 100%;
+
+/* ============================================
+   COMPANY SHOWCASE - MISSING CLASSES
+   ============================================ */
+.about-company-showcase {
+  margin-top: var(--space-16);
+  padding-top: var(--space-16);
+  border-top: 2px solid rgba(15, 32, 64, 0.1);
+}
+
+.company-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-bottom: var(--space-6);
+  justify-content: flex-start;
+}
+
+.company-btn {
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--text-xs);
+  font-weight: var(--font-semibold);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wide);
+  border: 1px solid rgba(15, 32, 64, 0.2);
+  background: transparent;
+  color: var(--color-navy);
+  cursor: pointer;
+  border-radius: var(--radius-full);
+  transition: all var(--transition-base);
+}
+
+.company-btn:hover {
+  border-color: var(--color-gold);
+  color: var(--color-gold);
+}
+
+.company-btn.active {
+  background: var(--color-gold);
+  border-color: var(--color-gold);
+  color: var(--color-navy);
+}
+
+.company-info-box {
+  border: 1px solid rgba(15, 32, 64, 0.1);
+  background: var(--color-white);
+  padding: var(--space-8);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+}
+
+.company-info-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: var(--space-3);
+  gap: var(--space-4);
+}
+
+.company-info-title {
+  font-family: var(--font-heading);
+  font-size: var(--text-xl);
+  font-weight: var(--font-bold);
+  color: var(--color-navy);
+  margin: 0;
+}
+
+.company-info-meta {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  align-items: flex-end;
+}
+
+.company-info-category {
+  color: var(--color-gold);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wide);
+  font-weight: var(--font-semibold);
+}
+
+.company-info-desc {
+  color: var(--color-charcoal);
+  line-height: var(--leading-relaxed);
+  margin: 0;
+  font-size: var(--text-base);
+  opacity: 0.9;
+}
+
+.company-info-divider {
+  margin-top: var(--space-6);
+  height: 1px;
+  background: linear-gradient(to right, var(--color-gold), transparent);
+}
+
+/* Light section variant */
+.section-light .company-btn {
+  border-color: rgba(15, 32, 64, 0.3);
+  color: rgba(15, 32, 64, 0.6);
+}
+
+.section-light .company-btn:hover {
+  border-color: var(--color-gold);
+  color: var(--color-navy);
+}
+
+.section-light .company-info-box {
+  background: var(--color-white);
+  border: 1px solid rgba(15, 32, 64, 0.1);
+}
+
+.section-light .company-info-title {
+  color: var(--color-navy);
+}
+
+.section-light .company-info-desc {
+  color: var(--color-charcoal);
+}
