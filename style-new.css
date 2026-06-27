@@ -691,6 +691,23 @@ p {
   color: var(--color-white);
 }
 
+.section-dark h1,
+.section-dark h2,
+.section-dark h3,
+.section-dark h4,
+.section-dark h5,
+.section-dark h6,
+.section-dark p,
+.section-dark span,
+.section-dark a,
+.section-dark li {
+  color: var(--color-white);
+}
+
+.section-dark .section-subtitle {
+  color: rgba(255, 255, 255, 0.8);
+}
+
 .section-header {
   text-align: center;
   margin-bottom: var(--space-16);
@@ -3286,6 +3303,10 @@ a:focus-visible {
 
 .dark-section .board-member-info h4 {
   color: var(--color-white);
+}
+
+.dark-section .board-member-info p {
+  color: var(--color-gold);
 }
 
 .dark-section .board-title,

@@ -1,357 +1,264 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Samara H-VACR - Leading provider of commercial and industrial refrigeration and HVAC solutions in Saudi Arabia.">
-  <meta name="theme-color" content="#1d4f91">
-  <title>Samara H-VACR | Samara Group</title>
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Orbitron:wght@400;500;600;700;800;900&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
-  
-  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
-  
-  <link rel="stylesheet" href="style-new.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samara H-VACR | Samara Group</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;5000;600;700;800&family=Orbitron:wght@400;5000;600;700;800;900&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+    
+    <link rel="stylesheet" href="style-new.css">
 </head>
 <body>
-  <!-- Background Layers -->
-  
-  <!-- Navigation -->
-  <nav class="navbar" id="main-nav">
-    <div class="nav-container">
-      <a href="index.html" class="nav-logo">
-        <img src="samara-logo-group.png" alt="Samara Group" class="nav-logo-img">
-      </a>
-      <ul class="nav-menu">
-        <li><a href="index.html#about" class="nav-link">About</a></li>
-        <li class="nav-dropdown">
-          <a href="#" class="nav-link dropdown-toggle">Companies <span class="dropdown-arrow">▼</span></a>
-          <ul class="dropdown-menu">
-            <li><a href="samara-H-VACR.html">Samara H-VACR</a></li>
-            <li><a href="samara-parking.html">Samara Parking</a></li>
-            <li><a href="builmix.html">Saudi Builmix</a></li>
-            <li><a href="samara-real-estate.html">Samara Real Estate</a></li>
-            <li><a href="saryryah-healthcare.html">Saryryah Healthcare</a></li>
-            <li><a href="mahara-recruitment.html">Mahara Recruitment</a></li>
-            <li><a href="salmiya-oasis.html">Salmiya Oasis</a></li>
-          </ul>
-        </li>
-        <li><a href="index.html#contact" class="nav-link">Contact</a></li>
-      </ul>
-      <button class="nav-toggle" id="mobile-menu-btn" aria-label="Open menu">
-        <span class="hamburger"></span>
-      </button>
-    </div>
-  </nav>
-  
-  <!-- Mobile Menu -->
-  <div class="mobile-menu" id="mobile-menu">
-    <button class="mobile-menu-close" id="mobile-menu-close" aria-label="Close menu">&times;</button>
-    <a href="index.html#about" class="mobile-nav">About</a>
-    <div class="mobile-dropdown">
-      <a href="#" class="mobile-nav mobile-dropdown-toggle">Companies <span class="dropdown-arrow">▼</span></a>
-      <div class="mobile-dropdown-content">
-        <a href="samara-H-VACR.html" class="mobile-subnav">Samara H-VACR</a>
-        <a href="samara-parking.html" class="mobile-subnav">Samara Parking</a>
-        <a href="builmix.html" class="mobile-subnav">Saudi Builmix</a>
-        <a href="samara-real-estate.html" class="mobile-subnav">Samara Real Estate</a>
-        <a href="saryryah-healthcare.html" class="mobile-subnav">Saryryah Healthcare</a>
-        <a href="mahara-recruitment.html" class="mobile-subnav">Mahara Recruitment</a>
-        <a href="salmiya-oasis.html" class="mobile-subnav">Salmiya Oasis</a>
-      </div>
-    </div>
-    <a href="index.html#contact" class="mobile-nav">Contact</a>
-  </div>
-  
-  <!-- Hero Section with Image-Driven Parallax -->
-  <section class="hero company-hero" id="home">
-    <div class="company-hero-bg">
-      <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070&auto=format&fit=crop" alt="Samara H-VACR industrial facility">
-    </div>
-    <div class="hero-overlay"></div>
-
-    <div class="hero-content-wrapper">
-      <div class="hero-badge animate-fade-up"><span>EST. 1984</span></div>
-      <h1 class="hero-title animate-fade-up">Samara H-VACR</h1>
-      <p class="hero-subtitle animate-fade-up">Leading provider of commercial and industrial refrigeration and HVAC solutions, serving supermarkets, cold storage, food processing facilities, and commercial buildings across the Kingdom of Saudi Arabia.</p>
-
-      <div class="hero-metrics animate-fade-up">
-        <div class="hero-metric"><h3><span class="counter" data-target="40">0</span></h3><p>Years Experience</p></div>
-        <div class="hero-metric"><h3><span class="counter" data-target="500">0</span></h3><p>Projects Completed</p></div>
-        <div class="hero-metric"><h3><span class="counter" data-target="100">0</span></h3><p>% Client Satisfaction</p></div>
-      </div>
-
-      <div class="hero-cta animate-fade-up">
-        <a href="#about" class="btn btn-primary">Learn More</a>
-        <a href="#contact" class="btn btn-outline">Contact Us</a>
-      </div>
-    </div>
-  </section>
-      
-      <div class="hero-cta fade-in-up">
-        <a href="https://www.samararefrigeration.com/" target="_blank" class="btn btn-primary">
-          Visit Company Website
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-        </a>
-        <a href="#about" class="btn btn-outline">
-          Learn More
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 19 7-7 3 3-7 7-3-3z"/><path d="m18 13-1.5-7.5L2 2l3.5 14.5L13 18l7.5-3.5L22 2l-4 11z"/><path d="m2 2 7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg>
-        </a>
-      </div>
+    <!-- Navigation -->
+    <nav class="navbar" id="main-nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="samara-logo-group.png" alt="Samara Group" class="nav-logo-img">
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html#about" class="nav-link">About</a></li>
+                <li class="nav-dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">Companies <span class="dropdown-arrow">▼</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="samara-H-VACR.html">Samara H-VACR</a></li>
+                        <li><a href="samara-parking.html">Samara Parking</a></li>
+                        <li><a href="builmix.html">Saudi Builmix</a></li>
+                        <li><a href="samara-H-VACR.html">Samara H-VACR</a></li>
+                        <li><a href="saryryah-healthcare.html">Saryryah Healthcare</a></li>
+                        <li><a href="mahara-recruitment.html">Mahara Recruitment</a></li>
+                        <li><a href="salmiya-oasis.html">Salmiya Oasis</a></li>
+                    </ul>
+                </li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" id="mobile-menu-btn" aria-label="Open menu">
+                <span class="hamburger"></span>
+            </button>
+        </div>
+    </nav>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <button class="mobile-menu-close" id="mobile-menu-close" aria-label="Close menu">&times;</button>
+        <a href="index.html#about" class="mobile-nav">About</a>
+        <div class="mobile-dropdown">
+            <a href="#" class="mobile-nav mobile-dropdown-toggle">Companies <span class="dropdown-arrow">▼</span></a>
+            <div class="mobile-dropdown-content">
+                <a href="samara-H-VACR.html" class="mobile-subnav">Samara H-VACR</a>
+                <a href="samara-parking.html" class="mobile-subnav">Samara Parking</a>
+                <a href="builmix.html" class="mobile-subnav">Saudi Builmix</a>
+                <a href="samara-H-VACR.html" class="mobile-subnav">Samara H-VACR</a>
+                <a href="saryryah-healthcare.html" class="mobile-subnav">Saryryah Healthcare</a>
+                <a href="mahara-recruitment.html" class="mobile-subnav">Mahara Recruitment</a>
+                <a href="salmiya-oasis.html" class="mobile-subnav">Salmiya Oasis</a>
+            </div>
+        </div>
+        <a href="index.html#contact" class="mobile-nav">Contact</a>
     </div>
     
-    <div class="scroll-indicator">
-      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
-    </div>
-  </section>
-  
-  <!-- About Section -->
-  <section class="section section-light" id="about">
-    <div class="container">
-      <div class="section-header animate-fade-up">
-        <h2 class="section-title">About Samara H-VACR</h2>
-        <p class="section-subtitle">Four decades of refrigeration excellence</p>
-        <div class="section-line"></div>
-      </div>
-      <div class="about-grid">
-        <div class="about-image">
-          <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070&auto=format&fit=crop" alt="Samara Refrigeration Facility" loading="lazy">
+    <!-- HERO SECTION -->
+    <section class="hero company-hero">
+        <div class="company-hero-bg">
+            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop" alt="Samara H-VACR Building">
         </div>
-        <div class="about-content">
-          <p>Since our establishment in 1984, Samara H-VACR has been at the forefront of commercial and industrial refrigeration and HVAC solutions in Saudi Arabia. As the founding company of Samara Group, we have built a reputation for excellence, reliability, and innovation.</p>
-          <p>Our expertise spans across design, installation, and maintenance of comprehensive refrigeration and HVAC systems for supermarkets, cold storage warehouses, food processing plants, commercial buildings, and industrial facilities throughout the GCC region.</p>
-          <p>We combine cutting-edge technology with decades of experience to deliver energy-efficient, sustainable cooling and climate control solutions that meet the unique challenges of the Middle Eastern climate.</p>
-          
-          <div class="stats-grid">
-            <div class="stat-item">
-              <i data-lucide="award"></i>
-              <h4>40+ Years</h4>
+        <div class="hero-overlay"></div>
+        <div class="hero-content-wrapper">
+            <div class="hero-badge animate-fade-up"><span>Samara Group Company</span></div>
+            <h1 class="hero-title animate-fade-up">Samara H-VACR</h1>
+            <p class="hero-subtitle animate-fade-up">Premium real estate development and construction services across Saudi Arabia.</p>
+            <div class="hero-metrics animate-fade-up">
+                <div class="hero-metric"><h3><span class="counter" data-target="40">0</span>+</h3><p>Years Experience</p></div>
+                <div class="hero-metric"><h3><span class="counter" data-target="500">0</span>+</h3><p>Projects Delivered</p></div>
+                <div class="hero-metric"><h3><span class="counter" data-target="2">0</span>B+</h3><p>SAR Project Value</p></div>
             </div>
-            <div class="stat-item">
-              <i data-lucide="briefcase"></i>
-              <h4>500+ Projects</h4>
+            <div class="hero-buttons animate-fade-up">
+                <a href="#about" class="btn btn-primary">Our Services</a>
+                <a href="#contact" class="btn btn-outline">Contact Us</a>
             </div>
-            <div class="stat-item">
-              <i data-lucide="users"></i>
-              <h4>Expert Team</h4>
-            </div>
-            <div class="stat-item">
-              <i data-lucide="shield-check"></i>
-              <h4>ISO Certified</h4>
-            </div>
-          </div>
         </div>
-      </div>
-    </div>
-  </section>
-  
-  <!-- Services Section -->
-  <section class="section section-dark" id="services">
-    <div class="container">
-      <div class="section-header animate-fade-up">
-        <h2>Comprehensive HVAC & Refrigeration Solutions</h2>
-        <div class="section-line"></div>
-      </div>
-      <div class="services-grid">
-        <div class="service-card">
-          <div class="service-icon">
-            <i data-lucide="snowflake"></i>
-          </div>
-          <h3>Commercial Refrigeration</h3>
-          <p>Complete refrigeration systems for supermarkets, hypermarkets, and retail chains including display cases, walk-in coolers, and freezer rooms.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">
-            <i data-lucide="wind"></i>
-          </div>
-          <h3>HVAC Systems</h3>
-          <p>Advanced heating, ventilation, and air conditioning solutions for commercial buildings, offices, and industrial facilities with smart climate control.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">
-            <i data-lucide="warehouse"></i>
-          </div>
-          <h3>Cold Storage Solutions</h3>
-          <p>Design and construction of temperature-controlled warehouses for food distribution, pharmaceutical storage, and logistics operations.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">
-            <i data-lucide="factory"></i>
-          </div>
-          <h3>Industrial Cooling</h3>
-          <p>Large-scale industrial refrigeration systems for food processing plants, beverage production, and manufacturing facilities.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">
-            <i data-lucide="wrench"></i>
-          </div>
-          <h3>Maintenance & Support</h3>
-          <p>24/7 preventive maintenance, emergency repairs, and system optimization services to ensure uninterrupted operations.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">
-            <i data-lucide="cpu"></i>
-          </div>
-          <h3>Smart Controls</h3>
-          <p>Advanced monitoring and control systems for energy management, remote diagnostics, and predictive maintenance.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Metrics Section -->
-  <section class="section section-light">
-    <div class="container">
-      <div class="section-header animate-fade-up">
-        <h2 class="section-title">Numbers That Define Excellence</h2>
-        <p class="section-subtitle">Delivering value through numbers</p>
-        <div class="section-line"></div>
-      </div>
-      <div class="stats-grid">
-        <div class="stat-item">
-          <i data-lucide="calendar"></i>
-          <h4>40+ Years</h4>
+    <!-- ABOUT SECTION -->
+    <section id="about" class="section section-light">
+        <div class="container">
+            <div class="section-grid">
+                <div class="section-image animate-fade-up">
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop" alt="Samara H-VACR Building">
+                </div>
+                <div class="section-content animate-fade-up">
+                    <h2 class="section-title">About Samara H-VACR</h2>
+                    <p class="section-text">Samara H-VACR is a premier developer and contractor within the Samara Group, specializing in residential, commercial, and mixed-use projects across the Kingdom of Saudi Arabia. With over 40 years of industry expertise, we deliver exceptional spaces that enhance communities and provide lasting value to investors and occupants alike.</p>
+                    <p class="section-text">Our comprehensive approach covers every phase of the real estate lifecycle—from initial land acquisition and feasibility studies to design, construction, and property management. We leverage deep market knowledge and strategic partnerships to navigate complex developments efficiently, ensuring on-time delivery and superior quality standards.</p>
+                    <div class="stats-grid">
+                        <div class="stat-item"><h3 class="counter" data-target="40">0</h3><p>Years Experience</p></div>
+                        <div class="stat-item"><h3 class="counter" data-target="500">0</h3><p>Projects Completed</p></div>
+                        <div class="stat-item"><h3 class="counter" data-target="100">0</h3><p>% On-Time Delivery</p></div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="stat-item">
-          <i data-lucide="briefcase"></i>
-          <h4>500+ Projects</h4>
-        </div>
-        <div class="stat-item">
-          <i data-lucide="users"></i>
-          <h4>150+ Clients</h4>
-        </div>
-        <div class="stat-item">
-          <i data-lucide="award"></i>
-          <h4>100% Satisfaction</h4>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Company Showcase Section -->
-  <section class="section section-dark">
-    <div class="container">
-      <div class="section-header animate-fade-up">
-        <h2>Our Work in Action</h2>
-        <div class="section-line"></div>
-      </div>
-      <div class="showcase-grid">
-        <div class="showcase-card">
-          <div class="showcase-image">
-            <img src="https://images.unsplash.com/photo-1542838686-37da4a9fd1b3?q=80&w=2070&auto=format&fit=crop" alt="Supermarket Refrigeration Project">
-          </div>
-          <div class="showcase-content">
-            <h3>Riyadh Supermarket Chain</h3>
-            <p>Complete refrigeration system installation for 15 hypermarket locations across Riyadh, including display cases and cold storage rooms.</p>
-            <span class="showcase-tag">Commercial Refrigeration</span>
-          </div>
+    <!-- SERVICES SECTION -->
+    <section class="section section-dark">
+        <div class="container">
+            <div class="section-header animate-fade-up">
+                <h2 class="section-title">Our Services</h2>
+                <p class="section-subtitle">Comprehensive real estate and construction solutions</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card animate-fade-up">
+                    <div class="service-icon"><i data-lucide="building"></i></div>
+                    <h3>H-VACR Development</h3>
+                    <p>End-to-end development of residential compounds, office towers, retail centers, and mixed-use communities tailored to market demands.</p>
+                </div>
+                <div class="service-card animate-fade-up">
+                    <div class="service-icon"><i data-lucide="hammer"></i></div>
+                    <h3>General Contracting</h3>
+                    <p>Full-service construction management with rigorous focus on quality control, safety protocols, and adherence to project timelines.</p>
+                </div>
+                <div class="service-card animate-fade-up">
+                    <div class="service-icon"><i data-lucide="clipboard-list"></i></div>
+                    <h3>Project Management</h3>
+                    <p>Professional oversight from conception to handover, coordinating stakeholders, budgets, and resources for optimal outcomes.</p>
+                </div>
+                <div class="service-card animate-fade-up">
+                    <div class="service-icon"><i data-lucide="hard-hat"></i></div>
+                    <h3>Infrastructure Development</h3>
+                    <p>Design and execution of essential infrastructure including roads, utilities, and site preparation for large-scale developments.</p>
+                </div>
+                <div class="service-card animate-fade-up">
+                    <div class="service-icon"><i data-lucide="paintbrush"></i></div>
+                    <h3>Fit-Out & Interiors</h3>
+                    <p>Custom interior fit-out services for commercial offices, retail spaces, and hospitality venues with premium finishes.</p>
+                </div>
+                <div class="service-card animate-fade-up">
+                    <div class="service-icon"><i data-lucide="wrench"></i></div>
+                    <h3>Facility Maintenance</h3>
+                    <p>Ongoing maintenance and facility management services to preserve asset value and ensure operational efficiency.</p>
+                </div>
+            </div>
         </div>
-        <div class="showcase-card">
-          <div class="showcase-image">
-            <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2070&auto=format&fit=crop" alt="Cold Storage Warehouse">
-          </div>
-          <div class="showcase-content">
-            <h3>Dammam Cold Storage Facility</h3>
-            <p>Design and construction of a 5,000 sqm temperature-controlled warehouse for food distribution with multi-zone cooling capabilities.</p>
-            <span class="showcase-tag">Cold Storage</span>
-          </div>
+    </section>
+
+    <!-- METRICS SECTION -->
+    <section class="section section-light">
+        <div class="container">
+            <div class="section-header animate-fade-up">
+                <h2 class="section-title">Our Impact</h2>
+                <p class="section-subtitle">Delivering value through numbers</p>
+            </div>
+            <div class="metrics-grid">
+                <div class="metric-card animate-fade-up">
+                    <div class="metric-icon"><i data-lucide="calendar"></i></div>
+                    <h3 class="counter" data-target="40">0</h3>
+                    <p>Years of Excellence</p>
+                </div>
+                <div class="metric-card animate-fade-up">
+                    <div class="metric-icon"><i data-lucide="briefcase"></i></div>
+                    <h3 class="counter" data-target="500">0</h3>
+                    <p>Projects Delivered</p>
+                </div>
+                <div class="metric-card animate-fade-up">
+                    <div class="metric-icon"><i data-lucide="dollar-sign"></i></div>
+                    <h3 class="counter" data-target="2">0</h3>
+                    <p>Billion SAR Value</p>
+                </div>
+                <div class="metric-card animate-fade-up">
+                    <div class="metric-icon"><i data-lucide="check-circle"></i></div>
+                    <h3 class="counter" data-target="100">0</h3>
+                    <p>% Client Satisfaction</p>
+                </div>
+            </div>
         </div>
-        <div class="showcase-card">
-          <div class="showcase-image">
-            <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=2070&auto=format&fit=crop" alt="Industrial Cooling System">
-          </div>
-          <div class="showcase-content">
-            <h3>Jubail Industrial Plant</h3>
-            <p>Large-scale industrial cooling system for a food processing facility, featuring ammonia-based refrigeration and heat recovery systems.</p>
-            <span class="showcase-tag">Industrial Cooling</span>
-          </div>
+    </section>
+
+    <!-- COMPANY SHOWCASE SECTION -->
+    <section class="section section-dark">
+        <div class="container">
+            <div class="section-header animate-fade-up">
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">Showcasing our commitment to excellence</p>
+            </div>
+            <div class="showcase-grid">
+                <div class="showcase-card animate-fade-up">
+                    <img src="https://images.unsplash.com/photo-1486340212027-8081e485405e?q=80&w=2070&auto=format&fit=crop" alt="Commercial Complex">
+                    <div class="showcase-content">
+                        <h3>Al-Khobar Commercial Complex</h3>
+                        <p>A mixed-use development featuring retail outlets, office spaces, and parking facilities in the heart of Al-Khobar.</p>
+                    </div>
+                </div>
+                <div class="showcase-card animate-fade-up">
+                    <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=2070&auto=format&fit=crop" alt="Residential Compound">
+                    <div class="showcase-content">
+                        <h3>Riyadh Residential Compound</h3>
+                        <p>Luxury residential community with 200+ units, amenities including pools, gyms, and landscaped gardens.</p>
+                    </div>
+                </div>
+                <div class="showcase-card animate-fade-up">
+                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=2070&auto=format&fit=crop" alt="Industrial Warehouse">
+                    <div class="showcase-content">
+                        <h3>Dammam Industrial Warehouse</h3>
+                        <p>State-of-the-art logistics and warehousing facility spanning 15,000 sqm with advanced automation systems.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
-  
-  <!-- Contact Section -->
-  <section class="section section-light" id="contact">
-    <div class="container">
-      <div class="section-header animate-fade-up">
-        <h2>Contact Samara H-VACR</h2>
-        <div class="section-line"></div>
-      </div>
-      <div class="contact-grid">
-        <div class="contact-item">
-          <div class="contact-icon">
-            <i data-lucide="phone"></i>
-          </div>
-          <div>
-            <h4>Phone</h4>
-            <p>+966 13 3301222</p>
-          </div>
+    </section>
+
+    <!-- Website Link Section -->
+    <section class="company-section" style="text-align: center;">
+        <div class="container">
+            <span class="section-label">Visit Our Website</span>
+            <h2 class="section-title">Explore More</h2>
+            <div class="section-line"></div>
+            <a href="https://samaragroup.com.sa/samara-H-VACR-and-contracting/" target="_blank" rel="noopener noreferrer" class="website-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                Visit Samara H-VACR Website
+            </a>
         </div>
-        <div class="contact-item">
-          <div class="contact-icon">
-            <i data-lucide="mail"></i>
-          </div>
-          <div>
-            <h4>Email</h4>
-            <p>info@samararefrigeration.com</p>
-          </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="samara-logo-group.png" alt="Samara Group">
+                    <p>Building the future together.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <a href="index.html">Home</a>
+                    <a href="index.html#about">About</a>
+                    <a href="index.html#companies">Companies</a>
+                    <a href="index.html#contact">Contact</a>
+                </div>
+                <div class="footer-companies">
+                    <h4>Our Companies</h4>
+                    <a href="samara-H-VACR.html">Samara H-VACR</a>
+                    <a href="samara-parking.html">Samara Parking</a>
+                    <a href="builmix.html">Saudi Builmix</a>
+                    <a href="samara-H-VACR.html">Samara H-VACR</a>
+                    <a href="saryryah-healthcare.html">Saryryah Healthcare</a>
+                    <a href="mahara-recruitment.html">Mahara Recruitment</a>
+                    <a href="salmiya-oasis.html">Salmiya Oasis</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Samara Group. All rights reserved.</p>
+            </div>
         </div>
-        <div class="contact-item">
-          <div class="contact-icon">
-            <i data-lucide="map-pin"></i>
-          </div>
-          <div>
-            <h4>Location</h4>
-            <p>Al-Khobar, Saudi Arabia</p>
-          </div>
-        </div>
-        <div class="contact-item">
-          <div class="contact-icon">
-            <i data-lucide="clock"></i>
-          </div>
-          <div>
-            <h4>Working Hours</h4>
-            <p>Sunday - Thursday: 8AM - 5PM</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  <!-- Website Link Section -->
-  <section class="section section-dark" style="text-align: center;">
-    <div class="container">
-      <div class="section-header animate-fade-up">
-        <h2>Explore More</h2>
-        <div class="section-line"></div>
-      </div>
-      <a href="https://www.samararefrigeration.com/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-        Visit Samara H-VACR Website
-      </a>
-    </div>
-  </section>
-  
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; 2024 Samara H-VACR. A Samara Group Company. All rights reserved.</p>
-    </div>
-  </footer>
-  
+    </footer>
+
   <script src="script-new.js"></script>
-  <script>
-    // Initialize Lucide icons after the page loads
-    document.addEventListener('DOMContentLoaded', () => {
-      if (typeof lucide !== 'undefined' && lucide.createIcons) {
-        lucide.createIcons();
-      }
-    });
-  </script>
 </body>
 </html>
