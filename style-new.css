@@ -502,6 +502,20 @@ p {
   transform: translateY(30px);
 }
 
+/* Hero title wrapper for multi-line titles */
+.hero-title-wrapper {
+  display: block;
+  margin-bottom: var(--space-6);
+}
+
+.hero-line {
+  display: block;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: var(--font-bold);
+  line-height: var(--leading-tight);
+  color: var(--color-white);
+}
+
 .hero-subtitle {
   font-size: clamp(1.1rem, 2vw, 1.5rem);
   line-height: var(--leading-relaxed);
@@ -609,6 +623,30 @@ p {
 }
 
 .btn-outline:hover {
+  background-color: var(--color-white);
+  color: var(--color-navy);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Secondary button style for company pages */
+.btn-secondary {
+  background-color: transparent;
+  color: var(--color-white);
+  border: 2px solid var(--color-white);
+  padding: var(--space-4) var(--space-8);
+  font-size: var(--text-base);
+  font-weight: var(--font-semibold);
+  border-radius: var(--radius-full);
+  transition: all var(--transition-base);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+}
+
+.btn-secondary:hover {
   background-color: var(--color-white);
   color: var(--color-navy);
   transform: translateY(-3px);
@@ -1034,6 +1072,15 @@ p {
   color: var(--color-white);
 }
 
+/* Hero CTA group for company pages */
+.hero-cta-group {
+  display: flex;
+  gap: var(--space-4);
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: var(--space-6);
+}
+
 .back-link {
   display: inline-flex;
   align-items: center;
@@ -1165,6 +1212,169 @@ p {
   padding: var(--space-24) 0;
   background-color: var(--color-navy);
   color: var(--color-white);
+}
+
+/* Contact Section Layout */
+.contact-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-16);
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .contact-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.contact-label {
+  display: inline-block;
+  font-size: var(--text-xs);
+  font-weight: var(--font-semibold);
+  color: var(--color-gold);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wide);
+  margin-bottom: var(--space-2);
+}
+
+.contact-title {
+  font-size: clamp(2rem, 4vw, var(--text-5xl));
+  color: var(--color-white);
+  margin-bottom: var(--space-4);
+}
+
+.contact-desc {
+  font-size: var(--text-lg);
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: var(--space-6);
+}
+
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+}
+
+.info-icon {
+  width: 50px;
+  height: 50px;
+  background-color: var(--color-gold);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-white);
+  flex-shrink: 0;
+}
+
+.info-text h4 {
+  color: var(--color-white);
+  font-size: var(--text-lg);
+  margin-bottom: var(--space-1);
+}
+
+.info-text p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: var(--text-base);
+}
+
+.info-text a {
+  color: rgba(255, 255, 255, 0.8);
+  transition: color var(--transition-fast);
+}
+
+.info-text a:hover {
+  color: var(--color-gold);
+}
+
+.form-group {
+  margin-bottom: var(--space-4);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: var(--space-4);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--color-white);
+  font-family: var(--font-primary);
+  font-size: var(--text-base);
+  transition: all var(--transition-fast);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--color-gold);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.form-group select {
+  cursor: pointer;
+}
+
+.form-group select option {
+  background: var(--color-navy);
+  color: var(--color-white);
+}
+
+/* Light section variant for contact form */
+.light-section .form-group input,
+.light-section .form-group select,
+.light-section .form-group textarea {
+  background: var(--color-white);
+  border-color: rgba(0, 0, 0, 0.1);
+  color: var(--color-charcoal);
+}
+
+.light-section .form-group input::placeholder,
+.light-section .form-group textarea::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.light-section .form-group input:focus,
+.light-section .form-group select:focus,
+.light-section .form-group textarea:focus {
+  background: var(--color-off-white);
+  border-color: var(--color-gold);
+}
+
+.light-section .info-text h4,
+.light-section .info-text p {
+  color: var(--color-charcoal);
+}
+
+.light-section .info-icon {
+  background-color: var(--color-gold);
+  color: var(--color-white);
+}
+
+.light-section .contact-label {
+  color: var(--color-gold);
+}
+
+.light-section .contact-title {
+  color: var(--color-navy);
+}
+
+.light-section .contact-desc {
+  color: var(--color-charcoal);
 }
 
 /* Timeline Section */
