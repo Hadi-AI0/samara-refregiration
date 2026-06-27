@@ -686,6 +686,10 @@ p {
   background-color: var(--color-off-white);
 }
 
+.section-light .section-text {
+  color: var(--color-charcoal);
+}
+
 .section-dark {
   background-color: var(--color-navy);
   color: var(--color-white);
@@ -923,9 +927,17 @@ p {
   margin-bottom: var(--space-2);
 }
 
+.section-light .stat-item h3 {
+  color: var(--color-navy);
+}
+
 .stat-item p {
   font-size: var(--text-sm);
   opacity: 0.8;
+}
+
+.section-light .stat-item p {
+  color: var(--color-charcoal);
 }
 
 /* ============================================
@@ -1244,10 +1256,18 @@ p {
   color: var(--color-navy);
 }
 
+.section-light .service-card h3 {
+  color: var(--color-navy);
+}
+
 .service-card p {
   color: var(--color-charcoal);
   opacity: 0.8;
   font-size: var(--text-base);
+}
+
+.section-light .service-card p {
+  color: var(--color-charcoal);
 }
 
 /* Service cards in dark sections */
