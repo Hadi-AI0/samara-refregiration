@@ -69,22 +69,38 @@
   </div>
   
   <!-- Hero Section with Image-Driven Parallax -->
-  <section class="company-hero">
-    <div class="company-hero-bg">
+  <section class="hero" id="home">
+    <div class="hero-bg">
       <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070&auto=format&fit=crop" alt="Samara H-VACR industrial facility">
     </div>
     <div class="hero-overlay"></div>
     
-    <div class="hero-content-wrapper">
-      <span class="hero-badge">EST. 1984</span>
-      <h1 class="hero-title">Samara H-VACR</h1>
-      <p class="hero-subtitle">Leading provider of commercial and industrial refrigeration and HVAC solutions, serving supermarkets, cold storage, food processing facilities, and commercial buildings across the Kingdom of Saudi Arabia.</p>
-      <div class="hero-cta-group">
-        <a href="https://www.samararefrigeration.com/" target="_blank" class="btn-primary">
+    <div class="container hero-content">
+      <div class="hero-badge fade-in-up">EST. 1984</div>
+      <h1 class="hero-title fade-in-up">Samara H-VACR</h1>
+      <p class="hero-subtitle fade-in-up">Leading provider of commercial and industrial refrigeration and HVAC solutions, serving supermarkets, cold storage, food processing facilities, and commercial buildings across the Kingdom of Saudi Arabia.</p>
+      
+      <div class="hero-metrics fade-in-up">
+        <div class="metric-item">
+          <span class="metric-number" data-target="40">0</span>
+          <span class="metric-label">Years Experience</span>
+        </div>
+        <div class="metric-item">
+          <span class="metric-number" data-target="500">0</span>
+          <span class="metric-label">Projects Completed</span>
+        </div>
+        <div class="metric-item">
+          <span class="metric-number" data-target="100">0</span>
+          <span class="metric-label">% Client Satisfaction</span>
+        </div>
+      </div>
+      
+      <div class="hero-cta fade-in-up">
+        <a href="https://www.samararefrigeration.com/" target="_blank" class="btn btn-primary">
           Visit Company Website
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
         </a>
-        <a href="#about" class="btn-secondary">
+        <a href="#about" class="btn btn-outline">
           Learn More
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 19 7-7 3 3-7 7-3-3z"/><path d="m18 13-1.5-7.5L2 2l3.5 14.5L13 18l7.5-3.5L22 2l-4 11z"/><path d="m2 2 7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg>
         </a>
@@ -97,32 +113,51 @@
   </section>
   
   <!-- About Section -->
-  <section class="company-section">
+  <section class="about-section light-section" id="about">
     <div class="container">
-      <a href="index.html" class="back-link">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
-        Back to Samara Group
-      </a>
-      <div class="about-company-wrapper">
-        <div class="about-company-image">
-          <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070&auto=format&fit=crop" alt="Samara Refrigeration Facility">
+      <div class="section-header">
+        <h2>About Samara H-VACR</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="about-grid">
+        <div class="about-image">
+          <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070&auto=format&fit=crop" alt="Samara Refrigeration Facility" loading="lazy">
         </div>
-        <div class="about-company-content">
-          <h2>About Samara H-VACR</h2>
+        <div class="about-content">
           <p>Since our establishment in 1984, Samara H-VACR has been at the forefront of commercial and industrial refrigeration and HVAC solutions in Saudi Arabia. As the founding company of Samara Group, we have built a reputation for excellence, reliability, and innovation.</p>
           <p>Our expertise spans across design, installation, and maintenance of comprehensive refrigeration and HVAC systems for supermarkets, cold storage warehouses, food processing plants, commercial buildings, and industrial facilities throughout the GCC region.</p>
           <p>We combine cutting-edge technology with decades of experience to deliver energy-efficient, sustainable cooling and climate control solutions that meet the unique challenges of the Middle Eastern climate.</p>
+          
+          <div class="stats-grid">
+            <div class="stat-item">
+              <i data-lucide="award"></i>
+              <h4>40+ Years</h4>
+            </div>
+            <div class="stat-item">
+              <i data-lucide="briefcase"></i>
+              <h4>500+ Projects</h4>
+            </div>
+            <div class="stat-item">
+              <i data-lucide="users"></i>
+              <h4>Expert Team</h4>
+            </div>
+            <div class="stat-item">
+              <i data-lucide="shield-check"></i>
+              <h4>ISO Certified</h4>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
   
   <!-- Services Section -->
-  <section class="company-section">
+  <section class="services-section dark-section" id="services">
     <div class="container">
-      <span class="section-label">Our Services</span>
-      <h2 class="section-title">Comprehensive HVAC & Refrigeration Solutions</h2>
-      <div class="section-line"></div>
+      <div class="section-header">
+        <h2>Comprehensive HVAC & Refrigeration Solutions</h2>
+        <div class="section-line"></div>
+      </div>
       <div class="services-grid">
         <div class="service-card">
           <div class="service-icon">
@@ -171,38 +206,40 @@
   </section>
 
   <!-- Metrics Section -->
-  <section class="company-section">
+  <section class="section section-light">
     <div class="container">
-      <span class="section-label">Our Impact</span>
-      <h2 class="section-title">Numbers That Define Excellence</h2>
-      <div class="section-line"></div>
-      <div class="metrics-grid">
-        <div class="metric-card">
-          <div class="metric-number" data-target="40">0</div>
-          <div class="metric-label">Years of Experience</div>
+      <div class="section-header">
+        <h2>Numbers That Define Excellence</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="stats-grid">
+        <div class="stat-item">
+          <i data-lucide="calendar"></i>
+          <h4>40+ Years</h4>
         </div>
-        <div class="metric-card">
-          <div class="metric-number" data-target="500">0</div>
-          <div class="metric-label">Projects Completed</div>
+        <div class="stat-item">
+          <i data-lucide="briefcase"></i>
+          <h4>500+ Projects</h4>
         </div>
-        <div class="metric-card">
-          <div class="metric-number" data-target="150">0</div>
-          <div class="metric-label">Corporate Clients</div>
+        <div class="stat-item">
+          <i data-lucide="users"></i>
+          <h4>150+ Clients</h4>
         </div>
-        <div class="metric-card">
-          <div class="metric-number" data-target="100">0</div>
-          <div class="metric-label">% Client Satisfaction</div>
+        <div class="stat-item">
+          <i data-lucide="award"></i>
+          <h4>100% Satisfaction</h4>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Company Showcase Section -->
-  <section class="company-section">
+  <section class="section section-dark">
     <div class="container">
-      <span class="section-label">Featured Projects</span>
-      <h2 class="section-title">Our Work in Action</h2>
-      <div class="section-line"></div>
+      <div class="section-header">
+        <h2>Our Work in Action</h2>
+        <div class="section-line"></div>
+      </div>
       <div class="showcase-grid">
         <div class="showcase-card">
           <div class="showcase-image">
@@ -239,48 +276,47 @@
   </section>
   
   <!-- Contact Section -->
-  <section class="company-section">
+  <section class="section section-light" id="contact">
     <div class="container">
-      <span class="section-label">Get In Touch</span>
-      <h2 class="section-title">Contact Samara H-VACR</h2>
-      <div class="section-line"></div>
-      <div class="contact-company">
-        <div class="contact-grid">
-          <div class="contact-item">
-            <div class="contact-item-icon">
-              <i data-lucide="phone"></i>
-            </div>
-            <div>
-              <h4>Phone</h4>
-              <p>+966 13 3301222</p>
-            </div>
+      <div class="section-header">
+        <h2>Contact Samara H-VACR</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i data-lucide="phone"></i>
           </div>
-          <div class="contact-item">
-            <div class="contact-item-icon">
-              <i data-lucide="mail"></i>
-            </div>
-            <div>
-              <h4>Email</h4>
-              <p>info@samararefrigeration.com</p>
-            </div>
+          <div>
+            <h4>Phone</h4>
+            <p>+966 13 3301222</p>
           </div>
-          <div class="contact-item">
-            <div class="contact-item-icon">
-              <i data-lucide="map-pin"></i>
-            </div>
-            <div>
-              <h4>Location</h4>
-              <p>Al-Khobar, Saudi Arabia</p>
-            </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i data-lucide="mail"></i>
           </div>
-          <div class="contact-item">
-            <div class="contact-item-icon">
-              <i data-lucide="clock"></i>
-            </div>
-            <div>
-              <h4>Working Hours</h4>
-              <p>Sunday - Thursday: 8AM - 5PM</p>
-            </div>
+          <div>
+            <h4>Email</h4>
+            <p>info@samararefrigeration.com</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i data-lucide="map-pin"></i>
+          </div>
+          <div>
+            <h4>Location</h4>
+            <p>Al-Khobar, Saudi Arabia</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i data-lucide="clock"></i>
+          </div>
+          <div>
+            <h4>Working Hours</h4>
+            <p>Sunday - Thursday: 8AM - 5PM</p>
           </div>
         </div>
       </div>
@@ -288,12 +324,13 @@
   </section>
   
   <!-- Website Link Section -->
-  <section class="company-section">
+  <section class="section section-dark" style="text-align: center;">
     <div class="container">
-      <span class="section-label">Visit Our Website</span>
-      <h2 class="section-title">Explore More</h2>
-      <div class="section-line"></div>
-      <a href="https://www.samararefrigeration.com/" target="_blank" rel="noopener noreferrer" class="website-btn">
+      <div class="section-header">
+        <h2>Explore More</h2>
+        <div class="section-line"></div>
+      </div>
+      <a href="https://www.samararefrigeration.com/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
         Visit Samara H-VACR Website
       </a>
