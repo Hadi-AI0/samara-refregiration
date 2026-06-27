@@ -1385,6 +1385,17 @@ p {
   overflow: hidden;
 }
 
+/* Dark section variant for timeline */
+.dark-section.timeline-section {
+  background-color: var(--color-navy) !important;
+}
+
+.dark-section.timeline-section .timeline-label,
+.dark-section.timeline-section .timeline-title,
+.dark-section.timeline-section .timeline-subtitle {
+  color: var(--color-white) !important;
+}
+
 .timeline-label {
   display: inline-block;
   color: var(--color-gold);
@@ -1465,6 +1476,11 @@ p {
   transition: opacity 0.5s, transform 0.5s;
 }
 
+.timeline-milestone.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
 .timeline-milestone:nth-child(odd) {
   margin-left: 0;
 }
@@ -1539,6 +1555,19 @@ p {
   color: var(--color-charcoal);
   font-size: var(--text-base);
   line-height: var(--leading-relaxed);
+}
+
+/* Dark section timeline variant */
+.dark-section .timeline-milestone h3 {
+  color: var(--color-white);
+}
+
+.dark-section .timeline-milestone p {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.dark-section .timeline-year {
+  color: var(--color-gold);
 }
 
 .contact-grid {
@@ -3931,14 +3960,14 @@ a:focus-visible {
 .founder-quote {
   font-size: 1.4rem;
   line-height: 1.7;
-  color: var(--white);
+  color: var(--color-white);
   margin-bottom: 30px;
   font-weight: 300;
   font-style: italic;
 }
 
 .founder-quote strong {
-  color: var(--accent);
+  color: var(--color-gold);
   font-weight: 600;
   font-style: normal;
 }
@@ -3949,15 +3978,15 @@ a:focus-visible {
 }
 
 .founder-name {
-  font-family: var(--font-display);
+  font-family: var(--font-heading);
   font-size: 1.2rem;
-  color: var(--white);
+  color: var(--color-white);
   margin-bottom: 5px;
   letter-spacing: 1px;
 }
 
 .founder-title {
-  color: var(--gray);
+  color: rgba(255,255,255,0.7);
   font-size: 0.9rem;
   letter-spacing: 1px;
   text-transform: uppercase;
