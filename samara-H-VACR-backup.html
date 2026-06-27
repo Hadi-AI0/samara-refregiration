@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samara Real Estate | Samara Group</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Orbitron:wght@400;500;600;700;800;900&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+    
+    <link rel="stylesheet" href="style-new.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="main-nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="samara-logo-group.png" alt="Samara Group" class="nav-logo-img">
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html#about" class="nav-link">About</a></li>
+                <li class="nav-dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">Companies <span class="dropdown-arrow">▼</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="samara-H-VACR.html">Samara H-VACR</a></li>
+                        <li><a href="samara-parking.html">Samara Parking</a></li>
+                        <li><a href="builmix.html">Saudi Builmix</a></li>
+                        <li><a href="samara-real-estate.html">Samara Real Estate</a></li>
+                        <li><a href="saryryah-healthcare.html">Saryryah Healthcare</a></li>
+                        <li><a href="mahara-recruitment.html">Mahara Recruitment</a></li>
+                        <li><a href="salmiya-oasis.html">Salmiya Oasis</a></li>
+                    </ul>
+                </li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" id="mobile-menu-btn" aria-label="Open menu">
+                <span class="hamburger"></span>
+            </button>
+        </div>
+    </nav>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <button class="mobile-menu-close" id="mobile-menu-close" aria-label="Close menu">&times;</button>
+        <a href="index.html#about" class="mobile-nav">About</a>
+        <div class="mobile-dropdown">
+            <a href="#" class="mobile-nav mobile-dropdown-toggle">Companies <span class="dropdown-arrow">▼</span></a>
+            <div class="mobile-dropdown-content">
+                <a href="samara-H-VACR.html" class="mobile-subnav">Samara H-VACR</a>
+                <a href="samara-parking.html" class="mobile-subnav">Samara Parking</a>
+                <a href="builmix.html" class="mobile-subnav">Saudi Builmix</a>
+                <a href="samara-real-estate.html" class="mobile-subnav">Samara Real Estate</a>
+                <a href="saryryah-healthcare.html" class="mobile-subnav">Saryryah Healthcare</a>
+                <a href="mahara-recruitment.html" class="mobile-subnav">Mahara Recruitment</a>
+                <a href="salmiya-oasis.html" class="mobile-subnav">Salmiya Oasis</a>
+            </div>
+        </div>
+        <a href="index.html#contact" class="mobile-nav">Contact</a>
+    </div>
+    
+    <!-- HERO SECTION -->
+    <section class="hero company-hero">
+        <div class="company-hero-bg">
+            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop" alt="Samara Real Estate Building">
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content-wrapper">
+            <div class="hero-badge animate-fade-up"><span>Samara Group Company</span></div>
+            <h1 class="hero-title animate-fade-up">Samara Real Estate & Contracting</h1>
+            <p class="hero-subtitle animate-fade-up">Premium real estate development and construction services across Saudi Arabia.</p>
+            <div class="hero-metrics animate-fade-up">
+                <div class="hero-metric"><h3><span class="counter" data-target="25">0</span>+</h3><p>Years Experience</p></div>
+                <div class="hero-metric"><h3><span class="counter" data-target="50">0</span>+</h3><p>Projects Delivered</p></div>
+                <div class="hero-metric"><h3><span class="counter" data-target="2">0</span>B+</h3><p>SAR Project Value</p></div>
+            </div>
+            <div class="hero-buttons animate-fade-up">
+                <a href="#about" class="btn btn-primary">Our Services</a>
+                <a href="#contact" class="btn btn-outline">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="section section-light">
+        <div class="container">
+            <div class="section-grid">
+                <div class="section-image animate-fade-up">
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop" alt="Samara Real Estate Building">
+                </div>
+                <div class="section-content animate-fade-up">
+                    <h2 class="section-title">About Samara Real Estate</h2>
+                    <p class="section-text">Samara Real Estate & Contracting is a premier developer and contractor within the Samara Group, specializing in residential, commercial, and mixed-use projects across the Kingdom of Saudi Arabia. With over 25 years of industry expertise, we deliver exceptional spaces that enhance communities and provide lasting value to investors and occupants alike.</p>
+                    <p class="section-text">Our comprehensive approach covers every phase of the real estate lifecycle—from initial land acquisition and feasibility studies to design, construction, and property management. We leverage deep market knowledge and strategic partnerships to navigate complex developments efficiently, ensuring on-time delivery and superior quality standards.</p>
+                    <div class="stats-grid">
+                        <div class="stat-item"><h3 class="counter" data-target="25">0</h3><p>Years Experience</p></div>
+                        <div class="stat-item"><h3 class="counter" data-target="50">0</h3><p>Projects Completed</p></div>
+                        <div class="stat-item"><h3 class="counter" data-target="100">0</h3><p>% On-Time Delivery</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section class="section section-dark">
+        <div class="container">
+            <div class="section-header animate-fade-up">
+                <h2 class="section-title">Our Services</h2>
+                <p class="section-subtitle">Comprehensive real estate and construction solutions</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card animate-fade-up">
+                    <div class="service-icon"><i data-lucide="building"></i></div>
+                    <h3>Real Estate Development</h3>
+                    <p>End-to-end development of residential compounds, office towers, retail centers, and mixed-use communities tailored to market demands.</p>
+                </div>
+                <div class="service-card animate-fade-up">
+                    <div class="service-icon"><i data-lucide="hammer"></i></div>
+                    <h3>General Contracting</h3>
+                    <p>Full-service construction management with rigorous focus on quality control, safety protocols, and adherence to project timelines.</p>
+                </div>
+                <div class="service-card animate-fade-up">
+                    <div class="service-icon"><i data-lucide="clipboard-list"></i></div>
+                    <h3>Project Management</h3>
+                    <p>Professional oversight from conception to handover, coordinating stakeholders, budgets, and resources for optimal outcomes.</p>
+                </div>
+                <div class="service-card animate-fade-up">
+                    <div class="service-icon"><i data-lucide="hard-hat"></i></div>
+                    <h3>Infrastructure Development</h3>
+                    <p>Design and execution of essential infrastructure including roads, utilities, and site preparation for large-scale developments.</p>
+                </div>
+                <div class="service-card animate-fade-up">
+                    <div class="service-icon"><i data-lucide="paintbrush"></i></div>
+                    <h3>Fit-Out & Interiors</h3>
+                    <p>Custom interior fit-out services for commercial offices, retail spaces, and hospitality venues with premium finishes.</p>
+                </div>
+                <div class="service-card animate-fade-up">
+                    <div class="service-icon"><i data-lucide="wrench"></i></div>
+                    <h3>Facility Maintenance</h3>
+                    <p>Ongoing maintenance and facility management services to preserve asset value and ensure operational efficiency.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- METRICS SECTION -->
+    <section class="section section-light">
+        <div class="container">
+            <div class="section-header animate-fade-up">
+                <h2 class="section-title">Our Impact</h2>
+                <p class="section-subtitle">Delivering value through numbers</p>
+            </div>
+            <div class="metrics-grid">
+                <div class="metric-card animate-fade-up">
+                    <div class="metric-icon"><i data-lucide="calendar"></i></div>
+                    <h3 class="counter" data-target="25">0</h3>
+                    <p>Years of Excellence</p>
+                </div>
+                <div class="metric-card animate-fade-up">
+                    <div class="metric-icon"><i data-lucide="briefcase"></i></div>
+                    <h3 class="counter" data-target="50">0</h3>
+                    <p>Projects Delivered</p>
+                </div>
+                <div class="metric-card animate-fade-up">
+                    <div class="metric-icon"><i data-lucide="dollar-sign"></i></div>
+                    <h3 class="counter" data-target="2">0</h3>
+                    <p>Billion SAR Value</p>
+                </div>
+                <div class="metric-card animate-fade-up">
+                    <div class="metric-icon"><i data-lucide="check-circle"></i></div>
+                    <h3 class="counter" data-target="100">0</h3>
+                    <p>% Client Satisfaction</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMPANY SHOWCASE SECTION -->
+    <section class="section section-dark">
+        <div class="container">
+            <div class="section-header animate-fade-up">
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">Showcasing our commitment to excellence</p>
+            </div>
+            <div class="showcase-grid">
+                <div class="showcase-card animate-fade-up">
+                    <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?q=80&w=2070&auto=format&fit=crop" alt="Commercial Complex">
+                    <div class="showcase-content">
+                        <h3>Al-Khobar Commercial Complex</h3>
+                        <p>A mixed-use development featuring retail outlets, office spaces, and parking facilities in the heart of Al-Khobar.</p>
+                    </div>
+                </div>
+                <div class="showcase-card animate-fade-up">
+                    <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=2070&auto=format&fit=crop" alt="Residential Compound">
+                    <div class="showcase-content">
+                        <h3>Riyadh Residential Compound</h3>
+                        <p>Luxury residential community with 200+ units, amenities including pools, gyms, and landscaped gardens.</p>
+                    </div>
+                </div>
+                <div class="showcase-card animate-fade-up">
+                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=2070&auto=format&fit=crop" alt="Industrial Warehouse">
+                    <div class="showcase-content">
+                        <h3>Dammam Industrial Warehouse</h3>
+                        <p>State-of-the-art logistics and warehousing facility spanning 15,000 sqm with advanced automation systems.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Website Link Section -->
+    <section class="company-section" style="text-align: center;">
+        <div class="container">
+            <span class="section-label">Visit Our Website</span>
+            <h2 class="section-title">Explore More</h2>
+            <div class="section-line"></div>
+            <a href="https://samaragroup.com.sa/samara-real-estate-and-contracting/" target="_blank" rel="noopener noreferrer" class="website-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                Visit Samara Real Estate Website
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="samara-logo-group.png" alt="Samara Group">
+                    <p>Building the future together.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <a href="index.html">Home</a>
+                    <a href="index.html#about">About</a>
+                    <a href="index.html#companies">Companies</a>
+                    <a href="index.html#contact">Contact</a>
+                </div>
+                <div class="footer-companies">
+                    <h4>Our Companies</h4>
+                    <a href="samara-H-VACR.html">Samara H-VACR</a>
+                    <a href="samara-parking.html">Samara Parking</a>
+                    <a href="builmix.html">Saudi Builmix</a>
+                    <a href="samara-real-estate.html">Samara Real Estate</a>
+                    <a href="saryryah-healthcare.html">Saryryah Healthcare</a>
+                    <a href="mahara-recruitment.html">Mahara Recruitment</a>
+                    <a href="salmiya-oasis.html">Salmiya Oasis</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Samara Group. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+  <script src="script-new.js"></script>
+</body>
+</html>
