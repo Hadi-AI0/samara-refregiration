@@ -1594,12 +1594,11 @@ p {
 }
 
 .timeline-milestone:nth-child(even) {
-  margin-left: 0 !important;
-  padding-left: var(--space-6);
-  padding-right: 0 !important;
-  left: auto !important;
-  right: 0 !important;
-  text-align: left !important;
+  margin-left: 50%;
+  padding-left: var(--space-10);
+  padding-right: var(--space-6);
+  left: 0;
+  text-align: left;
 }
 
 .timeline-content-wrapper {
@@ -1648,11 +1647,11 @@ p {
 }
 
 .timeline-milestone:nth-child(odd) .timeline-text {
-  text-align: left;
+  text-align: right;
 }
 
 .timeline-milestone:nth-child(even) .timeline-text {
-  text-align: right;
+  text-align: left;
 }
 
 .timeline-year {
@@ -2120,7 +2119,7 @@ a:focus-visible {
 }
 
 .hero-title {
-  font-family: 'Orbitron', sans-serif;
+  font-family: var(--font-primary), sans-serif;
   font-size: clamp(2.5rem, 5vw, 4.5rem);
   font-weight: 700;
   line-height: 1.1;
@@ -2707,12 +2706,22 @@ a:focus-visible {
   max-width: 320px !important;
 }
 
+/* ============================================
+   WHEEL SELECTOR
+   ============================================ */
+.wheel-selector {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0;
+}
+
 .radio-input {
   position: relative;
   height: 280px;
-  width: 320px !important;
-  max-width: 320px !important;
-  width: 320px;
+  width: 100%;
+  max-width: none;
   background: var(--color-navy);
   border: 2px solid rgba(255, 255, 255, 0.1);
   border-radius: 30px;
