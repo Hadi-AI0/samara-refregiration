@@ -1642,29 +1642,17 @@ p {
 }
 
 .timeline-milestone h3 {
-  color: var(--color-navy);
+  color: var(--color-text-local);
   margin-bottom: var(--space-3);
   font-size: var(--text-xl);
   font-weight: var(--font-semibold);
 }
 
 .timeline-milestone p {
-  color: var(--color-charcoal);
+  color: var(--color-text-local);
+  opacity: 0.9;
   font-size: var(--text-base);
   line-height: var(--leading-relaxed);
-}
-
-/* Dark section timeline variant */
-.dark-section .timeline-milestone h3 {
-  color: var(--color-white);
-}
-
-.dark-section .timeline-milestone p {
-  color: rgba(255, 255, 255, 0.9);
-}
-
-.dark-section .timeline-year {
-  color: var(--color-gold);
 }
 
 .contact-grid {
@@ -3823,73 +3811,10 @@ a:focus-visible {
   transform: translateX(-50%);
 }
 
-.timeline-milestone {
-  position: relative;
-  margin-bottom: 60px;
-  width: 50%;
-  padding: 0 40px;
-  box-sizing: border-box;
-}
-
-.timeline-milestone:nth-child(odd) {
-  left: 0;
-  text-align: right;
-}
-
-.timeline-milestone:nth-child(even) {
-  text-align: left;
-}
-
-/* Dot on the line */
-.timeline-milestone::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  width: 20px;
-  height: 20px;
-  background: var(--color-white);
-  border: 4px solid var(--color-accent);
-  border-radius: 50%;
-  z-index: 2;
-}
-
-.timeline-milestone:nth-child(odd)::after {
-  right: -10px;
-}
-
-.timeline-milestone:nth-child(even)::after {
-  left: -10px;
-}
-
-.timeline-year {
-  font-family: var(--font-display);
-  font-size: 1.5rem;
-  font-weight: 800;
-  color: var(--color-accent);
-  margin-bottom: 10px;
-  display: block;
-}
-
-.timeline-content {
-  background: var(--color-card-bg);
-  padding: 20px;
-  border-radius: 8px;
-  border: 1px solid var(--color-border);
-  box-shadow: var(--shadow-sm);
-}
-
-.timeline-content h3 {
-  color: var(--color-text-local);
-  margin-bottom: 10px;
-  font-size: 1.2rem;
-}
-
-.timeline-content p {
-  color: var(--color-text-local);
-  opacity: 0.9;
-  line-height: 1.6;
-  font-size: 0.95rem;
-}
+/* ============================================
+   DUPLICATE TIMELINE SECTION - REMOVED
+   Modern timeline styles are defined above at line 1556
+   ============================================ */
 
 /* --- Hero Overlay Fix --- */
 .hero-overlay {
@@ -4137,52 +4062,10 @@ a:focus-visible {
   padding: 6px 12px;
 }
 
-.board-content {
-  background: var(--color-navy);
-  padding: 60px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  color: var(--color-white);
-}
-
-.board-content-subtitle {
-  color: rgba(255,255,255,0.4);
-  font-size: 0.65rem;
-  text-transform: uppercase;
-  letter-spacing: 0.25em;
-  margin-bottom: 4px;
-}
-
-.board-content-role {
-  color: var(--color-gold);
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.25em;
-  margin-bottom: 8px;
-}
-
-.board-content-name {
-  font-family: var(--font-serif);
-  font-size: 2.5rem;
-  font-weight: 900;
-  color: var(--color-white);
-  margin-bottom: 24px;
-  line-height: 1.1;
-}
-
-.board-content-desc {
-  color: rgba(255,255,255,0.85);
-  font-size: 1rem;
-  line-height: 1.7;
-  margin-bottom: 32px;
-}
-
-.board-content-links {
-  display: flex;
-  gap: 12px;
-  margin-bottom: 32px;
-}
+/* ============================================
+   DUPLICATE BOARD CONTENT STYLES - REMOVED
+   Board content styles are defined above at line 3129
+   ============================================ */
 
 .board-social-btn {
   width: 40px;
