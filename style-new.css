@@ -493,7 +493,7 @@ p {
 }
 
 .hero-title {
-  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-size: clamp(2rem, 5vw, 3.5rem);
   font-weight: var(--font-bold);
   line-height: var(--leading-tight);
   margin-bottom: var(--space-6);
@@ -510,7 +510,7 @@ p {
 
 .hero-line {
   display: block;
-  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-size: clamp(2rem, 5vw, 3.5rem);
   font-weight: var(--font-bold);
   line-height: var(--leading-tight);
   color: var(--color-white);
@@ -977,6 +977,93 @@ p {
   font-size: var(--text-sm);
   opacity: 0.8;
   margin-bottom: var(--space-3);
+}
+
+/* Footer Newsletter */
+.footer-newsletter h4 {
+  color: var(--color-white);
+  font-size: var(--text-lg);
+  margin-bottom: var(--space-4);
+}
+
+.footer-newsletter p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: var(--text-sm);
+  margin-bottom: var(--space-4);
+}
+
+.newsletter-form {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.newsletter-form input {
+  flex: 1;
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--color-white);
+  font-size: var(--text-sm);
+}
+
+.newsletter-form input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.newsletter-form button {
+  padding: var(--space-3) var(--space-6);
+  background: var(--color-gold);
+  color: var(--color-navy);
+  border: none;
+  border-radius: var(--radius-sm);
+  font-weight: var(--font-semibold);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.newsletter-form button:hover {
+  background: var(--color-white);
+}
+
+/* Footer Legal */
+.footer-legal {
+  display: flex;
+  gap: var(--space-6);
+}
+
+.footer-legal a {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: var(--text-sm);
+  transition: color var(--transition-fast);
+}
+
+.footer-legal a:hover {
+  color: var(--color-gold);
+}
+
+/* Location Tag */
+.location-tag {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: var(--text-xs);
+  text-align: center;
+  margin-top: var(--space-6);
+  letter-spacing: 1px;
+}
+
+/* Logo Contrast Styles */
+.nav-logo-img {
+  filter: brightness(0) invert(1); /* White logo for dark navbar */
+}
+
+.footer-logo img {
+  filter: brightness(0) invert(1); /* White logo for footer */
+}
+
+/* Light background variants - remove filter for light backgrounds */
+.light-section .nav-logo-img,
+.navbar.scrolled .nav-logo-img {
+  filter: none; /* Original color logo for light backgrounds */
 }
 
 .footer-bottom {
@@ -1470,7 +1557,7 @@ p {
   position: relative;
   margin-bottom: var(--space-20);
   width: 50%;
-  padding: 0 var(--space-10);
+  padding: 0 var(--space-6);
   opacity: 0.3;
   transform: scale(0.95);
   transition: opacity 0.5s, transform 0.5s;
@@ -1483,15 +1570,19 @@ p {
 
 .timeline-milestone:nth-child(odd) {
   margin-left: 0;
+  padding-right: var(--space-6);
+  padding-left: var(--space-10);
 }
 
 .timeline-milestone:nth-child(even) {
   margin-left: 50%;
+  padding-left: var(--space-6);
+  padding-right: var(--space-10);
 }
 
 .timeline-content-wrapper {
   display: flex;
-  gap: var(--space-6);
+  gap: var(--space-4);
   align-items: center;
 }
 
@@ -2571,6 +2662,8 @@ a:focus-visible {
 }
 
 /* ============================================
+   END PRELOADER SECTION
+   ============================================ */
    HERO OVERLAY ENHANCEMENTS
    ============================================ */
 .hero-overlay {
@@ -2754,7 +2847,7 @@ a:focus-visible {
   display: flex;
   align-items: center;
   padding: 40px 0;
-  opacity: 0.2;
+  opacity: 0.4; /* Increased from 0.2 for better visibility */
   transform: translateY(30px);
   transition: all 0.6s ease;
 }
@@ -3505,69 +3598,11 @@ a:focus-visible {
    (Restored from style.css.old + New Requests)
    ========================================= */
 
-/* --- Preloader (New Design) --- */
-#preloader {
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: var(--color-bg-local);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-  transition: opacity 0.5s ease;
-}
-
-#preloader.hidden {
-  opacity: 0;
-  pointer-events: none;
-}
-
-.loader-content { text-align: center; }
-
-.loader-logo {
-  font-family: var(--font-display);
-  font-size: 4rem;
-  font-weight: 900;
-  color: var(--color-primary);
-  margin-bottom: 1rem;
-  animation: pulse 2s infinite;
-}
-
-.loader-text {
-  font-size: 1.2rem;
-  letter-spacing: 4px;
-  color: var(--color-primary);
-  margin-bottom: 2rem;
-  text-transform: uppercase;
-}
-
-.loader-bar {
-  width: 200px; height: 2px;
-  background: rgba(255,255,255,0.1);
-  border-radius: 2px;
-  overflow: hidden;
-  margin: 0 auto;
-}
-
-.loader-progress {
-  width: 0%; height: 100%;
-  background: var(--color-accent);
-  animation: load 2s ease-in-out forwards;
-}
-
-@keyframes pulse {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.7; transform: scale(1.05); }
-}
-
-@keyframes load {
-  0% { width: 0%; }
-  100% { width: 100%; }
-}
+/* =========================================
+   END DUPLICATE PRELOADER REMOVED
+   ========================================= */
 
 /* --- Dark/Light Section Contrast Logic --- */
-/* Ensures text and cards contrast against section backgrounds */
 .dark-section {
   --color-bg-local: var(--color-navy);
   --color-text-local: var(--color-white);
@@ -4033,17 +4068,17 @@ a:focus-visible {
   height: 44px;
   border: 1px solid rgba(255,255,255,0.2);
   background: transparent;
-  color: rgba(255,255,255,0.6);
+  color: var(--color-white);
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: var(--transition);
+  transition: var(--transition-base);
 }
 
 .board-nav-btn:hover {
-  border-color: var(--accent);
-  color: var(--accent);
+  border-color: var(--color-gold);
+  color: var(--color-gold);
 }
 
 .board-main {
@@ -4244,7 +4279,7 @@ a:focus-visible {
 }
 
 .board-thumb-name {
-  color: var(--white);
+  color: var(--color-white);
   font-size: 0.75rem;
   font-weight: 700;
   line-height: 1.2;
@@ -4252,7 +4287,7 @@ a:focus-visible {
 }
 
 .board-thumb-role {
-  color: var(--accent);
+  color: var(--color-gold);
   font-size: 0.65rem;
 }
 
