@@ -618,113 +618,100 @@
     </div>
   </section>
 
-  <!-- Companies Section -->
-  <section class="about-section light-section" id="companies">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-label">Our Companies</span>
-        <h2 class="section-title">Specialized Entities Driving Excellence</h2>
-        <div class="section-line"></div>
-        <p class="section-subtitle">Seven pillars of our diversified portfolio</p>
+  <!-- Sectors Section -->
+  <section class="sectors-section" id="companies">
+    <!-- Header -->
+    <div class="container sectors-header-container">
+      <div class="sectors-header">
+        <div class="sectors-title-wrapper">
+          <div class="sectors-label-line"></div>
+          <span class="sectors-label">What We Do</span>
+        </div>
+        <h2 class="sectors-title">Our 8 Companies</h2>
       </div>
-      <div class="companies-grid">
-        <a href="samara-H-VACR.html" class="company-card" data-card style="text-decoration: none; color: inherit;">
-          <div class="card-bg-glow"></div>
-          <div class="card-image">
-            <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070&auto=format&fit=crop" alt="Samara H-VACR">
-            <div class="card-overlay"></div>
-          </div>
-          <div class="card-content">
-            <div class="card-category">Est. 1984</div>
-            <h3 class="card-title">Samara H-VACR</h3>
-            <p class="card-description">Leading provider of commercial and industrial HVAC and refrigeration solutions, serving supermarkets, cold storage, food processing facilities, and commercial buildings across the Kingdom.</p>
-            <span class="card-link">Learn More <span>&rarr;</span></span>
-          </div>
-        </a>
+      <p class="sectors-subtitle">Eight specialised companies working together to deliver integrated solutions across the Kingdom's key sectors.</p>
+    </div>
 
-        <a href="samara-real-estate.html" class="company-card" data-card style="text-decoration: none; color: inherit;">
-          <div class="card-bg-glow"></div>
-          <div class="card-image">
-            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop" alt="Samara Real Estate">
-            <div class="card-overlay"></div>
-          </div>
-          <div class="card-content">
-            <div class="card-category">Est. 2001</div>
-            <h3 class="card-title">Samara Real Estate & Contracting</h3>
-            <p class="card-description">Developing premium residential and commercial properties while delivering high-quality general contracting services for major infrastructure projects.</p>
-            <span class="card-link">Learn More <span>&rarr;</span></span>
-          </div>
-        </a>
+    <!-- Scrollable tab bar -->
+    <div class="sectors-tab-bar">
+      <div class="container">
+        <div class="sectors-tabs" id="sectorsTabs">
+          <button class="sector-tab active" data-sector="0">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M2 12h20"/></svg>
+            HVAC
+          </button>
+          <button class="sector-tab" data-sector="1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/></svg>
+            Refrigeration
+          </button>
+          <button class="sector-tab" data-sector="2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18"/><path d="M15 3v18"/><path d="M3 9h18"/><path d="M3 15h18"/></svg>
+            Smart Parking
+          </button>
+          <button class="sector-tab" data-sector="3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 22h20"/><path d="M12 2v20"/><path d="M12 2a10 10 0 0 1 10 10"/><path d="M12 2A10 10 0 0 0 2 12"/></svg>
+            Construction
+          </button>
+          <button class="sector-tab" data-sector="4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l8-4 8 4v14"/><path d="M17 21v-8.5a1.5 1.5 0 0 0-3 0V21"/></svg>
+            Real Estate
+          </button>
+          <button class="sector-tab" data-sector="5">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2v7.31"/><path d="M14 2v7.31"/><path d="M8.5 2h7"/><path d="M14 9.3a6.5 6.5 0 1 1-4 0"/></svg>
+            BuildMix
+          </button>
+          <button class="sector-tab" data-sector="6">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a5 5 0 0 0-5 5v2a5 5 0 0 0 10 0V7a5 5 0 0 0-5-5z"/><path d="M12 12v10"/><path d="M8 22h8"/><path d="M12 12a5 5 0 0 1 5 5v3H7v-3a5 5 0 0 1 5-5z"/></svg>
+            Hospitality
+          </button>
+          <button class="sector-tab" data-sector="7">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            Recruitment
+          </button>
+        </div>
+      </div>
+    </div>
 
-        <a href="saryryah-healthcare.html" class="company-card" data-card style="text-decoration: none; color: inherit;">
-          <div class="card-bg-glow"></div>
-          <div class="card-image">
-            <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=2053&auto=format&fit=crop" alt="Saryryah Healthcare">
-            <div class="card-overlay"></div>
-          </div>
-          <div class="card-content">
-            <div class="card-category">Est. 2001</div>
-            <h3 class="card-title">Saryryah Healthcare</h3>
-            <p class="card-description">Operating and managing hospitals and medical centers, providing world-class healthcare services with a focus on patient care and medical excellence.</p>
-            <span class="card-link">Learn More <span>&rarr;</span></span>
-          </div>
-        </a>
+    <!-- Main panel -->
+    <div class="sectors-main-panel">
+      <!-- Background images for each sector -->
+      <div class="sectors-background-images">
+        <div class="sector-bg-image active" data-sector="0">
+          <img src="https://images.unsplash.com/photo-1615309662243-70f6df917b59?w=1400&h=900&fit=crop&auto=format" alt="Samara HVAC">
+        </div>
+        <div class="sector-bg-image" data-sector="1">
+          <img src="https://images.unsplash.com/photo-1553413077-190dd305871c?w=1400&h=900&fit=crop&auto=format" alt="Samara Refrigeration">
+        </div>
+        <div class="sector-bg-image" data-sector="2">
+          <img src="rotary_parking.jfif" alt="Smart Parking">
+        </div>
+        <div class="sector-bg-image" data-sector="3">
+          <img src="https://images.unsplash.com/photo-1618764889055-628b7adacfe1?w=1400&h=900&fit=crop&auto=format" alt="Construction">
+        </div>
+        <div class="sector-bg-image" data-sector="4">
+          <img src="https://images.unsplash.com/photo-1756064173162-326c8e85215d?w=1400&h=900&fit=crop&auto=format" alt="Real Estate">
+        </div>
+        <div class="sector-bg-image" data-sector="5">
+          <img src="https://images.unsplash.com/photo-1527410651988-c2f385ccd3f7?w=1400&h=900&fit=crop&auto=format" alt="BuildMix">
+        </div>
+        <div class="sector-bg-image" data-sector="6">
+          <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1400&h=900&fit=crop&auto=format" alt="Hospitality">
+        </div>
+        <div class="sector-bg-image" data-sector="7">
+          <img src="https://images.unsplash.com/photo-1690378820474-b468b8ee64d3?w=1400&h=900&fit=crop&auto=format" alt="Recruitment">
+        </div>
+      </div>
 
-        <a href="samara-parking.html" class="company-card" data-card style="text-decoration: none; color: inherit;">
-          <div class="card-bg-glow"></div>
-          <div class="card-image">
-            <img src="https://images.unsplash.com/photo-1590674899505-1c5c41951f89?q=80&w=2070&auto=format&fit=crop" alt="Samara Parking Solutions">
-            <div class="card-overlay"></div>
-          </div>
-          <div class="card-content">
-            <div class="card-category">Recent Venture</div>
-            <h3 class="card-title">Samara Parking Solutions (SPS)</h3>
-            <p class="card-description">Delivering advanced parking management systems and smart city solutions to optimize urban mobility and traffic flow in major cities.</p>
-            <span class="card-link">Learn More <span>&rarr;</span></span>
-          </div>
-        </a>
+      <!-- Text content -->
+      <div class="container sectors-content-container">
+        <div class="sectors-content" id="sectorsContent">
+          <!-- Content will be dynamically updated by JavaScript -->
+        </div>
+      </div>
 
-        <a href="builmix.html" class="company-card" data-card style="text-decoration: none; color: inherit;">
-          <div class="card-bg-glow"></div>
-          <div class="card-image">
-            <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?q=80&w=2070&auto=format&fit=crop" alt="Saudi Builmix">
-            <div class="card-overlay"></div>
-          </div>
-          <div class="card-content">
-            <div class="card-category">Est. 2012</div>
-            <h3 class="card-title">Saudi Builmix LLC</h3>
-            <p class="card-description">Producing high-quality ready-mix concrete for large-scale construction projects, ensuring durability and compliance with international standards.</p>
-            <span class="card-link">Learn More <span>&rarr;</span></span>
-          </div>
-        </a>
-
-        <a href="mahara-recruitment.html" class="company-card" data-card style="text-decoration: none; color: inherit;">
-          <div class="card-bg-glow"></div>
-          <div class="card-image">
-            <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=2084&auto=format&fit=crop" alt="Mahara Recruitment">
-            <div class="card-overlay"></div>
-          </div>
-          <div class="card-content">
-            <div class="card-category">Human Resources</div>
-            <h3 class="card-title">Mahara Recruitment</h3>
-            <p class="card-description">Professional recruitment and HR services connecting top talent with leading organizations across the Kingdom.</p>
-            <span class="card-link">Learn More <span>&rarr;</span></span>
-          </div>
-        </a>
-
-        <a href="salmiya-oasis.html" class="company-card" data-card style="text-decoration: none; color: inherit;">
-          <div class="card-bg-glow"></div>
-          <div class="card-image">
-            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=2070&auto=format&fit=crop" alt="Salmiya Oasis">
-            <div class="card-overlay"></div>
-          </div>
-          <div class="card-content">
-            <div class="card-category">Hospitality</div>
-            <h3 class="card-title">Salmiya Oasis</h3>
-            <p class="card-description">Premium hospitality and accommodation services providing exceptional experiences for travelers and guests.</p>
-            <span class="card-link">Learn More <span>&rarr;</span></span>
-          </div>
-        </a>
+      <!-- Right thumbnail strip (desktop only) -->
+      <div class="sectors-thumbnail-strip" id="sectorsThumbnails">
+        <!-- Thumbnails will be dynamically generated by JavaScript -->
       </div>
     </div>
   </section>
@@ -990,6 +977,170 @@
             mpCards[index].classList.add('active');
           });
         });
+
+        // Sectors Section Functionality
+        const sectorsData = [
+          {
+            icon: "Wind",
+            label: "HVAC",
+            title: "Samara HVAC",
+            tagline: "Engineering comfort for hospitals, towers & commercial spaces",
+            desc: "Samara HVAC delivers end-to-end HVAC projects, air duct manufacturing, chiller and central AC solutions, and full maintenance & service contracts. We serve hospitals, commercial buildings, and industrial facilities across the Kingdom.",
+            highlights: ["HVAC Projects", "Air Duct Manufacturing", "Chiller & Central AC", "Maintenance Contracts"],
+            vision: "Engineering Excellence",
+            image: "https://images.unsplash.com/photo-1615309662243-70f6df917b59?w=1400&h=900&fit=crop&auto=format"
+          },
+          {
+            icon: "Thermometer",
+            label: "Refrigeration",
+            title: "Samara Refrigeration",
+            tagline: "Cold-chain infrastructure powering KSA's food security",
+            desc: "Samara Refrigeration provides industrial-grade cold rooms, freezers, refrigeration projects, maintenance services, and a full-service refrigeration workshop. Supporting food security across the Eastern Province since 1992.",
+            highlights: ["Cold Rooms & Freezers", "Industrial Refrigeration", "Maintenance Services", "Refrigeration Workshop"],
+            vision: "Food Security Pillar",
+            image: "https://images.unsplash.com/photo-1553413077-190dd305871c?w=1400&h=900&fit=crop&auto=format"
+          },
+          {
+            icon: "ParkingSquare",
+            label: "Smart Parking",
+            title: "Smart Commercial Parking",
+            tagline: "AI-powered parking for Saudi Arabia's smart cities",
+            desc: "Our smart parking division delivers automated rotary systems, AI-powered management software, mobile app integration, live availability tracking, vehicle calling systems, and smart payment solutions.",
+            highlights: ["Rotary Parking Systems", "AI Management Software", "Mobile App Integration", "Smart Payment Systems"],
+            vision: "Smart Cities Pillar",
+            image: "rotary_parking.jfif"
+          },
+          {
+            icon: "HardHat",
+            label: "Construction",
+            title: "General Contracting & Construction",
+            tagline: "Building the Kingdom's infrastructure from the ground up",
+            desc: "We deliver full-scope construction projects including commercial buildings, infrastructure, renovation works, and comprehensive MEP projects. From heavy equipment to finishing — one contractor for every phase.",
+            highlights: ["Buildings Construction", "Infrastructure Projects", "Renovation Works", "MEP Projects"],
+            vision: "Infrastructure",
+            image: "https://images.unsplash.com/photo-1618764889055-628b7adacfe1?w=1400&h=900&fit=crop&auto=format"
+          },
+          {
+            icon: "Building2",
+            label: "Real Estate",
+            title: "Real Estate",
+            tagline: "Premium Saudi developments from design to handover",
+            desc: "Our real estate arm develops and manages residential compounds and commercial properties. We handle property development, management, and strategic real estate investments aligned with Vision 2030's National Housing Programme.",
+            highlights: ["Property Development", "Property Management", "Residential Compounds", "Real Estate Investments"],
+            vision: "Housing Programme",
+            image: "https://images.unsplash.com/photo-1756064173162-326c8e85215d?w=1400&h=900&fit=crop&auto=format"
+          },
+          {
+            icon: "FlaskConical",
+            label: "BuildMix",
+            title: "BuildMix Company",
+            tagline: "Concrete solutions powering construction across the region",
+            desc: "BuildMix supplies ready-mix concrete, concrete products, and construction materials to major construction projects. Our fleet of mixer trucks and concrete plants ensure reliable, on-time delivery for every project scale.",
+            highlights: ["Ready-Mix Concrete", "Concrete Products", "Materials Supply", "Fleet Operations"],
+            vision: "Industrial Growth",
+            image: "https://images.unsplash.com/photo-1527410651988-c2f385ccd3f7?w=1400&h=900&fit=crop&auto=format"
+          },
+          {
+            icon: "Palmtree",
+            label: "Hospitality",
+            title: "Al Salmiya Oasis",
+            tagline: "Premium tourism & hospitality experiences aligned with Vision 2030",
+            desc: "Al Salmiya Oasis delivers resort development, hospitality services, tourism projects, events and recreation experiences. We are aligned with Saudi Vision 2030's tourism diversification targets to create world-class destinations.",
+            highlights: ["Resort Development", "Hospitality Services", "Tourism Projects", "Events & Recreation"],
+            vision: "Tourism 2030",
+            image: "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1400&h=900&fit=crop&auto=format"
+          },
+          {
+            icon: "Users",
+            label: "Recruitment",
+            title: "Mahara Recruitment",
+            tagline: "Connecting global talent with Saudi enterprises",
+            desc: "Mahara Recruitment provides international recruitment, workforce solutions, HR services, and overseas employment. We connect qualified global talent with leading Saudi companies across all sectors.",
+            highlights: ["International Recruitment", "Workforce Solutions", "HR Services", "Overseas Employment"],
+            vision: "Saudization",
+            image: "https://images.unsplash.com/photo-1690378820474-b468b8ee64d3?w=1400&h=900&fit=crop&auto=format"
+          }
+        ];
+
+        const sectorTabs = document.querySelectorAll('.sector-tab');
+        const bgImages = document.querySelectorAll('.sector-bg-image');
+        const sectorsContent = document.getElementById('sectorsContent');
+        const sectorsThumbnails = document.getElementById('sectorsThumbnails');
+        let activeSector = 0;
+
+        function renderContent(index) {
+          const s = sectorsData[index];
+          sectorsContent.innerHTML = `
+            <div class="sectors-text-content" style="animation: fadeUp 0.5s ease-out forwards; opacity: 0;">
+              <span class="sectors-vision-badge">
+                <span class="badge-dot"></span>
+                ${s.vision}
+              </span>
+              <h3 class="sectors-content-title">${s.title}</h3>
+              <p class="sectors-content-tagline">${s.tagline}</p>
+              <p class="sectors-content-desc">${s.desc}</p>
+              <div class="sectors-highlights-grid">
+                ${s.highlights.map(h => `
+                  <div class="highlight-item">
+                    <span class="highlight-bullet"></span>
+                    ${h}
+                  </div>
+                `).join('')}
+              </div>
+              <a href="#" class="sectors-learn-more-btn">
+                Learn More
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </a>
+            </div>
+          `;
+        }
+
+        function renderThumbnails(activeIndex) {
+          const inactiveSectors = sectorsData.filter((_, i) => i !== activeIndex).slice(0, 4);
+          sectorsThumbnails.innerHTML = inactiveSectors.map((sec, idx) => {
+            const originalIndex = sectorsData.indexOf(sec);
+            return `
+              <button class="thumbnail-item" data-sector="${originalIndex}">
+                <img src="${sec.image}" alt="${sec.label}">
+                <div class="thumbnail-overlay"></div>
+                <div class="thumbnail-info">
+                  <p class="thumbnail-vision">${sec.vision}</p>
+                  <p class="thumbnail-label">${sec.label}</p>
+                </div>
+              </button>
+            `;
+          }).join('');
+
+          // Add click handlers to thumbnails
+          sectorsThumbnails.querySelectorAll('.thumbnail-item').forEach(btn => {
+            btn.addEventListener('click', () => {
+              const idx = parseInt(btn.getAttribute('data-sector'));
+              setActiveSector(idx);
+            });
+          });
+        }
+
+        function setActiveSector(index) {
+          sectorTabs.forEach((tab, i) => {
+            tab.classList.toggle('active', i === index);
+          });
+          bgImages.forEach((bg, i) => {
+            bg.classList.toggle('active', i === index);
+          });
+          activeSector = index;
+          renderContent(index);
+          renderThumbnails(index);
+        }
+
+        sectorTabs.forEach((tab, index) => {
+          tab.addEventListener('click', () => {
+            setActiveSector(index);
+          });
+        });
+
+        // Initialize sectors section
+        renderContent(0);
+        renderThumbnails(0);
       });
     </script>
 </body>
