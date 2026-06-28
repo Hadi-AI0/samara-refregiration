@@ -87,22 +87,45 @@
     <a href="#contact" class="mobile-nav">Contact</a>
   </div>
 
-  <!-- Hero Section -->
-  <section class="hero" id="hero">
+  <!-- Hero Section - Carousel -->
+  <section class="hero hero-carousel" id="hero">
     
     <div class="hero-bg">
-      <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop" alt="Saudi Arabia skyline">
+      <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop" alt="Saudi Arabia skyline" class="hero-slide active">
+      <img src="https://images.unsplash.com/photo-1590674955636-98c6f66e6b9d?q=80&w=2070&auto=format&fit=crop" alt="Construction site" class="hero-slide">
+      <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop" alt="Saudi Arabia vision" class="hero-slide">
     </div>
     
     <div class="hero-overlay"></div>
     
     <div class="hero-content">
       <div class="hero-badge">ESTABLISHED 1984</div>
-      <h1 class="hero-title">
-        <span class="hero-line">BUILDING THE FUTURE</span>
-        <span class="hero-line">OF SAUDI ARABIA</span>
-      </h1>
-      <p class="hero-subtitle">A diversified family business group with over four decades of excellence across the GCC, leading in refrigeration, real estate, healthcare, and industrial solutions.</p>
+      
+      <!-- Slide 1 -->
+      <div class="hero-slide-content active" data-slide="0">
+        <h1 class="hero-title">
+          <span class="hero-line">Where Heritage Meets Ambition</span>
+        </h1>
+        <p class="hero-subtitle">Aligned with Saudi Vision 2030 — investing in the infrastructure of a thriving nation</p>
+      </div>
+      
+      <!-- Slide 2 -->
+      <div class="hero-slide-content" data-slide="1">
+        <h1 class="hero-title">
+          <span class="hero-line">Raising New Horizons</span>
+        </h1>
+        <p class="hero-subtitle">Construction, real estate, and infrastructure projects shaping Saudi Arabia's built environment</p>
+      </div>
+      
+      <!-- Slide 3 -->
+      <div class="hero-slide-content" data-slide="2">
+        <h1 class="hero-title">
+          <span class="hero-line">BUILDING THE FUTURE</span>
+          <span class="hero-line">OF SAUDI ARABIA</span>
+        </h1>
+        <p class="hero-subtitle">A diversified family business group with over four decades of excellence across the GCC, leading in refrigeration, real estate, healthcare, and industrial solutions.</p>
+      </div>
+      
       <div class="hero-metrics">
         <div class="metric-item">
           <span class="stat-number counter" data-target="7">0</span>
@@ -120,6 +143,13 @@
       <div class="hero-cta">
         <a href="#companies" class="btn btn-primary">Explore Our Companies</a>
         <a href="#contact" class="btn btn-outline">Get In Touch</a>
+      </div>
+      
+      <!-- Carousel Indicators -->
+      <div class="hero-carousel-indicators">
+        <button class="carousel-dot active" data-slide="0" aria-label="Slide 1"></button>
+        <button class="carousel-dot" data-slide="1" aria-label="Slide 2"></button>
+        <button class="carousel-dot" data-slide="2" aria-label="Slide 3"></button>
       </div>
     </div>
   </section>
@@ -239,6 +269,150 @@
             As Saudi Arabia strides boldly toward Vision 2030, we stand ready to play our part, building the infrastructure, healthcare, and innovations that will shape the future of generations to come.
           </blockquote>
           <cite>The Founder<br>Chairman, Samara Group</cite>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Manufacturing Partners Section -->
+  <section class="manufacturing-partners-section" id="manufacturing-partners">
+    <div class="container">
+      <!-- Header -->
+      <div class="mp-header">
+        <div class="mp-header-content">
+          <div class="mp-label-wrapper">
+            <div class="mp-label-line"></div>
+            <span class="mp-label">International Partnerships</span>
+          </div>
+          <h2 class="mp-title">Our Factories & Global Manufacturing Partners</h2>
+        </div>
+        <p class="mp-subtitle">Strategic manufacturing partnerships in Egypt and China powering our engineering excellence.</p>
+      </div>
+
+      <!-- Factory selector tabs -->
+      <div class="mp-tabs">
+        <button class="mp-tab active" data-factory="0">
+          <span class="mp-tab-flag">🇪🇬</span>
+          <div class="mp-tab-info">
+            <span class="mp-tab-name">SAWA Factory</span>
+            <span class="mp-tab-country">Egypt</span>
+          </div>
+        </button>
+        <button class="mp-tab" data-factory="1">
+          <span class="mp-tab-flag">🇨🇳</span>
+          <div class="mp-tab-info">
+            <span class="mp-tab-name">GG Lifters Factory</span>
+            <span class="mp-tab-country">China</span>
+          </div>
+        </button>
+      </div>
+
+      <!-- Main factory card -->
+      <div class="mp-card-container">
+        <!-- SAWA Factory -->
+        <div class="mp-card active" data-factory="0">
+          <div class="mp-card-image">
+            <img src="https://images.unsplash.com/photo-1496247749665-49cf5b1022e9?w=1200&h=800&fit=crop&auto=format" alt="SAWA Factory">
+            <div class="mp-card-overlay"></div>
+            <div class="mp-card-badge">
+              <span class="mp-badge-flag">🇪🇬</span>
+              <div class="mp-badge-info">
+                <span class="mp-badge-name">SAWA Factory</span>
+                <span class="mp-badge-country">Egypt</span>
+              </div>
+            </div>
+          </div>
+          <div class="mp-card-content">
+            <div class="mp-card-location">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <span>Egypt</span>
+            </div>
+            <h3 class="mp-card-title">SAWA Factory</h3>
+            <p class="mp-card-specialty">Steel Manufacturing & Metal Fabrication</p>
+            <p class="mp-card-desc">SAWA Factory in Egypt is Samara Group's steel manufacturing and metal fabrication partner, operating to international quality standards and exporting finished products to several European countries. Advanced manufacturing capabilities enable precision industrial production at scale.</p>
+            
+            <div class="mp-highlights">
+              <div class="mp-highlight"><div class="mp-highlight-dot"></div>Steel Manufacturing</div>
+              <div class="mp-highlight"><div class="mp-highlight-dot"></div>Metal Fabrication</div>
+              <div class="mp-highlight"><div class="mp-highlight-dot"></div>Industrial Products</div>
+              <div class="mp-highlight"><div class="mp-highlight-dot"></div>Export to Europe</div>
+            </div>
+
+            <div class="mp-stats">
+              <div class="mp-stat-pill">
+                <span class="mp-stat-value">5+</span>
+                <span class="mp-stat-label">European Countries Served</span>
+              </div>
+              <div class="mp-stat-pill">
+                <span class="mp-stat-value">ISO</span>
+                <span class="mp-stat-label">Int'l Quality Standards</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- GG Lifters Factory -->
+        <div class="mp-card" data-factory="1">
+          <div class="mp-card-image">
+            <img src="https://images.unsplash.com/photo-1717386255773-1e3037c81788?w=1200&h=800&fit=crop&auto=format" alt="GG Lifters Factory">
+            <div class="mp-card-overlay"></div>
+            <div class="mp-card-badge">
+              <span class="mp-badge-flag">🇨🇳</span>
+              <div class="mp-badge-info">
+                <span class="mp-badge-name">GG Lifters Factory</span>
+                <span class="mp-badge-country">China</span>
+              </div>
+            </div>
+          </div>
+          <div class="mp-card-content">
+            <div class="mp-card-location">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <span>China</span>
+            </div>
+            <h3 class="mp-card-title">GG Lifters Factory</h3>
+            <p class="mp-card-specialty">Smart Parking & Automated Lifting Systems</p>
+            <p class="mp-card-desc">GG Lifters Factory in China is our exclusive manufacturing partner for smart parking systems and mechanical lifting equipment. Using advanced automation technologies and international engineering capabilities, GG Lifters produces the rotary parking solutions deployed by Samara Parking Solutions across Saudi Arabia.</p>
+            
+            <div class="mp-highlights">
+              <div class="mp-highlight"><div class="mp-highlight-dot"></div>Smart Parking Systems</div>
+              <div class="mp-highlight"><div class="mp-highlight-dot"></div>Automated Lifting Equipment</div>
+              <div class="mp-highlight"><div class="mp-highlight-dot"></div>Metal Industries</div>
+              <div class="mp-highlight"><div class="mp-highlight-dot"></div>Advanced Automation</div>
+            </div>
+
+            <div class="mp-stats">
+              <div class="mp-stat-pill">
+                <span class="mp-stat-value">15+</span>
+                <span class="mp-stat-label">Years Manufacturing</span>
+              </div>
+              <div class="mp-stat-pill">
+                <span class="mp-stat-value">High</span>
+                <span class="mp-stat-label">Automation Level</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- World map decorative strip -->
+      <div class="mp-info-strip">
+        <div class="mp-info-item">
+          <div class="mp-info-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+          </div>
+          <span>Manufacturing in Egypt & China</span>
+        </div>
+        <div class="mp-info-item">
+          <div class="mp-info-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+          </div>
+          <span>Exporting to Europe & MENA</span>
+        </div>
+        <div class="mp-info-item">
+          <div class="mp-info-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          </div>
+          <span>Headquartered in Al-Khobar, KSA</span>
         </div>
       </div>
     </div>
@@ -763,6 +937,59 @@
         if (typeof lucide !== 'undefined' && lucide.createIcons) {
           lucide.createIcons();
         }
+        
+        // Hero Carousel Functionality
+        const heroCarousel = document.querySelector('.hero-carousel');
+        if (heroCarousel) {
+          let currentSlide = 0;
+          const slides = heroCarousel.querySelectorAll('.hero-slide');
+          const contents = heroCarousel.querySelectorAll('.hero-slide-content');
+          const dots = heroCarousel.querySelectorAll('.carousel-dot');
+          const totalSlides = slides.length;
+          
+          function showSlide(index) {
+            slides.forEach((slide, i) => {
+              slide.classList.toggle('active', i === index);
+            });
+            contents.forEach((content, i) => {
+              content.classList.toggle('active', i === index);
+            });
+            dots.forEach((dot, i) => {
+              dot.classList.toggle('active', i === index);
+            });
+            currentSlide = index;
+          }
+          
+          function nextSlide() {
+            showSlide((currentSlide + 1) % totalSlides);
+          }
+          
+          // Auto-advance every 5 seconds
+          let carouselInterval = setInterval(nextSlide, 5000);
+          
+          // Click handlers for dots
+          dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+              clearInterval(carouselInterval);
+              showSlide(index);
+              carouselInterval = setInterval(nextSlide, 5000);
+            });
+          });
+        }
+        
+        // Manufacturing Partners Tab Functionality
+        const mpTabs = document.querySelectorAll('.mp-tab');
+        const mpCards = document.querySelectorAll('.mp-card');
+        
+        mpTabs.forEach((tab, index) => {
+          tab.addEventListener('click', () => {
+            mpTabs.forEach(t => t.classList.remove('active'));
+            mpCards.forEach(c => c.classList.remove('active'));
+            
+            tab.classList.add('active');
+            mpCards[index].classList.add('active');
+          });
+        });
       });
     </script>
 </body>
