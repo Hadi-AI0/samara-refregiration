@@ -1,8 +1,76 @@
-# Examples 1:
-# Project contains only HTML and CSS files - no build artifacts, dependencies, or temp files to ignore
+```gitignore
+# Compiled and build artifacts
+*.pyc
+__pycache__/
+*.o
+*.obj
+dist/
+build/
+*.class
+*.exe
+*.dll
+*.so
+*.a
+*.out
 
-# Example 2 (Project with artifacts):
-# Input contained Python cache files, dist folder, .env.local, and VSCode settings
-# Would generate appropriate ignores for those artifacts
+# Dependencies
+.venv/
+venv/
+node_modules/
+target/
+.gradle/
+.mypy_cache/
+.pytest_cache/
 
-# Since this project only has HTML/CSS files being modified, output remains empty
+# Logs and temp files
+*.log
+*.tmp
+*.swp
+*.swo
+*.bak
+*.cache
+
+# Environment
+.env
+.env.local
+*.env.*
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Coverage
+coverage/
+htmlcov/
+.coverage
+
+# Compressed files
+*.zip
+*.gz
+*.tar
+*.tgz
+*.bz2
+*.xz
+*.7z
+*.rar
+*.zst
+*.lz4
+*.lzh
+*.cab
+*.arj
+*.rpm
+*.deb
+*.Z
+*.lz
+*.lzo
+*.tar.gz
+*.tar.bz2
+*.tar.xz
+*.tar.zst
+```
